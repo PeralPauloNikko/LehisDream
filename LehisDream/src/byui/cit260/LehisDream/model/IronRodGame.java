@@ -10,7 +10,7 @@ import java.util.Objects;
 
 /**
  *
- * @author smith
+ * @author smith / peral
  */
 public class IronRodGame implements Serializable{
     
