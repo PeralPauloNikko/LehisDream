@@ -15,43 +15,35 @@ import java.util.Objects;
 public class IronRodGame implements Serializable{
     
     //class instance variables
-    private String name;
-    private double energyLeft;
+
+    private double totalEnergy;
 
     public IronRodGame() {
     }
     
     
 
-    public String getName() {
-        return name;
+    public double getTotalEnergy() {
+        return totalEnergy;
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public double getEnergyLeft() {
-        return energyLeft;
-    }
-
-    public void setEnergyLeft(double energyLeft) {
-        this.energyLeft = energyLeft;
+    public void setTotalEnergy(double totalEnergy) {
+        this.totalEnergy = totalEnergy;
     }
 
     @Override
     public int hashCode() {
-        int hash = 5;
-        hash = 43 * hash + Objects.hashCode(this.name);
-        hash = 43 * hash + (int) (Double.doubleToLongBits(this.energyLeft) ^ (Double.doubleToLongBits(this.energyLeft) >>> 32));
+        int hash = 7;
+        hash = 89 * hash + (int) (Double.doubleToLongBits(this.totalEnergy) ^ (Double.doubleToLongBits(this.totalEnergy) >>> 32));
         return hash;
     }
 
     @Override
     public String toString() {
-        return "IronRodGame{" + "name=" + name + ", energyLeft=" + energyLeft + '}';
+        return "IronRodGame{" + "totalEnergy=" + totalEnergy + '}';
     }
     
+
     @Override
     public boolean equals(Object obj) {
         if (this == obj) {
@@ -64,15 +56,17 @@ public class IronRodGame implements Serializable{
             return false;
         }
         final IronRodGame other = (IronRodGame) obj;
-        if (Double.doubleToLongBits(this.energyLeft) != Double.doubleToLongBits(other.energyLeft)) {
-            return false;
-        }
-        if (!Objects.equals(this.name, other.name)) {
+        if (Double.doubleToLongBits(this.totalEnergy) != Double.doubleToLongBits(other.totalEnergy)) {
             return false;
         }
         return true;
     }
     
+    
+
+  
+    
+
     
     
 }

@@ -12,26 +12,34 @@ import byui.cit260.LehisDream.model.IronRodGame;
  * @author EthicalH1
  */
 public class LehisDream {
-
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
+    
+    public static void teamTest(){
         Player playerOne = new Player();
         
         playerOne.setName("Lehi");
         playerOne.setEnergyLeft(100);
         
-     String playerInfo = playerOne.toString();
-     System.out.println(playerInfo);
-     
-     IronRodGame playerOne1 = new IronRodGame();
+        String playerInfo = playerOne.toString();
+        System.out.println(playerInfo);
+    }
+
+    public static void aprilTest(){
+        IronRodGame gameOne = new IronRodGame();
         
-        playerOne1.setName("Lehi");
-        playerOne1.setEnergyLeft(100);
+        gameOne.setTotalEnergy(100);
         
-        String playerInfor = playerOne1.toString();
-        System.out.println(playerInfor);
+        String gameInfo = gameOne.toString();
+        System.out.println(gameInfo);
+        
+    }
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        
+        teamTest();
+        aprilTest();
+        
      
     }
     
