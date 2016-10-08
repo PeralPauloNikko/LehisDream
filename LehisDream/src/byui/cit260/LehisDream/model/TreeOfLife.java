@@ -10,40 +10,36 @@ import java.util.Objects;
 
 /**
  *
- * @author smith / peral
+ * @author smith
  */
-public class IronRodGame implements Serializable{
+public class TreeOfLife implements Serializable{
     
     //class instance variables
+    private String prizeAcquired;
 
-    private double totalEnergy;
-
-    public IronRodGame() {
+    public TreeOfLife() {
     }
     
-    
-
-    public double getTotalEnergy() {
-        return totalEnergy;
+    public String getPrizeAcquired() {
+        return prizeAcquired;
     }
 
-    public void setTotalEnergy(double totalEnergy) {
-        this.totalEnergy = totalEnergy;
+    public void setPrizeAcquired(String prizeAcquired) {
+        this.prizeAcquired = prizeAcquired;
     }
 
     @Override
     public int hashCode() {
         int hash = 7;
-        hash = 89 * hash + (int) (Double.doubleToLongBits(this.totalEnergy) ^ (Double.doubleToLongBits(this.totalEnergy) >>> 32));
+        hash = 29 * hash + Objects.hashCode(this.prizeAcquired);
         return hash;
     }
 
     @Override
     public String toString() {
-        return "IronRodGame{" + "totalEnergy=" + totalEnergy + '}';
+        return "TreeOfLife{" + "prizeAcquired=" + prizeAcquired + '}';
     }
     
-
     @Override
     public boolean equals(Object obj) {
         if (this == obj) {
@@ -55,18 +51,17 @@ public class IronRodGame implements Serializable{
         if (getClass() != obj.getClass()) {
             return false;
         }
-        final IronRodGame other = (IronRodGame) obj;
-        if (Double.doubleToLongBits(this.totalEnergy) != Double.doubleToLongBits(other.totalEnergy)) {
+        final TreeOfLife other = (TreeOfLife) obj;
+        if (!Objects.equals(this.prizeAcquired, other.prizeAcquired)) {
             return false;
         }
         return true;
     }
     
-    
 
-  
+   
     
-
+    
     
     
 }
