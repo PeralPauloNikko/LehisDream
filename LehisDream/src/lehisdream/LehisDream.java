@@ -6,7 +6,7 @@
 package lehisdream;
 
 import byui.cit260.LehisDream.model.Player;
-
+import byui.cit260.LehisDream.model.IronRodGame;
 /**
  *
  * @author EthicalH1
@@ -24,6 +24,17 @@ public class LehisDream {
         
      String playerInfo = playerOne.toString();
      System.out.println(playerInfo);
+     
+     IronRodGame playerOne1 = new IronRodGame();
+        
+        playerOne1.setName("Lehi");
+        playerOne1.setEnergyLeft(100);
+        
+        String playerInfor = playerOne1.toString();
+        System.out.println(playerInfor);
+     
     }
+    
+
     
 }
