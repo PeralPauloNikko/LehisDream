@@ -13,6 +13,16 @@ import byui.cit260.LehisDream.model.IronRodGame;
 import byui.cit260.LehisDream.model.Location;
 import byui.cit260.LehisDream.model.Scene;
 import byui.cit260.LehisDream.model.TreeOfLife;
+
+//nikkoTest
+import byui.cit260.LehisDream.model.BackPack;
+import byui.cit260.LehisDream.model.Person;
+import byui.cit260.LehisDream.model.Map;
+import byui.cit260.LehisDream.model.Item;
+import byui.cit260.LehisDream.model.Question;
+import byui.cit260.LehisDream.model.AtStore;
+import byui.cit260.LehisDream.model.AtTheatre;
+
 /**
  *
  * @author EthicalH1
@@ -95,8 +105,85 @@ public class LehisDream {
         
         String churchInfo = facility.toString();
         System.out.println(churchInfo);
-         
     }
+    
+    
+    public static void nikkoTest() {
+    //BackPack
+    BackPack backPackOne = new BackPack();
+    
+    backPackOne.setItemsInStock("");
+    
+    String backPackInfo = backPackOne.toString();
+    System.out.println(backPackOne);
+    
+    //Person Test
+    Person personOne = new Person();
+    
+    personOne.setCoordinates("Home");
+    personOne.setPositiveNegativeEnergy(100);
+    
+    String personOneInfo = personOne.toString();
+    System.out.println(personOne);
+    
+    //Map Test
+    Map gps = new Map();
+    
+    gps.setVisited("");
+    gps.setRowCount("");
+    gps.setRowCount("");
+    
+    String mapInfo = gps.toString();
+    System.out.println(mapInfo);
+    
+    //Item Test
+    Item stuff = new Item();
+    
+    stuff.setCost(5);
+    stuff.setDescription("These are the things available in your backpack");
+    stuff.setEnergyAdd(25);
+    stuff.setCost(5);
+    
+    String itemInfo = stuff.toString();
+    System.out.println(itemInfo);
+    
+    //Question Test
+    Question questionOne = new Question();
+    
+    questionOne.setYesOrNoPrompt("Yes");
+    questionOne.setYesOrNoPrompt("No");
+    questionOne.setMultipleChoice("");
+    questionOne.setAction("");
+    
+    
+    String questionOneInfo = questionOne.toString();
+    System.out.println(questionOneInfo);
+    
+    //AtStore Test
+    AtStore buySell = new AtStore();
+    
+    buySell.setStoreDescription("Buy and Sell Stuff for your long journey!");
+    buySell.setGetPurchasedItem("Energy Bar, Water, Energy Drink");
+    
+    String buySellInfo = buySell.toString();
+    System.out.println(buySellInfo);
+    
+    //AtTheatre Test
+    AtTheatre theatreLocation = new AtTheatre();
+    
+    theatreLocation.setAtTheatreDescription("The theatre! It's dark inside!");
+    theatreLocation.setCalculateAdmission("$25");
+    
+    String theatreLocationInfo = theatreLocation.toString();
+    System.out.println(theatreLocationInfo);
+    
+    
+    
+    
+    }
+    
+    
+  
     /**
      * @param args the command line arguments
      */
@@ -104,8 +191,7 @@ public class LehisDream {
         
         teamTest();
         aprilTest();
-        
-     
+        nikkoTest();
     }
     
 
