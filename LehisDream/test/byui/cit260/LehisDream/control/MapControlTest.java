@@ -10,7 +10,7 @@ import static org.junit.Assert.*;
 
 /**
  *
- * @author EthicalH1
+ * @author smith & nikko
  */
 public class MapControlTest {
     
@@ -22,125 +22,163 @@ public class MapControlTest {
      */
     @Test
     public void testCalcVolumeOfFont() {
+        
         System.out.println("calcVolumeOfFont");
-        /*******************************************/
-        System.out.println("\tTest Case#1");
-                
-                //input of test scores 1
+        /************************************
+         * Test Case #1
+         ***********************************/
+        System.out.println("\tTest case #1");
+        
+        //input values for test case 1
         double height = 5.0;
         double width = 7.0;
         double length = 6.0;
         
+        double expResult = 210.0;//expected output returned value
+        
+        //create instance of MapControl class
         MapControl instance = new MapControl();
         
-        double expResult = 210.0;
-        
+        //call function to run test
         double result = instance.calcVolumeOfFont(height, width, length);
         
+        //compare expected return value with actual value returned
         assertEquals(expResult, result, 0.0);
-        // TODO review the generated test code and remove the default call to fail.
-
-
+        /************************************
+         * Test Case #2
+         ***********************************/
+        System.out.println("\tTest case #2");
         
-        
-        //Test Case 2
-        System.out.println("\tTest case#2");
+        //input values for test case 2
         height = 2.0;
         width = 5.0;
         length = 4.0;
-        expResult = -1.0;
         
+        expResult = -1;//expected output returned value
+        
+        //call function to run test
         result = instance.calcVolumeOfFont(height, width, length);
         
+        //compare expected return value with actual value returned
         assertEquals(expResult, result, 0.0);
-        // TODO test case 2
+        /************************************
+         * Test Case #3
+         ***********************************/
+        System.out.println("\tTest case #3");
         
-        //Test Case 3
-         System.out.println("\tTest case#3");
+        //input values for test case 3
         height = 7.0;
         width = 5.0;
         length = 4.0;
-        expResult = -1.0;
         
+        expResult = -1;//expected output returned value
+        
+        //call function to run test
         result = instance.calcVolumeOfFont(height, width, length);
         
+        //compare expected return value with actual value returned
         assertEquals(expResult, result, 0.0);
-        // TODO test case 3
+        /************************************
+         * Test Case #4
+         ***********************************/
+        System.out.println("\tTest case #4");
         
-         System.out.println("\tTest case#4");
+        //input values for test case 4
         height = 5.0;
         width = 4.0;
         length = 5.0;
-        expResult = -1.0;
         
+        expResult = -1;//expected output returned value
+        
+        //call function to run test
         result = instance.calcVolumeOfFont(height, width, length);
         
+        //compare expected return value with actual value returned
         assertEquals(expResult, result, 0.0);
-        // TODO test case 4
+        /************************************
+         * Test Case #5
+         ***********************************/
+        System.out.println("\tTest case #5");
         
-         System.out.println("\tTest case#5");
+        //input values for test case 5
         height = 5.0;
         width = 11.0;
         length = 5.0;
-        expResult = -1.0;
         
+        expResult = -1;//expected output returned value
+        
+        //call function to run test
         result = instance.calcVolumeOfFont(height, width, length);
         
+        //compare expected return value with actual value returned
         assertEquals(expResult, result, 0.0);
-        // TODO test case 5
+        /************************************
+         * Test Case #6
+         ***********************************/
+        System.out.println("\tTest case #6");
         
-        
-        
-        //Test Case 6
-         System.out.println("\tTest case#6");
+        //input values for test case 6
         height = 5.0;
         width = 9.0;
         length = 3.0;
-        expResult = -1.0;
         
+        expResult = -1;//expected output returned value
+        
+        //call function to run test
         result = instance.calcVolumeOfFont(height, width, length);
         
+        //compare expected return value with actual value returned
         assertEquals(expResult, result, 0.0);
-        // TODO test case 6
-
+        /************************************
+         * Test Case #7
+         ***********************************/
+        System.out.println("\tTest case #7");
         
-        //Test Case 7
-         System.out.println("\tTest case#7");
+        //input values for test case 7
         height = 5.0;
         width = 9.0;
         length = 9.0;
-        expResult = -1.0;
         
+        expResult = -1;//expected output returned value
+        
+        //call function to run test
         result = instance.calcVolumeOfFont(height, width, length);
         
+        //compare expected return value with actual value returned
         assertEquals(expResult, result, 0.0);
-        // TODO test case 7
+        /************************************
+         * Test Case #8
+         ***********************************/
+        System.out.println("\tTest case #8");
         
-        //TEST CASE 8
-         System.out.println("\tTest case#8");
+        //input values for test case 8
         height = 3.0;
-        width = 5.0;
+        width =  5.0;
         length = 4.0;
-        expResult = 60.0;
         
+        expResult = 60.0;//expected output returned value
+        
+        //call function to run test
         result = instance.calcVolumeOfFont(height, width, length);
         
+        //compare expected return value with actual value returned
         assertEquals(expResult, result, 0.0);
-        // TODO test case 8
+        /************************************
+         * Test Case #9
+         ***********************************/
+        System.out.println("\tTest case #9");
         
-        
-        //Test Case 9
-         System.out.println("\tTest case#9");
+        //input values for test case 9
         height = 6.0;
         width = 10.0;
         length = 8.0;
-        expResult = 480.0;
         
+        expResult = 480.0;//expected output returned value
+        
+        //call function to run test
         result = instance.calcVolumeOfFont(height, width, length);
         
+        //compare expected return value with actual value returned
         assertEquals(expResult, result, 0.0);
-        // TODO test case 2
     }
-    
 }
-
