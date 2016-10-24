@@ -193,6 +193,7 @@ public class MapControlTest {
          * Test Case #1
          ***********************************/
         System.out.println("\tTest case #1");
+        
         // input values for test case
         double length = 60.0;
         double width = 40.0;
@@ -213,6 +214,7 @@ public class MapControlTest {
          * Test Case #2
          ***********************************/
         System.out.println("\tTest case #2");
+        
         // input values for test case
         length = -1;
         width =  500.0;
@@ -230,6 +232,7 @@ public class MapControlTest {
          * Test Case #3
          ***********************************/
         System.out.println("\tTest case #3");
+        
         // input values for test case
         length = 700.0;
         width =  -1;
@@ -247,6 +250,7 @@ public class MapControlTest {
          * Test Case #4
          ***********************************/
         System.out.println("\tTest case #4");
+        
         // input values for test case
         length = 600.0;
         width =  0.0;
@@ -264,6 +268,7 @@ public class MapControlTest {
          * Test Case #5
          ***********************************/
         System.out.println("\tTest case #5");
+        
         // input values for test case
         length = 0.0;
         width =  400.0;
