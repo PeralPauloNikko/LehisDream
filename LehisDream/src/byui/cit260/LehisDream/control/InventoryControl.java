@@ -9,6 +9,7 @@ package byui.cit260.LehisDream.control;
  *
  * @author smith
  */
+
 public class InventoryControl {
     
 }
