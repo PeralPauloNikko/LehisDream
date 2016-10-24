@@ -182,5 +182,101 @@ public class MapControlTest {
         assertEquals(expResult, result, 0.0);
     }
     /**April Individual Assignment**/
+    /**
+     * Test of calcSquareFeetOfHome method, of class MapControl.
+     */
+    @Test
+    public void testCalcSquareFeetOfHome() {
+        
+        System.out.println("calcSquareFeetOfHome");
+        /************************************
+         * Test Case #1
+         ***********************************/
+        System.out.println("\tTest case #1");
+        // input values for test case
+        double length = 60.0;
+        double width = 40.0;
+        
+        //expected output returned value
+        double expResult = 2400.0;
+        
+        //create instance of MapControl class
+        MapControl instance = new MapControl();
+        
+        //call function to run test
+        double result = instance.calcSquareFeetOfHome(length, width);
+        //compare expected return value with actual value returned
+        
+        assertEquals(expResult, result, 0.0);
+        
+         /************************************
+         * Test Case #2
+         ***********************************/
+        System.out.println("\tTest case #2");
+        // input values for test case
+        length = -1;
+        width =  500.0;
+        
+        //expected output returned value
+        expResult = -1;
+        
+        //call function to run test
+        result = instance.calcSquareFeetOfHome(length, width);
+        //compare expected return value with actual value returned
+        
+        assertEquals(expResult, result, 0.0);
+        
+        /************************************
+         * Test Case #3
+         ***********************************/
+        System.out.println("\tTest case #3");
+        // input values for test case
+        length = 700.0;
+        width =  -1;
+        
+        //expected output returned value
+        expResult = -1;
+        
+        //call function to run test
+        result = instance.calcSquareFeetOfHome(length, width);
+        //compare expected return value with actual value returned
+        
+        assertEquals(expResult, result, 0.0);
+        
+        /************************************
+         * Test Case #4
+         ***********************************/
+        System.out.println("\tTest case #4");
+        // input values for test case
+        length = 600.0;
+        width =  0.0;
+        
+        //expected output returned value
+        expResult = 0.0;
+        
+        //call function to run test
+        result = instance.calcSquareFeetOfHome(length, width);
+        //compare expected return value with actual value returned
+        
+        assertEquals(expResult, result, 0.0);
+        
+        /************************************
+         * Test Case #5
+         ***********************************/
+        System.out.println("\tTest case #5");
+        // input values for test case
+        length = 0.0;
+        width =  400.0;
+        
+        //expected output returned value
+        expResult = 0.0;
+        
+        //call function to run test
+        result = instance.calcSquareFeetOfHome(length, width);
+        //compare expected return value with actual value returned
+        
+        assertEquals(expResult, result, 0.0);
+        
+    }
     
-}
+}       
