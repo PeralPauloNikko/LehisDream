@@ -5,6 +5,8 @@
  */
 package byui.cit260.LehisDream.view;
 
+import java.util.Scanner;
+
 /**
  *
  * @author smith
@@ -81,24 +83,7 @@ public class StartProgramView {
         }
         return value; //return the value entered
         }
-        /*
-        WHILE valid value has not been enteres
-            DISPLAY promptMessage
-            GET the value entered from keyboar
-            Trim front and trailing blanks off of the name
         
-            IF the length of the value is blank THEN
-            DISPLAY :Invalid value" The value can not be blank"
-            CONTINUE
-            ENDIF
-        
-            BREAK
-        
-        ENDWHILE
-        RETURN name
-        */
-    }
-    
     private boolean doAction(String playersName) {
        System.out.println("\n*** doAction () called ***");
        return true;
