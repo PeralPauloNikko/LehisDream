@@ -22,6 +22,7 @@ import byui.cit260.LehisDream.model.Item;
 import byui.cit260.LehisDream.model.Question;
 import byui.cit260.LehisDream.model.AtStore;
 import byui.cit260.LehisDream.model.AtTheatre;
+import byui.cit260.LehisDream.view.StartProgramView;
 
 /**
  *
@@ -189,9 +190,9 @@ public class LehisDream {
      */
     public static void main(String[] args) {
         
-        teamTest();
-        aprilTest();
-        nikkoTest();
+        //create StartProgramViewOrig and display the start program view
+        StartProgramView startProgramView = new StartProgramView();
+        startProgramView.displayStartProgramView();
     }
     
 
