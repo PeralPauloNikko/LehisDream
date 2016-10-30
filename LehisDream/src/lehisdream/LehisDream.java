@@ -30,6 +30,27 @@ import byui.cit260.LehisDream.view.StartProgramView;
  */
 public class LehisDream {
     
+    private static Game currentGame = null;
+    private static Player player = null;
+
+    public static Game getCurrentGame() {
+        return currentGame;
+    }
+
+    public static void setCurrentGame(Game currentGame) {
+        LehisDream.currentGame = currentGame;
+    }
+
+    public static Player getPlayer() {
+        return player;
+    }
+
+    public static void setPlayer(Player player) {
+        LehisDream.player = player;
+    }
+    
+  
+    
     public static void teamTest(){
         //Player Test
         Player playerOne = new Player();
@@ -193,6 +214,12 @@ public class LehisDream {
         //create StartProgramViewOrig and display the start program view
         StartProgramView startProgramView = new StartProgramView();
         startProgramView.displayStartProgramView();
+    }
+
+    private static class Game {
+
+        public Game() {
+        }
     }
     
 
