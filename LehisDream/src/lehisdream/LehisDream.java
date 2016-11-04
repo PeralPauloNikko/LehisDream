@@ -49,8 +49,6 @@ public class LehisDream {
         LehisDream.player = player;
     }
     
-  
-    
     public static void teamTest(){
         //Player Test
         Player playerOne = new Player();

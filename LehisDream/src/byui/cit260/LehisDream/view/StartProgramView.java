@@ -34,7 +34,7 @@ public class StartProgramView {
               +"\n* In this game you will follow a path to try to make it to    *"
               +"\n* the Tree of Life. The rod represents the word of God.       *"
               +"\n* If you fail to make it to the tree, you                     *"
-              +"\n* will find yourself at the Great and Spacios Building.       *"
+              +"\n* will find yourself at the Great and Spacious Building.       *"
               +"\n*                                                             *"
               +"\n* Along the path, you will encounter challenges and obstacles *"
               +"\n* where you must decide what to do in situations. You will    *"

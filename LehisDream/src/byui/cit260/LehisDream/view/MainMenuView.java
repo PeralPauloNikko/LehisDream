@@ -105,7 +105,7 @@ public MainMenuView() {
         
         //display the game menu
         GameMenuView gameMenu = new GameMenuView();
-        gameMenu.displayMenu();
+        gameMenu.displayGameMenuView();
     }
 
     private void restartExistingGame() {
@@ -120,8 +120,9 @@ public MainMenuView() {
     }
 
     private void saveGame() {
-        System.out.println("*** saveGame function called ***");
+        SaveGameView.SaveGame();
     }
+
     }
     
 

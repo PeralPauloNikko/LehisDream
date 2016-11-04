@@ -37,10 +37,10 @@ public class MapControlTest {
         double expResult = 210.0;//expected output returned value
         
         //create instance of MapControl class
-        MapControl instance = new MapControl();
+        //MapControl instance = new MapControl();
         
         //call function to run test
-        double result = instance.calcVolumeOfFont(height, width, length);
+        double result = MapControl.calcVolumeOfFont(height, width, length);
         
         //compare expected return value with actual value returned
         assertEquals(expResult, result, 0.0);
@@ -57,7 +57,7 @@ public class MapControlTest {
         expResult = -1;//expected output returned value
         
         //call function to run test
-        result = instance.calcVolumeOfFont(height, width, length);
+        result = MapControl.calcVolumeOfFont(height, width, length);
         
         //compare expected return value with actual value returned
         assertEquals(expResult, result, 0.0);
@@ -74,7 +74,7 @@ public class MapControlTest {
         expResult = -1;//expected output returned value
         
         //call function to run test
-        result = instance.calcVolumeOfFont(height, width, length);
+        result = MapControl.calcVolumeOfFont(height, width, length);
         
         //compare expected return value with actual value returned
         assertEquals(expResult, result, 0.0);
@@ -91,7 +91,7 @@ public class MapControlTest {
         expResult = -1;//expected output returned value
         
         //call function to run test
-        result = instance.calcVolumeOfFont(height, width, length);
+        result = MapControl.calcVolumeOfFont(height, width, length);
         
         //compare expected return value with actual value returned
         assertEquals(expResult, result, 0.0);
@@ -108,7 +108,7 @@ public class MapControlTest {
         expResult = -1;//expected output returned value
         
         //call function to run test
-        result = instance.calcVolumeOfFont(height, width, length);
+        result = MapControl.calcVolumeOfFont(height, width, length);
         
         //compare expected return value with actual value returned
         assertEquals(expResult, result, 0.0);
@@ -125,7 +125,7 @@ public class MapControlTest {
         expResult = -1;//expected output returned value
         
         //call function to run test
-        result = instance.calcVolumeOfFont(height, width, length);
+        result = MapControl.calcVolumeOfFont(height, width, length);
         
         //compare expected return value with actual value returned
         assertEquals(expResult, result, 0.0);
@@ -142,7 +142,7 @@ public class MapControlTest {
         expResult = -1;//expected output returned value
         
         //call function to run test
-        result = instance.calcVolumeOfFont(height, width, length);
+        result = MapControl.calcVolumeOfFont(height, width, length);
         
         //compare expected return value with actual value returned
         assertEquals(expResult, result, 0.0);
@@ -159,7 +159,7 @@ public class MapControlTest {
         expResult = 60.0;//expected output returned value
         
         //call function to run test
-        result = instance.calcVolumeOfFont(height, width, length);
+        result = MapControl.calcVolumeOfFont(height, width, length);
         
         //compare expected return value with actual value returned
         assertEquals(expResult, result, 0.0);
@@ -176,7 +176,7 @@ public class MapControlTest {
         expResult = 480.0;//expected output returned value
         
         //call function to run test
-        result = instance.calcVolumeOfFont(height, width, length);
+        result = MapControl.calcVolumeOfFont(height, width, length);
         
         //compare expected return value with actual value returned
         assertEquals(expResult, result, 0.0);

@@ -11,18 +11,18 @@ package byui.cit260.LehisDream.control;
  */
 public class MapControl {
 
-    public double calcVolumeOfFont(double height, double width, double length) {
+    public static double calcVolumeOfFont(double height, double width, double length) {
         
         if (height < 3 || height > 6) { //height has limits, 3 and 6
                 return -1;
         }
         
         if (width < 5 || width > 10) { //width has limits, 5 and 10
-                return -1;
+                return -2;
         }        
         
         if (length < 4 || length > 8) { //length has limits, 4 and 8
-                return -1;
+                return -3;
         }
         
         double volume = (height * width * length);
