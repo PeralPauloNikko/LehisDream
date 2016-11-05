@@ -28,6 +28,7 @@ public MainMenuView() {
               + "\nR - Restart saved game"
               + "\nH - Get Help on how to play the game"
               + "\nS - Save game"
+              + "\nG - Home"
               + "\nQ - Quit"
               + "\n-------------------------------------------";
     this.promptMessage = "\nPlease enter your selection: ";
@@ -92,6 +93,9 @@ public MainMenuView() {
             case "S": // save the current game
                 this.saveGame();
                 break;
+            case "G": //go to home
+                this.gotohome();
+                break;
             default:
                 System.out.println("\n*** Invalid selection *** Try again");
                 break;
@@ -103,9 +107,9 @@ public MainMenuView() {
         // create a new game
         GameControl.createNewGame(LehisDream.getPlayer());
         
-        //display the game menu
-        GameMenuView gameMenu = new GameMenuView();
-        gameMenu.displayGameMenuView();
+      // display the game menu
+       GameMenuView gameMenu = new GameMenuView();
+       gameMenu.displayGameMenuView();
     }
 
     private void restartExistingGame() {
@@ -123,14 +127,9 @@ public MainMenuView() {
         SaveGameView.SaveGame();
     }
 
-    private static class GameMenuView {
-
-        public GameMenuView() {
-        }
-
-        private void displayGameMenuView() {
-            
-        }
+    private void gotohome() {
+        AtHomeView homeView = new AtHomeView();
+        homeView.displayAtHomeView();
     }
 
     }

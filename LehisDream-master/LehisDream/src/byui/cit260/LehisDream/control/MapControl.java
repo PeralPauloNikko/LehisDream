@@ -30,14 +30,14 @@ public class MapControl {
         return volume;
     
     }
-    public double calcSquareFeetOfHome(double length, double width) {
+    public static double calcSquareFeetOfHome(double length, double width) {
         
         if (length < 0) {//length is negative? 
         return -1;
         }
         
         if (width < 0) { //width is negative?
-        return -1;
+        return -2;
         }
         
         //calculates squarefeet by multiplying length and width
