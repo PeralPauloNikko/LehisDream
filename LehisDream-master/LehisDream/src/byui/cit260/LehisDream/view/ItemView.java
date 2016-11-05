@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 package byui.cit260.LehisDream.view;
-
+import byui.cit260.LehisDream.control.InventoryControl;
 import java.util.Scanner;
 
 /**
