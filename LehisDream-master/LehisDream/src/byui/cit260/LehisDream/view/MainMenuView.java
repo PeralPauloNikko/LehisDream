@@ -14,8 +14,8 @@ import lehisdream.LehisDream;
  * @author smith
  */
 public class MainMenuView {
-    private String menu;
-    private String promptMessage;
+    private final String menu;
+    private final String promptMessage;
     
    
     
@@ -121,6 +121,16 @@ public MainMenuView() {
 
     private void saveGame() {
         SaveGameView.SaveGame();
+    }
+
+    private static class GameMenuView {
+
+        public GameMenuView() {
+        }
+
+        private void displayGameMenuView() {
+            
+        }
     }
 
     }
