@@ -88,7 +88,7 @@ public class MapControlTest {
         width = 4.0;
         length = 5.0;
         
-        expResult = -1;//expected output returned value
+        expResult = -2;//expected output returned value
         
         //call function to run test
         result = MapControl.calcVolumeOfFont(height, width, length);
@@ -105,7 +105,7 @@ public class MapControlTest {
         width = 11.0;
         length = 5.0;
         
-        expResult = -1;//expected output returned value
+        expResult = -2;//expected output returned value
         
         //call function to run test
         result = MapControl.calcVolumeOfFont(height, width, length);
@@ -122,7 +122,7 @@ public class MapControlTest {
         width = 9.0;
         length = 3.0;
         
-        expResult = -1;//expected output returned value
+        expResult = -3;//expected output returned value
         
         //call function to run test
         result = MapControl.calcVolumeOfFont(height, width, length);
@@ -139,7 +139,7 @@ public class MapControlTest {
         width = 9.0;
         length = 9.0;
         
-        expResult = -1;//expected output returned value
+        expResult = -3;//expected output returned value
         
         //call function to run test
         result = MapControl.calcVolumeOfFont(height, width, length);
