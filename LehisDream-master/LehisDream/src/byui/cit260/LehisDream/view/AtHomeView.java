@@ -45,7 +45,7 @@ public class AtHomeView {
             if (squarefeet == -1) {
                 System.out.println("You entered an invalid length. It should be greater than 0.");
             } else if (squarefeet == -2) {
-                System.out.println("You entered an invalid width. It should be greater than 0");
+                System.out.println("You entered an invalid width. It should be greater than 0.");
             } else {
                 valid = true;
                 System.out.println("The squarefeet of the home is:" + squarefeet);
