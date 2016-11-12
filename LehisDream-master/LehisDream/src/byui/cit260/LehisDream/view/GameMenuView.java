@@ -13,12 +13,11 @@ import lehisdream.LehisDream;
  *
  * @author smith
  */
-public class GameMenuView {
-    private String menu;
-    private String promptMessage;
+public class GameMenuView extends View{
+
     
    public GameMenuView() {
-    this.menu = "\n"
+          super("\n"
               + "\n-------------------------------------------"
               + "\n| Game Menu                               |"
               + "\n-------------------------------------------"
@@ -26,54 +25,15 @@ public class GameMenuView {
               + "\nM - Move Forward"
               + "\nB - Visit Bishop's office"
               + "\nP - Go to Backpack"
+              + "\nG - At Home"
               + "\nC - At Church"
               + "\nS - Save game"
               + "\nH - Help"
               + "\nQ - Quit"
-              + "\n-------------------------------------------";
-    this.promptMessage = "\nPlease enter your selection: ";
+              + "\n-------------------------------------------");
 }
-    /**
-     * displays the start program view
-     */
-    public void displayGameMenuView() {
-       
-        boolean done = false; // set flag to not done
-        do {
-            System.out.println(this.menu);
-            //prompt for and get menu option
-            String menuOption = this.getMenuOption();
-            if (menuOption.toUpperCase().equals("Q")) //user wants to quit
-                return; // exit the game
-            
-            //do the requested action and display the next view
-            done = this.doAction(menuOption);
-            
-        } while (!done);
-        
-        }
-    private String getMenuOption() {
-        
-        Scanner keyboard = new Scanner(System.in);//get infile for keyboard
-        String value = "";// value to be returned
-        boolean valid = false;// initialize to not valid
-        
-        while (!valid) {// loop while an invalid value is entered
-           System.out.println("\n" + this.promptMessage);
-            
-            value = keyboard.nextLine();// get next line typed on keyboard
-            value = value.trim(); // trim off leading and trailing blanks
-            
-            if (value.length() < 1) {// value is blank
-                System.out.println("\nInvalid value: value can not be blank");
-                continue;
-            }
-            
-            break; // end the loop
-        }
-        return value; //return the value entered
-        }
-    
+
+    @Override
     public boolean doAction(String choice) {
         
         choice = choice.toUpperCase(); // convert choice to upper case
@@ -91,9 +51,12 @@ public class GameMenuView {
             case "P": // go to backpack
                 this.goToBackpack();
                 break;
-            case"C": //
+            case "G": //go to home
+                this.atHome();
+                break;
+            case "C": //
                 this.atChurch();
-                break;    
+                break;
             case "S": // save the current game
                 this.saveGame();
                 break;
@@ -110,7 +73,7 @@ public class GameMenuView {
     private void displayHelpMenu() {
         //display the game menu
         HelpMenuView helpMenu = new HelpMenuView();
-        helpMenu.displayHelpMenuView();
+        helpMenu.display();
     }
     private void saveGame() {
         SaveGameView.SaveGame();
@@ -130,7 +93,11 @@ public class GameMenuView {
     private void moveForward() {
         System.out.println("*** moveForward function called ***");          
     }
-    private void atChurch() {
+    private void atHome() {
+        AtHomeView atHome = new AtHomeView();
+        atHome.displayAtHomeView();
+    }
+    private void atChurch() {     
         AtChurchView atChurch = new AtChurchView();
         atChurch.displayAtChurchView();
     }
