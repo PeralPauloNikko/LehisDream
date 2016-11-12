@@ -13,14 +13,12 @@ import lehisdream.LehisDream;
  *
  * @author smith
  */
-public class MainMenuView {
-    private final String menu;
-    private final String promptMessage;
+public class MainMenuView extends View {
     
    
     
 public MainMenuView() {
-    this.menu = "\n"
+          super("\n"
               + "\n-------------------------------------------"
               + "\n| Main Menu                               |"
               + "\n-------------------------------------------"
@@ -28,54 +26,12 @@ public MainMenuView() {
               + "\nR - Restart saved game"
               + "\nH - Get Help on how to play the game"
               + "\nS - Save game"
-              + "\nG - Home"
               + "\nQ - Quit"
-              + "\n-------------------------------------------";
-    this.promptMessage = "\nPlease enter your selection: ";
+              + "\n-------------------------------------------");
+
 }
-    /**
-     * displays the start program view
-     */
-    public void displayMainMenuView() {
-       
-        boolean done = false; // set flag to not done
-        do {
-            System.out.println(this.menu);
-            //prompt for and get menu option
-            String menuOption = this.getMenuOption();
-            if (menuOption.toUpperCase().equals("Q")) //user wants to quit
-                return; // exit the game
-            
-            //do the requested action and display the next view
-            done = this.doAction(menuOption);
-            
-        } while (!done);
-        
-        }
-
-    private String getMenuOption() {
-        
-        Scanner keyboard = new Scanner(System.in);//get infile for keyboard
-        String value = "";// value to be returned
-        boolean valid = false;// initialize to not valid
-        
-        while (!valid) {// loop while an invalid value is entered
-           System.out.println("\n" + this.promptMessage);
-            
-            value = keyboard.nextLine();// get next line typed on keyboard
-            value = value.trim(); // trim off leading and trailing blanks
-            
-            if (value.length() < 1) {// value is blank
-                System.out.println("\nInvalid value: value can not be blank");
-                continue;
-            }
-            
-            break; // end the loop
-        }
-        return value; //return the value entered
-        }
     
-
+@Override
     public boolean doAction(String choice) {
         
         choice = choice.toUpperCase(); // convert choice to upper case
@@ -93,9 +49,6 @@ public MainMenuView() {
             case "S": // save the current game
                 this.saveGame();
                 break;
-            case "G": //go to home
-                this.gotohome();
-                break;
             default:
                 System.out.println("\n*** Invalid selection *** Try again");
                 break;
@@ -109,7 +62,7 @@ public MainMenuView() {
         
       // display the game menu
        GameMenuView gameMenu = new GameMenuView();
-       gameMenu.displayGameMenuView();
+       gameMenu.display();
     }
 
     private void restartExistingGame() {
@@ -120,17 +73,13 @@ public MainMenuView() {
         
         //display the game menu
         HelpMenuView helpMenu = new HelpMenuView();
-        helpMenu.displayHelpMenuView();
+        helpMenu.display();
     }
 
     private void saveGame() {
         SaveGameView.SaveGame();
     }
 
-    private void gotohome() {
-        AtHomeView homeView = new AtHomeView();
-        homeView.displayAtHomeView();
-    }
 
     }
     
