@@ -238,7 +238,7 @@ public class MapControlTest {
         width =  -1;
         
         //expected output returned value
-        expResult = -1;
+        expResult = -2;
         
         //call function to run test
         result = instance.calcSquareFeetOfHome(length, width);
