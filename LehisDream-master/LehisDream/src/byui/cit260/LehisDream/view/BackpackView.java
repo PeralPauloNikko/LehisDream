@@ -51,7 +51,6 @@ public void displayInput() {
      *
      * @return
      */
-    @Override
     public String getInput() {
  
         Scanner keyboard = new Scanner(System.in);//get infile for keyboard
@@ -101,27 +100,27 @@ public void displayInput() {
     }
 
     private boolean sword(int i) {
-        System.out.println("\n*** doAction() function called ***");
+        System.out.println("\n*** sword() function called ***");
         return true;
     }
 
     private boolean flashlight() {
-        System.out.println("\n*** doAction() function called ***");
+        System.out.println("\n*** flashlight() function called ***");
         return true;
     }
 
     private boolean water(int i) {
-        System.out.println("\n*** doAction() function called ***");
+        System.out.println("\n*** water() function called ***");
         return true;
     }
 
     private boolean snack(int i) {
-        System.out.println("\n*** doAction() function called ***");
+        System.out.println("\n*** snack() function called ***");
         return true;
     }
 
     private boolean wallet(int i) {
-        System.out.println("\n*** doAction() function called ***");
+        System.out.println("\n*** wallet() function called ***");
         return true;
     }
 }
