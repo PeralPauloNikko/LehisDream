@@ -12,29 +12,25 @@ import java.util.Scanner;
  * @author EthicalH1
  */
 public class BackpackView extends View {
-        protected String displayMessage = "\nPlease enter your selection of the item: "; 
-    private boolean getInput;
 
 public BackpackView() {
           super("\n"
               + "\n-------------------------------------------"
               + "\n| Main Menu                               |"
               + "\n-------------------------------------------"
-              + "\nS - Sword----------------------------------"
+              + "\nS - Sword(can only be used once)-----------"
               + "\nF - Flashlight-----------------------------"
-              + "\nD - Water----------------------------------"
-              + "\nE - Snack----------------------------------"
+              + "\nD - Water(1)-------------------------------"
+              + "\nE - Snack(1)-------------------------------"
               + "\nW - Wallet---------------------------------"
               + "\nQ - Quit-----------------------------------"
               + "\n-------------------------------------------");
-
 }
     //display item view
 public void displayInput() {
     boolean done = false;//set flag to not done
     do {
         //prompt for and get menu option
-                    System.out.println(this.getInput);
             //prompt for and get menu option
             String getInput = this.getInput();
             if (getInput.toUpperCase().equals("Q")) //user wants to quit
