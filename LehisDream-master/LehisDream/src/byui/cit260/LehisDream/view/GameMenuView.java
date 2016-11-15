@@ -46,7 +46,7 @@ public class GameMenuView extends View{
                 this.moveForward();
                 break;    
             case "B": // visit Bishop's office
-                this.visitBishopsOffice();
+                this.bishopsOffice();
                 break;
             case "P": // go to backpack
                 this.goToBackpack();
@@ -83,12 +83,13 @@ public class GameMenuView extends View{
         System.out.println("*** viewPath function called ***");
     }
 
-    private void visitBishopsOffice() {
-       System.out.println("*** visitBishopsOffice function called ***");
+    private void bishopsOffice() {
+       BishopsOfficeView bishopsOffice = new BishopsOfficeView();
+       bishopsOffice.display();
     }
 
     private void goToBackpack() {
-        System.out.println("*** goToBackpack function called ***");
+        
         BackpackView backPack = new BackpackView();
         backPack.display();
     }
