@@ -96,7 +96,8 @@ public void displayInput() {
     }
 
     private boolean sword(int i) {
-        System.out.println("\n*** sword() function called ***");
+        SwordView sword = new SwordView();
+        sword.display();        
         return true;
     }
 
