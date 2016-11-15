@@ -90,7 +90,7 @@ public class GameMenuView extends View{
     private void goToBackpack() {
         System.out.println("*** goToBackpack function called ***");
         BackpackView backPack = new BackpackView();
-        backPack.displayInput();
+        backPack.display();
     }
     private void moveForward() {
         System.out.println("*** moveForward function called ***");          
