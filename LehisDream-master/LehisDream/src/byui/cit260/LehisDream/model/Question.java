@@ -17,6 +17,7 @@ public class Question implements Serializable{
     private String yesOrNoPrompt;
     private String multipleChoice;
     private String action;
+    private Scene scene;
 
     public Question() {
     }
@@ -45,6 +46,14 @@ public class Question implements Serializable{
 
     public void setAction(String action) {
         this.action = action;
+    }
+
+    public Scene getScene() {
+        return scene;
+    }
+
+    public void setScene(Scene scene) {
+        this.scene = scene;
     }
 
     @Override

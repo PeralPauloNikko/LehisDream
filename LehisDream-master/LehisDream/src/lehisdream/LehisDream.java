@@ -13,8 +13,8 @@ import byui.cit260.LehisDream.model.Scene;
 import byui.cit260.LehisDream.model.TreeOfLife;
 
 //nikkoTest
-import byui.cit260.LehisDream.model.BackPack;
-import byui.cit260.LehisDream.model.BeingEncounter;
+import byui.cit260.LehisDream.model.Backpack;
+import byui.cit260.LehisDream.model.Actor;
 import byui.cit260.LehisDream.model.Map;
 import byui.cit260.LehisDream.model.Item;
 import byui.cit260.LehisDream.model.Question;
@@ -101,22 +101,14 @@ public class LehisDream {
     
     public static void nikkoTest() {
     //BackPack
-    BackPack backPackOne = new BackPack();
+    Backpack backPackOne = new Backpack();
     
     backPackOne.setItemsInStock("");
     
     String backPackInfo = backPackOne.toString();
     System.out.println(backPackOne);
     
-    //Person Test
-    BeingEncounter personOne = new BeingEncounter();
-    
-    personOne.setCoordinates("Home");
-    personOne.setPositiveNegativeEnergy(100);
-    
-    String personOneInfo = personOne.toString();
-    System.out.println(personOne);
-    
+   
     //Map Test
     Map gps = new Map();
     

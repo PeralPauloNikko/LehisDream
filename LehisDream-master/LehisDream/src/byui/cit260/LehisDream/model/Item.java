@@ -18,6 +18,7 @@ public class Item implements Serializable {
     private double energyAdd;
     private double cost;
     private double quantityPurchased;
+    private Backpack backpack;
 
     public Item() {
     }
@@ -54,6 +55,14 @@ public class Item implements Serializable {
 
     public void setQuantityPurchased(double quantityPurchased) {
         this.quantityPurchased = quantityPurchased;
+    }
+
+    public Backpack getBackpack() {
+        return backpack;
+    }
+
+    public void setBackpack(Backpack backpack) {
+        this.backpack = backpack;
     }
 
     @Override

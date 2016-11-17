@@ -16,6 +16,7 @@ public class TreeOfLife implements Serializable{
     
     //class instance variables
     private String prizeAcquired;
+    private Scene scene;
 
     public TreeOfLife() {
     }
@@ -26,6 +27,14 @@ public class TreeOfLife implements Serializable{
 
     public void setPrizeAcquired(String prizeAcquired) {
         this.prizeAcquired = prizeAcquired;
+    }
+
+    public Scene getScene() {
+        return scene;
+    }
+
+    public void setScene(Scene scene) {
+        this.scene = scene;
     }
 
     @Override

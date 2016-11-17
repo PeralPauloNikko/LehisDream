@@ -17,7 +17,7 @@ public class Map implements Serializable{
     private String visited;
     private String rowCount;
     private String columnCount;
-
+    
     public Map() {
     }
     

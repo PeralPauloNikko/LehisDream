@@ -20,7 +20,10 @@ public class Location implements Serializable{
     private int row;
     private int column;
     private int zone;
-
+    private Actor actor; 
+    private Scene scene;
+    
+    
     public Location() {
     }
     
@@ -62,6 +65,22 @@ public class Location implements Serializable{
 
     public void setZone(int zone) {
         this.zone = zone;
+    }
+
+    public Actor getActor() {
+        return actor;
+    }
+
+    public void setActor(Actor actor) {
+        this.actor = actor;
+    }
+
+    public Scene getScene() {
+        return scene;
+    }
+
+    public void setScene(Scene scene) {
+        this.scene = scene;
     }
 
     @Override
