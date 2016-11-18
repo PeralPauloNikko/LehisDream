@@ -17,7 +17,11 @@ public class IronRodGame implements Serializable{
     //class instance variables
 
     private double totalEnergy;
-
+    private Player player;
+    private Backpack backpack;
+    private Map map;
+    
+    
     public IronRodGame() {
     }
     
@@ -29,6 +33,30 @@ public class IronRodGame implements Serializable{
 
     public void setTotalEnergy(double totalEnergy) {
         this.totalEnergy = totalEnergy;
+    }
+
+    public Player getPlayer() {
+        return player;
+    }
+
+    public void setPlayer(Player player) {
+        this.player = player;
+    }
+
+    public Backpack getBackpack() {
+        return backpack;
+    }
+
+    public void setBackpack(Backpack backpack) {
+        this.backpack = backpack;
+    }
+
+    public Map getMap() {
+        return map;
+    }
+
+    public void setMap(Map map) {
+        this.map = map;
     }
 
     @Override

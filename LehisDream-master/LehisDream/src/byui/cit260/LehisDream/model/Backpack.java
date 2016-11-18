@@ -12,12 +12,13 @@ import java.util.Objects;
  *
  * @author EthicalH1
  */
-public class BackPack implements Serializable{
+public class Backpack implements Serializable{
     
     //class instance variables
     private String itemsInStock;
+    private IronRodGame ironrodgame;
 
-    public BackPack() {
+    public Backpack() {
         
     }
 
@@ -28,6 +29,16 @@ public class BackPack implements Serializable{
     public void setItemsInStock(String itemsInStock) {
         this.itemsInStock = itemsInStock;
     }
+
+    public IronRodGame getIronrodgame() {
+        return ironrodgame;
+    }
+
+    public void setIronrodgame(IronRodGame ironrodgame) {
+        this.ironrodgame = ironrodgame;
+    }
+    
+    
 
     @Override
     public int hashCode() {
@@ -54,7 +65,7 @@ public class BackPack implements Serializable{
         if (getClass() != obj.getClass()) {
             return false;
         }
-        final BackPack other = (BackPack) obj;
+        final Backpack other = (Backpack) obj;
         if (!Objects.equals(this.itemsInStock, other.itemsInStock)) {
             return false;
         }

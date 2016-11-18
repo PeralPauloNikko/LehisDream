@@ -17,6 +17,7 @@ public class Scene implements Serializable{
     //class instance variables
     private String description;
     private String location;
+    private TreeOfLife treeoflife;
 
     public Scene() {
     }
@@ -35,6 +36,14 @@ public class Scene implements Serializable{
 
     public void setLocation(String location) {
         this.location = location;
+    }
+
+    public TreeOfLife getTreeoflife() {
+        return treeoflife;
+    }
+
+    public void setTreeoflife(TreeOfLife treeoflife) {
+        this.treeoflife = treeoflife;
     }
 
     @Override

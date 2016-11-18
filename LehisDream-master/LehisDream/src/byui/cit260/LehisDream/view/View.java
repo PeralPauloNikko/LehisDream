@@ -57,6 +57,6 @@ public String getInput() {
             
             break; // end the loop
         }
-        return value; //return the value entered
+        return value; //return the value entered6
 }
 }
