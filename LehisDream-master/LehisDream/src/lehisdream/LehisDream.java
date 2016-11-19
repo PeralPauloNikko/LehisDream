@@ -7,7 +7,7 @@ package lehisdream;
 
 
 import byui.cit260.LehisDream.model.Player;
-import byui.cit260.LehisDream.model.IronRodGame;
+import byui.cit260.LehisDream.model.Game;
 import byui.cit260.LehisDream.model.Location;
 import byui.cit260.LehisDream.model.Scene;
 import byui.cit260.LehisDream.model.TreeOfLife;
@@ -60,7 +60,7 @@ public class LehisDream {
     public static void aprilTest(){
         
         //IronRodGame Test
-        IronRodGame gameOne = new IronRodGame();
+        Game gameOne = new Game();
         
         gameOne.setTotalEnergy(100);
         
@@ -70,12 +70,11 @@ public class LehisDream {
         //Location Test
         Location place = new Location();
         
-        place.setVisited("Start");
+//        place.setVisited("Start");
         place.setEnergyRemaining(50);
         place.setRow(1);
         place.setColumn(1);
-        place.setZone(1);
-        
+       
         String locationInfo = place.toString();
         System.out.println(locationInfo);
         
@@ -91,8 +90,8 @@ public class LehisDream {
         Scene portrait = new Scene();
         
         portrait.setDescription("This is the starting place");
-        portrait.setLocation("Start Spot");
-        
+//        portrait.setLocation("Start Spot");
+//        
         String sceneInfo = portrait.toString();
         System.out.println(sceneInfo);
         
@@ -103,8 +102,8 @@ public class LehisDream {
     //BackPack
     Backpack backPackOne = new Backpack();
     
-    backPackOne.setItemsInStock("");
-    
+//    backPackOne.setItemsInStock("");
+//    
     String backPackInfo = backPackOne.toString();
     System.out.println(backPackOne);
     
@@ -112,10 +111,10 @@ public class LehisDream {
     //Map Test
     Map gps = new Map();
     
-    gps.setVisited("");
-    gps.setRowCount("");
-    gps.setRowCount("");
-    
+//    gps.setVisited("");
+//    gps.setRowCount("");
+//    gps.setRowCount("");
+//    
     String mapInfo = gps.toString();
     System.out.println(mapInfo);
     
@@ -131,16 +130,16 @@ public class LehisDream {
     System.out.println(itemInfo);
     
     //Question Test
-    Question questionOne = new Question();
+//    Question questionOne = new Question();
+//    
+//    questionOne.setYesOrNoPrompt("Yes");
+//    questionOne.setYesOrNoPrompt("No");
+//    questionOne.setMultipleChoice("");
+//    questionOne.setAction("");
     
-    questionOne.setYesOrNoPrompt("Yes");
-    questionOne.setYesOrNoPrompt("No");
-    questionOne.setMultipleChoice("");
-    questionOne.setAction("");
     
-    
-    String questionOneInfo = questionOne.toString();
-    System.out.println(questionOneInfo);
+//    String questionOneInfo = questionOne.toString();
+//    System.out.println(questionOneInfo);
     
    
     
@@ -159,11 +158,7 @@ public class LehisDream {
         startProgramView.display();
     }
 
-    private static class Game {
-
-        public Game() {
-        }
-    }
+    
     
 
     

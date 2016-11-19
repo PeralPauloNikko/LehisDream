@@ -16,12 +16,56 @@ public class Scene implements Serializable{
     
     //class instance variables
     private String description;
-    private String location;
-    private TreeOfLife treeoflife;
+    private String name;
+    private String symbol;
+    private Actor actor;
+    private Question question;
+    private Item[] itemsInStock;
+    
 
     public Scene() {
     }
-   
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getSymbol() {
+        return symbol;
+    }
+
+    public void setSymbol(String symbol) {
+        this.symbol = symbol;
+    }
+
+    public Actor getActor() {
+        return actor;
+    }
+
+    public void setActor(Actor actor) {
+        this.actor = actor;
+    }
+
+    public Question getQuestion() {
+        return question;
+    }
+
+    public void setQuestion(Question question) {
+        this.question = question;
+    }
+
+    public Item[] getItemsInStock() {
+        return itemsInStock;
+    }
+
+    public void setItemsInStock(Item[] itemsInStock) {
+        this.itemsInStock = itemsInStock;
+    }
+    
     public String getDescription() {
         return description;
     }
@@ -30,56 +74,6 @@ public class Scene implements Serializable{
         this.description = description;
     }
 
-    public String getLocation() {
-        return location;
-    }
-
-    public void setLocation(String location) {
-        this.location = location;
-    }
-
-    public TreeOfLife getTreeoflife() {
-        return treeoflife;
-    }
-
-    public void setTreeoflife(TreeOfLife treeoflife) {
-        this.treeoflife = treeoflife;
-    }
-
-    @Override
-    public int hashCode() {
-        int hash = 7;
-        hash = 97 * hash + Objects.hashCode(this.description);
-        hash = 97 * hash + Objects.hashCode(this.location);
-        return hash;
-    }
-
-    @Override
-    public String toString() {
-        return "Scene{" + "description=" + description + ", location=" + location + '}';
-    }
-    
-
-    @Override
-    public boolean equals(Object obj) {
-        if (this == obj) {
-            return true;
-        }
-        if (obj == null) {
-            return false;
-        }
-        if (getClass() != obj.getClass()) {
-            return false;
-        }
-        final Scene other = (Scene) obj;
-        if (!Objects.equals(this.description, other.description)) {
-            return false;
-        }
-        if (!Objects.equals(this.location, other.location)) {
-            return false;
-        }
-        return true;
-    }
     
     
     

@@ -19,6 +19,7 @@ public class Item implements Serializable {
     private double cost;
     private double quantityPurchased;
     private Backpack backpack;
+    
 
     public Item() {
     }

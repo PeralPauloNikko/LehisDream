@@ -15,23 +15,21 @@ import java.util.Objects;
 public class Location implements Serializable{
     
     //class instance variables
-    private String visited;
+    private boolean visited;
     private double energyRemaining;
     private int row;
     private int column;
-    private int zone;
-    private Actor actor; 
     private Scene scene;
     
     
     public Location() {
     }
     
-    public String getVisited() {
+    public boolean getVisited() {
         return visited;
     }
 
-    public void setVisited(String visited) {
+    public void setVisited(boolean visited) {
         this.visited = visited;
     }
 
@@ -59,22 +57,6 @@ public class Location implements Serializable{
         this.column = column;
     }
 
-    public int getZone() {
-        return zone;
-    }
-
-    public void setZone(int zone) {
-        this.zone = zone;
-    }
-
-    public Actor getActor() {
-        return actor;
-    }
-
-    public void setActor(Actor actor) {
-        this.actor = actor;
-    }
-
     public Scene getScene() {
         return scene;
     }
@@ -86,19 +68,14 @@ public class Location implements Serializable{
     @Override
     public int hashCode() {
         int hash = 7;
-        hash = 59 * hash + Objects.hashCode(this.visited);
-        hash = 59 * hash + (int) (Double.doubleToLongBits(this.energyRemaining) ^ (Double.doubleToLongBits(this.energyRemaining) >>> 32));
-        hash = 59 * hash + this.row;
-        hash = 59 * hash + this.column;
-        hash = 59 * hash + this.zone;
+        hash = 53 * hash + (this.visited ? 1 : 0);
+        hash = 53 * hash + (int) (Double.doubleToLongBits(this.energyRemaining) ^ (Double.doubleToLongBits(this.energyRemaining) >>> 32));
+        hash = 53 * hash + this.row;
+        hash = 53 * hash + this.column;
+        hash = 53 * hash + Objects.hashCode(this.scene);
         return hash;
     }
 
-    @Override
-    public String toString() {
-        return "Location{" + "visited=" + visited + ", energyRemaining=" + energyRemaining + ", row=" + row + ", column=" + column + ", zone=" + zone + '}';
-    }
-    
     @Override
     public boolean equals(Object obj) {
         if (this == obj) {
@@ -111,6 +88,9 @@ public class Location implements Serializable{
             return false;
         }
         final Location other = (Location) obj;
+        if (this.visited != other.visited) {
+            return false;
+        }
         if (Double.doubleToLongBits(this.energyRemaining) != Double.doubleToLongBits(other.energyRemaining)) {
             return false;
         }
@@ -120,17 +100,22 @@ public class Location implements Serializable{
         if (this.column != other.column) {
             return false;
         }
-        if (this.zone != other.zone) {
-            return false;
-        }
-        if (!Objects.equals(this.visited, other.visited)) {
+        if (!Objects.equals(this.scene, other.scene)) {
             return false;
         }
         return true;
     }
+
+    @Override
+    public String toString() {
+        return "Location{" + "visited=" + visited + ", energyRemaining=" + energyRemaining + ", row=" + row + ", column=" + column + ", scene=" + scene + '}';
+    }
+
+}
+    
     
     
      
     
     
-}
+

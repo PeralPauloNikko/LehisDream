@@ -17,6 +17,7 @@ public class Player implements Serializable{
     //class instance variables
     private String name;
     private double energyLeft;
+    private Game[] game;
 
     public Player() {
     }

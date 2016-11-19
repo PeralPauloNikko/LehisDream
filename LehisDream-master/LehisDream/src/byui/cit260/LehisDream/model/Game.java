@@ -7,22 +7,23 @@ package byui.cit260.LehisDream.model;
 
 import java.io.Serializable;
 import java.util.Objects;
+import java.util.logging.Logger;
 
 /**
  *
  * @author smith / peral
  */
-public class IronRodGame implements Serializable{
+public class Game implements Serializable{
     
     //class instance variables
 
     private double totalEnergy;
     private Player player;
-    private Backpack backpack;
+   
     private Map map;
+   
     
-    
-    public IronRodGame() {
+    public Game() {
     }
     
     
@@ -43,14 +44,6 @@ public class IronRodGame implements Serializable{
         this.player = player;
     }
 
-    public Backpack getBackpack() {
-        return backpack;
-    }
-
-    public void setBackpack(Backpack backpack) {
-        this.backpack = backpack;
-    }
-
     public Map getMap() {
         return map;
     }
@@ -61,16 +54,12 @@ public class IronRodGame implements Serializable{
 
     @Override
     public int hashCode() {
-        int hash = 7;
-        hash = 89 * hash + (int) (Double.doubleToLongBits(this.totalEnergy) ^ (Double.doubleToLongBits(this.totalEnergy) >>> 32));
+        int hash = 3;
+        hash = 37 * hash + (int) (Double.doubleToLongBits(this.totalEnergy) ^ (Double.doubleToLongBits(this.totalEnergy) >>> 32));
+        hash = 37 * hash + Objects.hashCode(this.player);
+        hash = 37 * hash + Objects.hashCode(this.map);
         return hash;
     }
-
-    @Override
-    public String toString() {
-        return "IronRodGame{" + "totalEnergy=" + totalEnergy + '}';
-    }
-    
 
     @Override
     public boolean equals(Object obj) {
@@ -83,18 +72,22 @@ public class IronRodGame implements Serializable{
         if (getClass() != obj.getClass()) {
             return false;
         }
-        final IronRodGame other = (IronRodGame) obj;
+        final Game other = (Game) obj;
         if (Double.doubleToLongBits(this.totalEnergy) != Double.doubleToLongBits(other.totalEnergy)) {
+            return false;
+        }
+        if (!Objects.equals(this.player, other.player)) {
+            return false;
+        }
+        if (!Objects.equals(this.map, other.map)) {
             return false;
         }
         return true;
     }
-    
-    
 
-  
-    
-
-    
-    
+    @Override
+    public String toString() {
+        return "Game{" + "totalEnergy=" + totalEnergy + ", player=" + player + ", map=" + map + '}';
+    }
 }
+   

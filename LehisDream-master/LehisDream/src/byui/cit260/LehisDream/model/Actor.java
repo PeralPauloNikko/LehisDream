@@ -24,7 +24,8 @@ public enum Actor implements Serializable{
     private final Point coordinates;
     private final double positiveNegativeEnergy = 0.0;
     private Location location;
-
+    private Scene[] scene;
+    
     Actor(String description) {
         this.description = description;
         coordinates = new Point(1,1);

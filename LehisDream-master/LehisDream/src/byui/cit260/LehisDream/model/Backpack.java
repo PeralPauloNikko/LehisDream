@@ -15,61 +15,24 @@ import java.util.Objects;
 public class Backpack implements Serializable{
     
     //class instance variables
-    private String itemsInStock;
-    private IronRodGame ironrodgame;
+    
+    private Game ironrodgame;
+    private Item[] items;
 
     public Backpack() {
         
     }
 
-    public String getItemsInStock() {
-        return itemsInStock;
-    }
+   
 
-    public void setItemsInStock(String itemsInStock) {
-        this.itemsInStock = itemsInStock;
-    }
-
-    public IronRodGame getIronrodgame() {
+    public Game getIronrodgame() {
         return ironrodgame;
     }
 
-    public void setIronrodgame(IronRodGame ironrodgame) {
+    public void setIronrodgame(Game ironrodgame) {
         this.ironrodgame = ironrodgame;
     }
     
     
 
-    @Override
-    public int hashCode() {
-        int hash = 7;
-        hash = 53 * hash + Objects.hashCode(this.itemsInStock);
-        return hash;
-    }
-
-    @Override
-    public String toString() {
-        return "BackPack{" + "itemsInStock=" + itemsInStock + '}';
-    }
-
-    
-    
-    @Override
-    public boolean equals(Object obj) {
-        if (this == obj) {
-            return true;
-        }
-        if (obj == null) {
-            return false;
-        }
-        if (getClass() != obj.getClass()) {
-            return false;
-        }
-        final Backpack other = (Backpack) obj;
-        if (!Objects.equals(this.itemsInStock, other.itemsInStock)) {
-            return false;
-        }
-        return true;
-    }
-    
 }
