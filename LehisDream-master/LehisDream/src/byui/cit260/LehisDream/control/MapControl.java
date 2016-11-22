@@ -450,7 +450,7 @@ public class MapControl {
         //scene 22
         currentScene = new Scene();
         currentScene.setDescription(
-            "You are at the front door of the house. In order to enter the house"
+            "You are at the front door of the house. In order to enter the house,"
           + "you need to answer the following question:");
         currentScene.setName("At Home");
         currentScene.setSymbol("AH");

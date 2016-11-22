@@ -31,18 +31,18 @@ public BackpackView() {
        choice = choice.toUpperCase(); // convert choice to upper case
         
         switch (choice) {
-            case "S": // create and start a new game
+            case "S": // Activate Sword
                 this.sword(1);
                 break;
-            case "F": // restart an existing game
+            case "F": // Use flashlight
                 this.flashlight();
                 break;
-            case "D": // display the help menu
+            case "D": // Emergency water
                 this.water(1);
                 break;
-            case "E": // save the current game
+            case "E": // Emergency snack
                 this.snack(1);
-            case "W": // save the current game
+            case "W": // See money in wallet
                 this.wallet(500);
                 break;
             default:
