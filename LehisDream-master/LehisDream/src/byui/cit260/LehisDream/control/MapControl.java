@@ -90,17 +90,18 @@ public class MapControl {
         //scene 2
         currentScene = new Scene();
         currentScene.setDescription(
-            "You are at the front door of the house. In order to enter the house"
+            "You are at the Laundry Room. In order to wash your clothes"
           + "you need to answer the following question:");
-        currentScene.setName("At Home");
-        currentScene.setSymbol("AH");
+        currentScene.setName("Laundry Room");
+        currentScene.setSymbol("LA");
         currentQuestion = new Question();
-        currentQuestion.setCurrentQuestion("What do you do when someone lies?");
-        currentQuestion.setAnswer1("Vote for them");
-        currentQuestion.setAnswer2("Run away");
-        currentQuestion.setAnswer3("Follow them");
-        currentQuestion.setAnswer4("Copy them");
-        currentQuestion.setCorrectAnswer(2);
+        currentQuestion.setCurrentQuestion("What does it mean to be a Special"
+                + "Witnes of Christ?");
+        currentQuestion.setAnswer1("Be Famous");
+        currentQuestion.setAnswer2("Be Batman");
+        currentQuestion.setAnswer3("A Prophet");
+        currentQuestion.setAnswer4("Be a mean person");
+        currentQuestion.setCorrectAnswer(3);
         currentScene.setQuestion(currentQuestion);
         
         scenes[SceneType.laundryRoom.ordinal()] = currentScene;
@@ -108,17 +109,17 @@ public class MapControl {
         //scene 3
         currentScene = new Scene();
         currentScene.setDescription(
-            "You are at the front door of the house. In order to enter the house"
+            "You are at the living room. In order to enter enjoy family time"
           + "you need to answer the following question:");
-        currentScene.setName("At Home");
-        currentScene.setSymbol("AH");
+        currentScene.setName("Living Room");
+        currentScene.setSymbol("LR");
         currentQuestion = new Question();
-        currentQuestion.setCurrentQuestion("What do you do when someone lies?");
-        currentQuestion.setAnswer1("Vote for them");
-        currentQuestion.setAnswer2("Run away");
-        currentQuestion.setAnswer3("Follow them");
-        currentQuestion.setAnswer4("Copy them");
-        currentQuestion.setCorrectAnswer(2);
+        currentQuestion.setCurrentQuestion("What is a patriarchal blessing?");
+        currentQuestion.setAnswer1("A guide");
+        currentQuestion.setAnswer2("A rommantic letter");
+        currentQuestion.setAnswer3("A letter");
+        currentQuestion.setAnswer4("A exam");
+        currentQuestion.setCorrectAnswer(1);
         currentScene.setQuestion(currentQuestion);
         
         scenes[SceneType.livingRoom.ordinal()] = currentScene;
@@ -126,17 +127,18 @@ public class MapControl {
         //scene 4
         currentScene = new Scene();
         currentScene.setDescription(
-            "You are at the front door of the house. In order to enter the house"
+            "You are at the Bedroom. In order to go to sleep and rest"
           + "you need to answer the following question:");
-        currentScene.setName("At Home");
-        currentScene.setSymbol("AH");
+        currentScene.setName("Bedroom");
+        currentScene.setSymbol("BD");
         currentQuestion = new Question();
-        currentQuestion.setCurrentQuestion("What do you do when someone lies?");
-        currentQuestion.setAnswer1("Vote for them");
-        currentQuestion.setAnswer2("Run away");
-        currentQuestion.setAnswer3("Follow them");
-        currentQuestion.setAnswer4("Copy them");
-        currentQuestion.setCorrectAnswer(2);
+        currentQuestion.setCurrentQuestion("How many years a young manis call to"
+                + "serve the lord");
+        currentQuestion.setAnswer1("Three years");
+        currentQuestion.setAnswer2("One year and haft");
+        currentQuestion.setAnswer3("Few years");
+        currentQuestion.setAnswer4("Two years");
+        currentQuestion.setCorrectAnswer(4);
         currentScene.setQuestion(currentQuestion);
         
         scenes[SceneType.bedroom.ordinal()] = currentScene;
@@ -144,16 +146,16 @@ public class MapControl {
         //scene 5
         currentScene = new Scene();
         currentScene.setDescription(
-            "You are at the front door of the house. In order to enter the house"
-          + "you need to answer the following question:");
-        currentScene.setName("At Home");
-        currentScene.setSymbol("AH");
+            "You are at the Kitchen. In order to enter to start cooking a "
+          + "delicious meal you need to answer the following question:");
+        currentScene.setName("Kitchen");
+        currentScene.setSymbol("KI");
         currentQuestion = new Question();
-        currentQuestion.setCurrentQuestion("What do you do when someone lies?");
-        currentQuestion.setAnswer1("Vote for them");
-        currentQuestion.setAnswer2("Run away");
-        currentQuestion.setAnswer3("Follow them");
-        currentQuestion.setAnswer4("Copy them");
+        currentQuestion.setCurrentQuestion("Why was Jesus Christ baptized?");
+        currentQuestion.setAnswer1("Because he want it");
+        currentQuestion.setAnswer2("To give us an example");
+        currentQuestion.setAnswer3("They asking him to do it");
+        currentQuestion.setAnswer4("He wanted a bath");
         currentQuestion.setCorrectAnswer(2);
         currentScene.setQuestion(currentQuestion);
         
@@ -162,17 +164,17 @@ public class MapControl {
         //scene 6
         currentScene = new Scene();
         currentScene.setDescription(
-            "You are at the front door of the house. In order to enter the house"
+            "You are at the Cateria. In order to enter to enjoy your lunch"
           + "you need to answer the following question:");
-        currentScene.setName("At Home");
-        currentScene.setSymbol("AH");
+        currentScene.setName("Cafeteria");
+        currentScene.setSymbol("CA");
         currentQuestion = new Question();
-        currentQuestion.setCurrentQuestion("What do you do when someone lies?");
-        currentQuestion.setAnswer1("Vote for them");
-        currentQuestion.setAnswer2("Run away");
-        currentQuestion.setAnswer3("Follow them");
+        currentQuestion.setCurrentQuestion("What do you do when someone steal?");
+        currentQuestion.setAnswer1("Help them");
+        currentQuestion.setAnswer2("Follow them");
+        currentQuestion.setAnswer3("Teach them");
         currentQuestion.setAnswer4("Copy them");
-        currentQuestion.setCorrectAnswer(2);
+        currentQuestion.setCorrectAnswer(3);
         currentScene.setQuestion(currentQuestion);
         
         scenes[SceneType.cafeteria.ordinal()] = currentScene;
@@ -180,17 +182,18 @@ public class MapControl {
         //scene 7
         currentScene = new Scene();
         currentScene.setDescription(
-            "You are at the front door of the house. In order to enter the house"
+            "You are at the Auditorium. In order to enter see the show"
           + "you need to answer the following question:");
-        currentScene.setName("At Home");
-        currentScene.setSymbol("AH");
+        currentScene.setName("Auditorium");
+        currentScene.setSymbol("AU");
         currentQuestion = new Question();
-        currentQuestion.setCurrentQuestion("What do you do when someone lies?");
-        currentQuestion.setAnswer1("Vote for them");
-        currentQuestion.setAnswer2("Run away");
-        currentQuestion.setAnswer3("Follow them");
-        currentQuestion.setAnswer4("Copy them");
-        currentQuestion.setCorrectAnswer(2);
+        currentQuestion.setCurrentQuestion("What do you do when someone hurt "
+                + "your feelings?");
+        currentQuestion.setAnswer1("Beg them");
+        currentQuestion.setAnswer2("Demand for a appology");
+        currentQuestion.setAnswer3("Give them a price");
+        currentQuestion.setAnswer4("Forgive them");
+        currentQuestion.setCorrectAnswer(4);
         currentScene.setQuestion(currentQuestion);
         
         scenes[SceneType.auditorium.ordinal()] = currentScene;
@@ -198,16 +201,16 @@ public class MapControl {
         //scene 8
         currentScene = new Scene();
         currentScene.setDescription(
-            "You are at the front door of the house. In order to enter the house"
+            "You are at the Office. In order to work"
           + "you need to answer the following question:");
-        currentScene.setName("At Home");
-        currentScene.setSymbol("AH");
+        currentScene.setName("Office");
+        currentScene.setSymbol("OC");
         currentQuestion = new Question();
-        currentQuestion.setCurrentQuestion("What do you do when someone lies?");
-        currentQuestion.setAnswer1("Vote for them");
-        currentQuestion.setAnswer2("Run away");
-        currentQuestion.setAnswer3("Follow them");
-        currentQuestion.setAnswer4("Copy them");
+        currentQuestion.setCurrentQuestion("Why Jesus died for us?");
+        currentQuestion.setAnswer1("He did not havea choice");
+        currentQuestion.setAnswer2("He love us");
+        currentQuestion.setAnswer3("Someone ask him");
+        currentQuestion.setAnswer4("to win a gift");
         currentQuestion.setCorrectAnswer(2);
         currentScene.setQuestion(currentQuestion);
         
@@ -216,17 +219,18 @@ public class MapControl {
         //scene 9
         currentScene = new Scene();
         currentScene.setDescription(
-            "You are at the front door of the house. In order to enter the house"
+            "You are at the library. In order to enter read a great book"
           + "you need to answer the following question:");
-        currentScene.setName("At Home");
-        currentScene.setSymbol("AH");
+        currentScene.setName("Library");
+        currentScene.setSymbol("LI");
         currentQuestion = new Question();
-        currentQuestion.setCurrentQuestion("What do you do when someone lies?");
-        currentQuestion.setAnswer1("Vote for them");
-        currentQuestion.setAnswer2("Run away");
-        currentQuestion.setAnswer3("Follow them");
-        currentQuestion.setAnswer4("Copy them");
-        currentQuestion.setCorrectAnswer(2);
+        currentQuestion.setCurrentQuestion("How many books are in the New "
+                                         + "Testament?");
+        currentQuestion.setAnswer1("27");
+        currentQuestion.setAnswer2("30");
+        currentQuestion.setAnswer3("15");
+        currentQuestion.setAnswer4("23");
+        currentQuestion.setCorrectAnswer(1);
         currentScene.setQuestion(currentQuestion);
         
         scenes[SceneType.library.ordinal()] = currentScene;
@@ -234,16 +238,17 @@ public class MapControl {
         //scene 10
         currentScene = new Scene();
         currentScene.setDescription(
-            "You are at the front door of the house. In order to enter the house"
+            "You are at the play ground. In order to enter to have a lot of fun"
           + "you need to answer the following question:");
-        currentScene.setName("At Home");
-        currentScene.setSymbol("AH");
+        currentScene.setName("Play Ground");
+        currentScene.setSymbol("PG");
         currentQuestion = new Question();
-        currentQuestion.setCurrentQuestion("What do you do when someone lies?");
-        currentQuestion.setAnswer1("Vote for them");
-        currentQuestion.setAnswer2("Run away");
-        currentQuestion.setAnswer3("Follow them");
-        currentQuestion.setAnswer4("Copy them");
+        currentQuestion.setCurrentQuestion("Who were the first apostles called "
+                                          + "to follow Jesus?");
+        currentQuestion.setAnswer1("Joseph and Hyrum");
+        currentQuestion.setAnswer2("Peter and Andrew");
+        currentQuestion.setAnswer3("Adam and Peter");
+        currentQuestion.setAnswer4("Maria and Jose");
         currentQuestion.setCorrectAnswer(2);
         currentScene.setQuestion(currentQuestion);
         
@@ -252,17 +257,17 @@ public class MapControl {
         //scene 11
         currentScene = new Scene();
         currentScene.setDescription(
-            "You are at the front door of the house. In order to enter the house"
+            "You are at the meat depatment. In order to prepare the best food"
           + "you need to answer the following question:");
-        currentScene.setName("At Home");
-        currentScene.setSymbol("AH");
+        currentScene.setName("Meat Dept");
+        currentScene.setSymbol("MD");
         currentQuestion = new Question();
-        currentQuestion.setCurrentQuestion("What do you do when someone lies?");
-        currentQuestion.setAnswer1("Vote for them");
-        currentQuestion.setAnswer2("Run away");
-        currentQuestion.setAnswer3("Follow them");
-        currentQuestion.setAnswer4("Copy them");
-        currentQuestion.setCorrectAnswer(2);
+        currentQuestion.setCurrentQuestion("How many apostles did Jesus have?");
+        currentQuestion.setAnswer1("12");
+        currentQuestion.setAnswer2("11");
+        currentQuestion.setAnswer3("8");
+        currentQuestion.setAnswer4("15");
+        currentQuestion.setCorrectAnswer(1);
         currentScene.setQuestion(currentQuestion);
         
         scenes[SceneType.meatDept.ordinal()] = currentScene;
@@ -270,16 +275,16 @@ public class MapControl {
         //scene 12
         currentScene = new Scene();
         currentScene.setDescription(
-            "You are at the front door of the house. In order to enter the house"
+            "You are at the deli shoppe. In order to enter to enjoy our food"
           + "you need to answer the following question:");
-        currentScene.setName("At Home");
-        currentScene.setSymbol("AH");
+        currentScene.setName("Deli Shoppe");
+        currentScene.setSymbol("DS");
         currentQuestion = new Question();
-        currentQuestion.setCurrentQuestion("What do you do when someone lies?");
-        currentQuestion.setAnswer1("Vote for them");
-        currentQuestion.setAnswer2("Run away");
-        currentQuestion.setAnswer3("Follow them");
-        currentQuestion.setAnswer4("Copy them");
+        currentQuestion.setCurrentQuestion("What was the boat Noah built called?");
+        currentQuestion.setAnswer1("Ship");
+        currentQuestion.setAnswer2("An ark");
+        currentQuestion.setAnswer3("Yate");
+        currentQuestion.setAnswer4("Boat");
         currentQuestion.setCorrectAnswer(2);
         currentScene.setQuestion(currentQuestion);
         
@@ -288,17 +293,18 @@ public class MapControl {
         //scene 13
         currentScene = new Scene();
         currentScene.setDescription(
-            "You are at the front door of the house. In order to enter the house"
+            "You are at the Dairy Aisle. In order to enter have some milk"
           + "you need to answer the following question:");
-        currentScene.setName("At Home");
-        currentScene.setSymbol("AH");
+        currentScene.setName("Dairy Aisle");
+        currentScene.setSymbol("DA");
         currentQuestion = new Question();
-        currentQuestion.setCurrentQuestion("What do you do when someone lies?");
-        currentQuestion.setAnswer1("Vote for them");
-        currentQuestion.setAnswer2("Run away");
-        currentQuestion.setAnswer3("Follow them");
-        currentQuestion.setAnswer4("Copy them");
-        currentQuestion.setCorrectAnswer(2);
+        currentQuestion.setCurrentQuestion("Who rolled back the stone in front "
+                + "of Jesus' tomb?");
+        currentQuestion.setAnswer1("Peter");
+        currentQuestion.setAnswer2("Maria");
+        currentQuestion.setAnswer3("Angels");
+        currentQuestion.setAnswer4("Jesus");
+        currentQuestion.setCorrectAnswer(3);
         currentScene.setQuestion(currentQuestion);
         
         scenes[SceneType.dairyAisle.ordinal()] = currentScene;
@@ -306,16 +312,16 @@ public class MapControl {
         //scene 14
         currentScene = new Scene();
         currentScene.setDescription(
-            "You are at the front door of the house. In order to enter the house"
+            "You are at the Produce Aisle. In order to enter make some salad"
           + "you need to answer the following question:");
-        currentScene.setName("At Home");
-        currentScene.setSymbol("AH");
+        currentScene.setName("Produce Aisle");
+        currentScene.setSymbol("PA");
         currentQuestion = new Question();
-        currentQuestion.setCurrentQuestion("What do you do when someone lies?");
-        currentQuestion.setAnswer1("Vote for them");
-        currentQuestion.setAnswer2("Run away");
-        currentQuestion.setAnswer3("Follow them");
-        currentQuestion.setAnswer4("Copy them");
+        currentQuestion.setCurrentQuestion("How can you go to Heaven?");
+        currentQuestion.setAnswer1("Make Mary cry");
+        currentQuestion.setAnswer2("Being agood person");
+        currentQuestion.setAnswer3("Be a mean person");
+        currentQuestion.setAnswer4("Eating cake");
         currentQuestion.setCorrectAnswer(2);
         currentScene.setQuestion(currentQuestion);
         
@@ -324,16 +330,17 @@ public class MapControl {
         //scene 15
         currentScene = new Scene();
         currentScene.setDescription(
-            "You are at the front door of the house. In order to enter the house"
-          + "you need to answer the following question:");
-        currentScene.setName("At Home");
-        currentScene.setSymbol("AH");
+           "You are at the Customer Service. In order to enter ask for some help"
+          +"you need to answer the following question:");
+        currentScene.setName("CustomerService");
+        currentScene.setSymbol("CS");
         currentQuestion = new Question();
-        currentQuestion.setCurrentQuestion("What do you do when someone lies?");
-        currentQuestion.setAnswer1("Vote for them");
-        currentQuestion.setAnswer2("Run away");
-        currentQuestion.setAnswer3("Follow them");
-        currentQuestion.setAnswer4("Copy them");
+        currentQuestion.setCurrentQuestion("What was the first thing Lehi saw in"
+                + "his dream?");
+        currentQuestion.setAnswer1("An iron rod");
+        currentQuestion.setAnswer2("A man dressed in white");
+        currentQuestion.setAnswer3("a tree");
+        currentQuestion.setAnswer4("mists of darkness");
         currentQuestion.setCorrectAnswer(2);
         currentScene.setQuestion(currentQuestion);
         
@@ -342,17 +349,18 @@ public class MapControl {
         //scene 16
         currentScene = new Scene();
         currentScene.setDescription(
-            "You are at the front door of the house. In order to enter the house"
+            "You are at the Theatre One. In order to enter enjoy the show"
           + "you need to answer the following question:");
-        currentScene.setName("At Home");
-        currentScene.setSymbol("AH");
+        currentScene.setName("Theatre One");
+        currentScene.setSymbol("T1");
         currentQuestion = new Question();
-        currentQuestion.setCurrentQuestion("What do you do when someone lies?");
-        currentQuestion.setAnswer1("Vote for them");
-        currentQuestion.setAnswer2("Run away");
-        currentQuestion.setAnswer3("Follow them");
-        currentQuestion.setAnswer4("Copy them");
-        currentQuestion.setCorrectAnswer(2);
+        currentQuestion.setCurrentQuestion("How long did Lehi say he traveled "
+                + "in mists of darkness ?");
+        currentQuestion.setAnswer1("Many hours");
+        currentQuestion.setAnswer2("An Eternity");
+        currentQuestion.setAnswer3("A little while");
+        currentQuestion.setAnswer4("Just 10 minutes");
+        currentQuestion.setCorrectAnswer(1);
         currentScene.setQuestion(currentQuestion);
         
         scenes[SceneType.theatreOne.ordinal()] = currentScene;
@@ -360,17 +368,17 @@ public class MapControl {
         //scene 17
         currentScene = new Scene();
         currentScene.setDescription(
-            "You are at the front door of the house. In order to enter the house"
+            "You are at the Theatre Two. In order to enter to enjoy the movie"
           + "you need to answer the following question:");
-        currentScene.setName("At Home");
-        currentScene.setSymbol("AH");
+        currentScene.setName("Theatre Two");
+        currentScene.setSymbol("T2");
         currentQuestion = new Question();
-        currentQuestion.setCurrentQuestion("What do you do when someone lies?");
-        currentQuestion.setAnswer1("Vote for them");
-        currentQuestion.setAnswer2("Run away");
-        currentQuestion.setAnswer3("Follow them");
-        currentQuestion.setAnswer4("Copy them");
-        currentQuestion.setCorrectAnswer(2);
+        currentQuestion.setCurrentQuestion("What does LDS stand for?");
+        currentQuestion.setAnswer1("Latter-day Souls");
+        currentQuestion.setAnswer2("Nothing in particular");
+        currentQuestion.setAnswer3("Learning Daily Songs");
+        currentQuestion.setAnswer4("Latter-day Saints");
+        currentQuestion.setCorrectAnswer(4);
         currentScene.setQuestion(currentQuestion);
         
         scenes[SceneType.theatreTwo.ordinal()] = currentScene;
@@ -378,16 +386,17 @@ public class MapControl {
         //scene 18
         currentScene = new Scene();
         currentScene.setDescription(
-            "You are at the front door of the house. In order to enter the house"
+            "You are at the Theatre Three. In order to enter to enjoy the show"
           + "you need to answer the following question:");
-        currentScene.setName("At Home");
-        currentScene.setSymbol("AH");
+        currentScene.setName("Theatre Three");
+        currentScene.setSymbol("T3");
         currentQuestion = new Question();
-        currentQuestion.setCurrentQuestion("What do you do when someone lies?");
-        currentQuestion.setAnswer1("Vote for them");
-        currentQuestion.setAnswer2("Run away");
-        currentQuestion.setAnswer3("Follow them");
-        currentQuestion.setAnswer4("Copy them");
+        currentQuestion.setCurrentQuestion("Who was the last prophet to write in"
+                + " the Book of Mormon?");
+        currentQuestion.setAnswer1("Nephi");
+        currentQuestion.setAnswer2("Moroni");
+        currentQuestion.setAnswer3("Mormon");
+        currentQuestion.setAnswer4("Alma");
         currentQuestion.setCorrectAnswer(2);
         currentScene.setQuestion(currentQuestion);
         
@@ -396,17 +405,18 @@ public class MapControl {
         //scene 19
         currentScene = new Scene();
         currentScene.setDescription(
-            "You are at the front door of the house. In order to enter the house"
+            "You are at the Theatre four. In order to enter to enjoy the show"
           + "you need to answer the following question:");
-        currentScene.setName("At Home");
-        currentScene.setSymbol("AH");
+        currentScene.setName("Theatre Four");
+        currentScene.setSymbol("T4");
         currentQuestion = new Question();
-        currentQuestion.setCurrentQuestion("What do you do when someone lies?");
-        currentQuestion.setAnswer1("Vote for them");
-        currentQuestion.setAnswer2("Run away");
-        currentQuestion.setAnswer3("Follow them");
-        currentQuestion.setAnswer4("Copy them");
-        currentQuestion.setCorrectAnswer(2);
+        currentQuestion.setCurrentQuestion("What do you do during Conference "
+                + "Weekend?");
+        currentQuestion.setAnswer1("Listen to the Prophets");
+        currentQuestion.setAnswer2("Vacation time");
+        currentQuestion.setAnswer3("Party all day");
+        currentQuestion.setAnswer4("Sleep");
+        currentQuestion.setCorrectAnswer(1);
         currentScene.setQuestion(currentQuestion);
         
         scenes[SceneType.theatreFour.ordinal()] = currentScene;
@@ -414,16 +424,17 @@ public class MapControl {
         //scene 20
         currentScene = new Scene();
         currentScene.setDescription(
-            "You are at the front door of the house. In order to enter the house"
+            "You are at the theatre five. In order to enter to enjoy a carol"
           + "you need to answer the following question:");
-        currentScene.setName("At Home");
-        currentScene.setSymbol("AH");
-        currentQuestion = new Question();
-        currentQuestion.setCurrentQuestion("What do you do when someone lies?");
-        currentQuestion.setAnswer1("Vote for them");
-        currentQuestion.setAnswer2("Run away");
-        currentQuestion.setAnswer3("Follow them");
-        currentQuestion.setAnswer4("Copy them");
+        currentScene.setName("Theatre Five");
+        currentScene.setSymbol("T5");
+        currentQuestion = new Question(); 
+        currentQuestion.setCurrentQuestion("What do you do when someone hit"
+                                         + "you?");
+        currentQuestion.setAnswer1("Hit them Back");
+        currentQuestion.setAnswer2("Forgive them");
+        currentQuestion.setAnswer3("Cry");
+        currentQuestion.setAnswer4("Hate them");
         currentQuestion.setCorrectAnswer(2);
         currentScene.setQuestion(currentQuestion);
         
@@ -432,17 +443,19 @@ public class MapControl {
         //scene 21
         currentScene = new Scene();
         currentScene.setDescription(
-            "You are at the front door of the house. In order to enter the house"
+            "You are at the Chapel. In order to enter to pray and listen the"
+          + " to talks of amazing people "
           + "you need to answer the following question:");
-        currentScene.setName("At Home");
-        currentScene.setSymbol("AH");
+        currentScene.setName("Chapel");
+        currentScene.setSymbol("CP");
         currentQuestion = new Question();
-        currentQuestion.setCurrentQuestion("What do you do when someone lies?");
-        currentQuestion.setAnswer1("Vote for them");
-        currentQuestion.setAnswer2("Run away");
-        currentQuestion.setAnswer3("Follow them");
-        currentQuestion.setAnswer4("Copy them");
-        currentQuestion.setCorrectAnswer(2);
+        currentQuestion.setCurrentQuestion("What do you do when you found"
+                                    + "a cellphone that you always wanted it?");
+        currentQuestion.setAnswer1("Give it back");
+        currentQuestion.setAnswer2("keep it");
+        currentQuestion.setAnswer3("Sell it");
+        currentQuestion.setAnswer4("Eat it");
+        currentQuestion.setCorrectAnswer(1);
         currentScene.setQuestion(currentQuestion);
         
         scenes[SceneType.chapel.ordinal()] = currentScene;
@@ -450,16 +463,17 @@ public class MapControl {
         //scene 22
         currentScene = new Scene();
         currentScene.setDescription(
-            "You are at the front door of the house. In order to enter the house,"
-          + "you need to answer the following question:");
-        currentScene.setName("At Home");
-        currentScene.setSymbol("AH");
+            "You are at the primary room. In order to enter learn and sing more "
+          + "about Jesus Christ you need to answer the following question:");
+        currentScene.setName("Primary Room");
+        currentScene.setSymbol("PM");
         currentQuestion = new Question();
-        currentQuestion.setCurrentQuestion("What do you do when someone lies?");
-        currentQuestion.setAnswer1("Vote for them");
-        currentQuestion.setAnswer2("Run away");
-        currentQuestion.setAnswer3("Follow them");
-        currentQuestion.setAnswer4("Copy them");
+        currentQuestion.setCurrentQuestion("What do you do with the Book of "
+                + "Mormon?");
+        currentQuestion.setAnswer1("See it");
+        currentQuestion.setAnswer2("Read it");
+        currentQuestion.setAnswer3("Make it part of your book selection");
+        currentQuestion.setAnswer4("Sell it");
         currentQuestion.setCorrectAnswer(2);
         currentScene.setQuestion(currentQuestion);
         
@@ -468,16 +482,17 @@ public class MapControl {
         //scene 23
         currentScene = new Scene();
         currentScene.setDescription(
-            "You are at the front door of the house. In order to enter the house"
-          + "you need to answer the following question:");
-        currentScene.setName("At Home");
-        currentScene.setSymbol("AH");
+            "You are at the cultural hall. In order to enter and have fun with "
+          + "friends. you need to answer the following question:");
+        currentScene.setName("Cultural Hall");
+        currentScene.setSymbol("CH");
         currentQuestion = new Question();
-        currentQuestion.setCurrentQuestion("What do you do when someone lies?");
-        currentQuestion.setAnswer1("Vote for them");
-        currentQuestion.setAnswer2("Run away");
-        currentQuestion.setAnswer3("Follow them");
-        currentQuestion.setAnswer4("Copy them");
+        currentQuestion.setCurrentQuestion("What do you do when you have a bad "
+                + "day?");
+        currentQuestion.setAnswer1("Be angry");
+        currentQuestion.setAnswer2("Learn, grow and move on");
+        currentQuestion.setAnswer3("Be mad");
+        currentQuestion.setAnswer4("Cry the rest of the day");
         currentQuestion.setCorrectAnswer(2);
         currentScene.setQuestion(currentQuestion);
         
@@ -486,17 +501,18 @@ public class MapControl {
         //scene 24
         currentScene = new Scene();
         currentScene.setDescription(
-            "You are at the front door of the house. In order to enter the house"
+            "You are at the relief society room. In order to enter and learn "
+          + "how to cook,bake, and make amazing things and enjoy time."
           + "you need to answer the following question:");
-        currentScene.setName("At Home");
-        currentScene.setSymbol("AH");
+        currentScene.setName("Relief Society Room");
+        currentScene.setSymbol("RS");
         currentQuestion = new Question();
-        currentQuestion.setCurrentQuestion("What do you do when someone lies?");
-        currentQuestion.setAnswer1("Vote for them");
-        currentQuestion.setAnswer2("Run away");
-        currentQuestion.setAnswer3("Follow them");
-        currentQuestion.setAnswer4("Copy them");
-        currentQuestion.setCorrectAnswer(2);
+        currentQuestion.setCurrentQuestion("How can I be more positivy?");
+        currentQuestion.setAnswer1("Focus in my mistakes");
+        currentQuestion.setAnswer2("Have a bad actitud");
+        currentQuestion.setAnswer3("Dance in the Sky");
+        currentQuestion.setAnswer4("See the bright in everything");
+        currentQuestion.setCorrectAnswer(4);
         currentScene.setQuestion(currentQuestion);
         
         scenes[SceneType.reliefSocietyRoom.ordinal()] = currentScene;
@@ -504,17 +520,18 @@ public class MapControl {
         //scene 25
         currentScene = new Scene();
         currentScene.setDescription(
-            "You are at the front door of the house. In order to enter the house"
+            "You are at the classroom. In order to enter to learn"
           + "you need to answer the following question:");
-        currentScene.setName("At Home");
-        currentScene.setSymbol("AH");
+        currentScene.setName("Classroom");
+        currentScene.setSymbol("CR");
         currentQuestion = new Question();
-        currentQuestion.setCurrentQuestion("What do you do when someone lies?");
-        currentQuestion.setAnswer1("Vote for them");
-        currentQuestion.setAnswer2("Run away");
-        currentQuestion.setAnswer3("Follow them");
-        currentQuestion.setAnswer4("Copy them");
-        currentQuestion.setCorrectAnswer(2);
+        currentQuestion.setCurrentQuestion("Which of the following people was "
+                + "not one of Lehi's son?");
+        currentQuestion.setAnswer1("Joseoh");
+        currentQuestion.setAnswer2("Sam");
+        currentQuestion.setAnswer3("Jacob");
+        currentQuestion.setAnswer4("Jarom");
+        currentQuestion.setCorrectAnswer(4);
         currentScene.setQuestion(currentQuestion);
         
         scenes[SceneType.classroom.ordinal()] = currentScene;
