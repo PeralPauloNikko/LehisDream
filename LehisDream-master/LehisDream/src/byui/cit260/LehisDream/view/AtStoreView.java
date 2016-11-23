@@ -26,7 +26,7 @@ public class AtStoreView extends View {
         this.groceries = game.getGroceries();
 
         String question = ("\nYou have now entered the store. You have the option"
-                + "\n to buy these items in the store only. Please select from "
+                + "\nto buy these items in the store only. Please select from "
                 + "\nthe list of items if you wish to purchase something to "
                 + "\nreplenish energy. Please remember you can not go over 100% "
                 + "energy.") + "\n\r"
@@ -35,7 +35,7 @@ public class AtStoreView extends View {
         for (Item item : groceries) {
 
             question = question + "\n\r" + item.getChoiceValue() + "-\t"
-                    + item.getName() + "\t" + item.getEnergyAdd() + "\t" + item.getCost();
+                    + item.getName() + "\t" + item.getEnergyAdd() + "\t$" + item.getCost();
         }
         question = question + "\n\rYou have $" + game.getPlayer().getCash() + ".\n\rEnter Q to Quit";
 
