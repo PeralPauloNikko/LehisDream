@@ -21,6 +21,7 @@ public class Game implements Serializable{
    
     private Player player;
     ArrayList <Item> groceries = new ArrayList<>();
+    ArrayList <Item> treats = new ArrayList<>();
     private Map map;
    
     
@@ -29,6 +30,11 @@ public class Game implements Serializable{
         groceries.add(new Item("Gallon of Milk",3.4,5.25, "M"));
         groceries.add(new Item("Slice of Pie",3.25,4.75, "P"));
         groceries.add(new Item("Ham Sandwich",2.15,3.25, "S"));
+        
+        treats.add(new Item("Banana Bunch",2.75,5.50, "B"));
+        treats.add(new Item("Gallon of Milk",3.4,5.25, "M"));
+        treats.add(new Item("Slice of Pie",3.25,4.75, "P"));
+        treats.add(new Item("Ham Sandwich",2.15,3.25, "S"));
 
     }
 
@@ -48,6 +54,14 @@ public class Game implements Serializable{
         this.groceries = groceries;
     }
 
+    public ArrayList<Item> getTreats() {
+        return treats;
+    }
+
+    public void setTreats(ArrayList<Item> treats) {
+        this.treats = treats;
+    }
+
     public Map getMap() {
         return map;
     }
@@ -59,9 +73,10 @@ public class Game implements Serializable{
     @Override
     public int hashCode() {
         int hash = 3;
-        hash = 53 * hash + Objects.hashCode(this.player);
-        hash = 53 * hash + Objects.hashCode(this.groceries);
-        hash = 53 * hash + Objects.hashCode(this.map);
+        hash = 83 * hash + Objects.hashCode(this.player);
+        hash = 83 * hash + Objects.hashCode(this.groceries);
+        hash = 83 * hash + Objects.hashCode(this.treats);
+        hash = 83 * hash + Objects.hashCode(this.map);
         return hash;
     }
 
@@ -83,6 +98,9 @@ public class Game implements Serializable{
         if (!Objects.equals(this.groceries, other.groceries)) {
             return false;
         }
+        if (!Objects.equals(this.treats, other.treats)) {
+            return false;
+        }
         if (!Objects.equals(this.map, other.map)) {
             return false;
         }
@@ -91,10 +109,8 @@ public class Game implements Serializable{
 
     @Override
     public String toString() {
-        return "Game{" + "player=" + player + ", groceries=" + groceries + ", map=" + map + '}';
+        return "Game{" + "player=" + player + ", groceries=" + groceries + ", treats=" + treats + ", map=" + map + '}';
     }
-    
-    
-
 }
+    
    

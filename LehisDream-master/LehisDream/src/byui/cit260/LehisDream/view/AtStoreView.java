@@ -17,7 +17,6 @@ import lehisdream.LehisDream;
 public class AtStoreView extends View {
 
     private Game game;
-    private int i;
     private ArrayList<Item> groceries;
 
     public AtStoreView() {
@@ -73,5 +72,5 @@ public class AtStoreView extends View {
         return false;
 
     }
-}//todo incorporate money deductions
+}
 

@@ -57,9 +57,6 @@ public class Player implements Serializable{
 
     public void setEnergyLevel(double energyLevel) {
         this.energyLevel = energyLevel;
-        if (this.energyLevel > 100){
-            this.energyLevel = 100;
-        }
         
     }
 
