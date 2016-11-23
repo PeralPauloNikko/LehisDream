@@ -6,8 +6,9 @@
 package byui.cit260.LehisDream.model;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.Objects;
-import java.util.logging.Logger;
+
 
 /**
  *
@@ -17,23 +18,18 @@ public class Game implements Serializable{
     
     //class instance variables
 
-    private double totalEnergy;
-    private Player player;
    
+    private Player player;
+    ArrayList <Item> groceries = new ArrayList<>();
     private Map map;
    
     
     public Game() {
-    }
-    
-    
+        groceries.add(new Item("Banana Bunch",2.75,5.50, "B"));
+        groceries.add(new Item("Gallon of Milk",3.4,5.25, "M"));
+        groceries.add(new Item("Slice of Pie",3.25,4.75, "P"));
+        groceries.add(new Item("Ham Sandwich",2.15,3.25, "S"));
 
-    public double getTotalEnergy() {
-        return totalEnergy;
-    }
-
-    public void setTotalEnergy(double totalEnergy) {
-        this.totalEnergy = totalEnergy;
     }
 
     public Player getPlayer() {
@@ -42,6 +38,14 @@ public class Game implements Serializable{
 
     public void setPlayer(Player player) {
         this.player = player;
+    }
+
+    public ArrayList<Item> getGroceries() {
+        return groceries;
+    }
+
+    public void setGroceries(ArrayList<Item> groceries) {
+        this.groceries = groceries;
     }
 
     public Map getMap() {
@@ -55,9 +59,9 @@ public class Game implements Serializable{
     @Override
     public int hashCode() {
         int hash = 3;
-        hash = 37 * hash + (int) (Double.doubleToLongBits(this.totalEnergy) ^ (Double.doubleToLongBits(this.totalEnergy) >>> 32));
-        hash = 37 * hash + Objects.hashCode(this.player);
-        hash = 37 * hash + Objects.hashCode(this.map);
+        hash = 53 * hash + Objects.hashCode(this.player);
+        hash = 53 * hash + Objects.hashCode(this.groceries);
+        hash = 53 * hash + Objects.hashCode(this.map);
         return hash;
     }
 
@@ -73,10 +77,10 @@ public class Game implements Serializable{
             return false;
         }
         final Game other = (Game) obj;
-        if (Double.doubleToLongBits(this.totalEnergy) != Double.doubleToLongBits(other.totalEnergy)) {
+        if (!Objects.equals(this.player, other.player)) {
             return false;
         }
-        if (!Objects.equals(this.player, other.player)) {
+        if (!Objects.equals(this.groceries, other.groceries)) {
             return false;
         }
         if (!Objects.equals(this.map, other.map)) {
@@ -87,7 +91,10 @@ public class Game implements Serializable{
 
     @Override
     public String toString() {
-        return "Game{" + "totalEnergy=" + totalEnergy + ", player=" + player + ", map=" + map + '}';
+        return "Game{" + "player=" + player + ", groceries=" + groceries + ", map=" + map + '}';
     }
+    
+    
+
 }
    

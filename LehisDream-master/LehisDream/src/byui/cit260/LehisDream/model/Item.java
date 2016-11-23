@@ -14,24 +14,27 @@ import java.util.Objects;
  */
 public class Item implements Serializable {
     //class instance variable
-    private String description;
+    private String name;
     private double energyAdd;
     private double cost;
-    private double quantityPurchased;
-    private Backpack backpack;
-    
-
+    private String choiceValue;
+   
     public Item() {
     }
     
-    
-
-    public String getDescription() {
-        return description;
+    public Item(String name, double energyAdd,  double cost, String choiceValue) {
+        this.name = name;
+        this.cost = cost;
+        this.choiceValue = choiceValue;
+        this.energyAdd = energyAdd;
     }
 
-    public void setDescription(String description) {
-        this.description = description;
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 
     public double getEnergyAdd() {
@@ -50,38 +53,24 @@ public class Item implements Serializable {
         this.cost = cost;
     }
 
-    public double getQuantityPurchased() {
-        return quantityPurchased;
+    public String getChoiceValue() {
+        return choiceValue;
     }
 
-    public void setQuantityPurchased(double quantityPurchased) {
-        this.quantityPurchased = quantityPurchased;
-    }
-
-    public Backpack getBackpack() {
-        return backpack;
-    }
-
-    public void setBackpack(Backpack backpack) {
-        this.backpack = backpack;
+    public void setChoiceValue(String choiceValue) {
+        this.choiceValue = choiceValue;
     }
 
     @Override
     public int hashCode() {
         int hash = 7;
-        hash = 53 * hash + Objects.hashCode(this.description);
-        hash = 53 * hash + (int) (Double.doubleToLongBits(this.energyAdd) ^ (Double.doubleToLongBits(this.energyAdd) >>> 32));
-        hash = 53 * hash + (int) (Double.doubleToLongBits(this.cost) ^ (Double.doubleToLongBits(this.cost) >>> 32));
-        hash = 53 * hash + (int) (Double.doubleToLongBits(this.quantityPurchased) ^ (Double.doubleToLongBits(this.quantityPurchased) >>> 32));
+        hash = 71 * hash + Objects.hashCode(this.name);
+        hash = 71 * hash + (int) (Double.doubleToLongBits(this.energyAdd) ^ (Double.doubleToLongBits(this.energyAdd) >>> 32));
+        hash = 71 * hash + (int) (Double.doubleToLongBits(this.cost) ^ (Double.doubleToLongBits(this.cost) >>> 32));
+        hash = 71 * hash + Objects.hashCode(this.choiceValue);
         return hash;
     }
 
-    @Override
-    public String toString() {
-        return "Item{" + "description=" + description + ", energyAdd=" + energyAdd + ", cost=" + cost + ", quantityPurchased=" + quantityPurchased + '}';
-    }
-
-    
     @Override
     public boolean equals(Object obj) {
         if (this == obj) {
@@ -100,14 +89,24 @@ public class Item implements Serializable {
         if (Double.doubleToLongBits(this.cost) != Double.doubleToLongBits(other.cost)) {
             return false;
         }
-        if (Double.doubleToLongBits(this.quantityPurchased) != Double.doubleToLongBits(other.quantityPurchased)) {
+        if (!Objects.equals(this.name, other.name)) {
             return false;
         }
-        if (!Objects.equals(this.description, other.description)) {
+        if (!Objects.equals(this.choiceValue, other.choiceValue)) {
             return false;
         }
         return true;
     }
+
+    @Override
+    public String toString() {
+        return "Item{" + "name=" + name + ", energyAdd=" + energyAdd + ", cost=" + cost + ", choiceValue=" + choiceValue + '}';
+    }
+
+    
+    
+    
+   
     
     
     

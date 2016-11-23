@@ -13,7 +13,7 @@ import byui.cit260.LehisDream.model.Scene;
 import byui.cit260.LehisDream.model.TreeOfLife;
 
 //nikkoTest
-import byui.cit260.LehisDream.model.Backpack;
+//import byui.cit260.LehisDream.model.Backpack;
 import byui.cit260.LehisDream.model.Actor;
 import byui.cit260.LehisDream.model.Map;
 import byui.cit260.LehisDream.model.Item;
@@ -51,7 +51,7 @@ public class LehisDream {
         Player playerOne = new Player();
         
         playerOne.setName("Lehi");
-        playerOne.setEnergyLeft(100);
+        playerOne.setEnergyLevel(100);
         
         String playerInfo = playerOne.toString();
         System.out.println(playerInfo);
@@ -62,7 +62,7 @@ public class LehisDream {
         //IronRodGame Test
         Game gameOne = new Game();
         
-        gameOne.setTotalEnergy(100);
+//        gameOne.setTotalEnergy(100);
         
         String gameInfo = gameOne.toString();
         System.out.println(gameInfo);
@@ -100,13 +100,13 @@ public class LehisDream {
     
     public static void nikkoTest() {
     //BackPack
-    Backpack backPackOne = new Backpack();
+//    Backpack backPackOne = new Backpack();
     
 //    backPackOne.setItemsInStock("");
 //    
-    String backPackInfo = backPackOne.toString();
-    System.out.println(backPackOne);
-    
+//    String backPackInfo = backPackOne.toString();
+//    System.out.println(backPackOne);
+//    
    
     //Map Test
     Map gps = new Map();
@@ -122,7 +122,7 @@ public class LehisDream {
     Item stuff = new Item();
     
     stuff.setCost(5);
-    stuff.setDescription("These are the things available in your backpack");
+//    stuff.setDescription("These are the things available in your backpack");
     stuff.setEnergyAdd(25);
     stuff.setCost(5);
     

@@ -30,6 +30,14 @@ public enum Actor implements Serializable{
         this.description = description;
         coordinates = new Point(1,1);
     }
+
+    public Scene[] getScene() {
+        return scene;
+    }
+
+    public void setScene(Scene[] scene) {
+        this.scene = scene;
+    }
     
     public String getDescription() {
         return description;

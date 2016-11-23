@@ -21,9 +21,18 @@ public class Scene implements Serializable{
     private Actor actor;
     private Question question;
     private Item[] itemsInStock;
-    
+    private int visits;
 
     public Scene() {
+        visits = 0;
+    }
+
+    public int getVisits() {
+        return visits;
+    }
+
+    public void setVisits(int visits) {
+        this.visits = visits;
     }
 
     public String getName() {

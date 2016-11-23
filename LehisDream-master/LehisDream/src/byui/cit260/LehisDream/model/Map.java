@@ -47,7 +47,6 @@ public class Map implements Serializable{
                 locations[row][column] = location;
             }
         }
-        //TODO:copy the code from page 26
     }
 
     public Location[][] getLocations() {

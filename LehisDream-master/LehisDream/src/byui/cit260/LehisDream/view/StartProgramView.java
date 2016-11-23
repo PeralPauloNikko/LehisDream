@@ -28,7 +28,7 @@ public class StartProgramView extends View{
        System.out.println(
                "\n**************************************************************"
               +"\n*                                                             *"
-              +"\n* This is the game of Hold to the Rod                         *"
+              +"\n* This is the game of Lehi's Dream.                         *"
               +"\n* In this game you will follow a path to try to make it to    *"
               +"\n* the Tree of Life. The rod represents the word of God.       *"
               +"\n* If you fail to make it to the tree, you                     *"

@@ -37,5 +37,5 @@ public enum SceneType {
     reliefSocietyRoom,
     classroom;
     
-    //TODO: make 25 diff scene name
+   
 }

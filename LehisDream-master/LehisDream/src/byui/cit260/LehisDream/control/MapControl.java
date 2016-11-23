@@ -268,7 +268,9 @@ public class MapControl {
         currentQuestion.setAnswer3("8");
         currentQuestion.setAnswer4("15");
         currentQuestion.setCorrectAnswer(1);
+        currentQuestion.setStore(true);
         currentScene.setQuestion(currentQuestion);
+        
         
         scenes[SceneType.meatDept.ordinal()] = currentScene;
         
@@ -286,6 +288,7 @@ public class MapControl {
         currentQuestion.setAnswer3("Yate");
         currentQuestion.setAnswer4("Boat");
         currentQuestion.setCorrectAnswer(2);
+        currentQuestion.setStore(true);
         currentScene.setQuestion(currentQuestion);
         
         scenes[SceneType.deliShoppe.ordinal()] = currentScene;
@@ -305,6 +308,7 @@ public class MapControl {
         currentQuestion.setAnswer3("Angels");
         currentQuestion.setAnswer4("Jesus");
         currentQuestion.setCorrectAnswer(3);
+        currentQuestion.setStore(true);
         currentScene.setQuestion(currentQuestion);
         
         scenes[SceneType.dairyAisle.ordinal()] = currentScene;
@@ -323,6 +327,7 @@ public class MapControl {
         currentQuestion.setAnswer3("Be a mean person");
         currentQuestion.setAnswer4("Eating cake");
         currentQuestion.setCorrectAnswer(2);
+        currentQuestion.setStore(true);
         currentScene.setQuestion(currentQuestion);
         
         scenes[SceneType.produceAisle.ordinal()] = currentScene;
@@ -342,6 +347,7 @@ public class MapControl {
         currentQuestion.setAnswer3("a tree");
         currentQuestion.setAnswer4("mists of darkness");
         currentQuestion.setCorrectAnswer(2);
+        currentQuestion.setStore(true);
         currentScene.setQuestion(currentQuestion);
         
         scenes[SceneType.customerService.ordinal()] = currentScene;
@@ -361,6 +367,7 @@ public class MapControl {
         currentQuestion.setAnswer3("A little while");
         currentQuestion.setAnswer4("Just 10 minutes");
         currentQuestion.setCorrectAnswer(1);
+        currentQuestion.setTheatre(true);
         currentScene.setQuestion(currentQuestion);
         
         scenes[SceneType.theatreOne.ordinal()] = currentScene;
@@ -379,6 +386,7 @@ public class MapControl {
         currentQuestion.setAnswer3("Learning Daily Songs");
         currentQuestion.setAnswer4("Latter-day Saints");
         currentQuestion.setCorrectAnswer(4);
+        currentQuestion.setTheatre(true);
         currentScene.setQuestion(currentQuestion);
         
         scenes[SceneType.theatreTwo.ordinal()] = currentScene;
@@ -417,6 +425,7 @@ public class MapControl {
         currentQuestion.setAnswer3("Party all day");
         currentQuestion.setAnswer4("Sleep");
         currentQuestion.setCorrectAnswer(1);
+        currentQuestion.setTheatre(true);
         currentScene.setQuestion(currentQuestion);
         
         scenes[SceneType.theatreFour.ordinal()] = currentScene;
@@ -436,6 +445,7 @@ public class MapControl {
         currentQuestion.setAnswer3("Cry");
         currentQuestion.setAnswer4("Hate them");
         currentQuestion.setCorrectAnswer(2);
+        currentQuestion.setTheatre(true);
         currentScene.setQuestion(currentQuestion);
         
         scenes[SceneType.theatreFive.ordinal()] = currentScene;
@@ -508,8 +518,8 @@ public class MapControl {
         currentScene.setSymbol("RS");
         currentQuestion = new Question();
         currentQuestion.setCurrentQuestion("How can I be more positivy?");
-        currentQuestion.setAnswer1("Focus in my mistakes");
-        currentQuestion.setAnswer2("Have a bad actitud");
+        currentQuestion.setAnswer1("Focus on my mistakes");
+        currentQuestion.setAnswer2("Have a bad attitude");
         currentQuestion.setAnswer3("Dance in the Sky");
         currentQuestion.setAnswer4("See the bright in everything");
         currentQuestion.setCorrectAnswer(4);

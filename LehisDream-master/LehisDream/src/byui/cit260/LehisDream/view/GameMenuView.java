@@ -30,6 +30,7 @@ public class GameMenuView extends View {
                 + "\nP - Go to Backpack"
                 + "\nG - At Home"
                 + "\nC - At Church"
+                + "\nR - At Store"
                 + "\nS - Save game"
                 + "\nH - Help"
                 + "\nQ - Quit"
@@ -59,6 +60,9 @@ public class GameMenuView extends View {
                 break;
             case "C": //
                 this.atChurch();
+                break;
+            case "R": //
+                this.atStore();
                 break;
             case "S": // save the current game
                 this.saveGame();
@@ -136,6 +140,10 @@ public class GameMenuView extends View {
                 newRow = 0;
         }
         MapControl.movePlayer(map, newRow, newColumn);
+        
+        QuestionMenuView questionMenu = new QuestionMenuView();
+        questionMenu.display();
+        
         viewPath();
         
     }
@@ -145,7 +153,6 @@ public class GameMenuView extends View {
     }
 
     private void goToBackpack() {
-        
         BackpackView backPack = new BackpackView();
         backPack.display();
     }
@@ -158,6 +165,10 @@ public class GameMenuView extends View {
         AtChurchView atChurch = new AtChurchView();
         atChurch.displayAtChurchView();
     }
-
+private void atStore() {     
+        AtStoreView atStore = new AtStoreView();
+        atStore.display();
+        
+    }
     
 }

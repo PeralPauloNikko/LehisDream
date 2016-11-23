@@ -7,6 +7,7 @@ package byui.cit260.LehisDream.model;
 
 import java.io.Serializable;
 import java.util.Objects;
+import java.util.logging.Logger;
 
 /**
  *
@@ -20,10 +21,13 @@ public class Question implements Serializable{
     private String answer3;
     private String answer4;
     private int correctAnswer;
-    
+    private boolean theatre;
+    private boolean store;
     
 
     public Question() {
+        theatre = false;
+        store = false;
     }
 
     public String getCurrentQuestion() {
@@ -74,15 +78,33 @@ public class Question implements Serializable{
         this.correctAnswer = correctAnswer;
     }
 
+    public boolean isTheatre() {
+        return theatre;
+    }
+
+    public void setTheatre(boolean theatre) {
+        this.theatre = theatre;
+    }
+
+    public boolean isStore() {
+        return store;
+    }
+
+    public void setStore(boolean store) {
+        this.store = store;
+    }
+
     @Override
     public int hashCode() {
-        int hash = 3;
-        hash = 89 * hash + Objects.hashCode(this.currentQuestion);
-        hash = 89 * hash + Objects.hashCode(this.answer1);
-        hash = 89 * hash + Objects.hashCode(this.answer2);
-        hash = 89 * hash + Objects.hashCode(this.answer3);
-        hash = 89 * hash + Objects.hashCode(this.answer4);
-        hash = 89 * hash + this.correctAnswer;
+        int hash = 5;
+        hash = 37 * hash + Objects.hashCode(this.currentQuestion);
+        hash = 37 * hash + Objects.hashCode(this.answer1);
+        hash = 37 * hash + Objects.hashCode(this.answer2);
+        hash = 37 * hash + Objects.hashCode(this.answer3);
+        hash = 37 * hash + Objects.hashCode(this.answer4);
+        hash = 37 * hash + this.correctAnswer;
+        hash = 37 * hash + (this.theatre ? 1 : 0);
+        hash = 37 * hash + (this.store ? 1 : 0);
         return hash;
     }
 
@@ -99,6 +121,12 @@ public class Question implements Serializable{
         }
         final Question other = (Question) obj;
         if (this.correctAnswer != other.correctAnswer) {
+            return false;
+        }
+        if (this.theatre != other.theatre) {
+            return false;
+        }
+        if (this.store != other.store) {
             return false;
         }
         if (!Objects.equals(this.currentQuestion, other.currentQuestion)) {
@@ -121,12 +149,10 @@ public class Question implements Serializable{
 
     @Override
     public String toString() {
-        return "Question{" + "currentQuestion=" + currentQuestion + ", answer1=" 
-                + answer1 + ", answer2=" + answer2 + ", answer3=" + answer3 
-                + ", answer4=" + answer4 + ", correctAnswer=" + correctAnswer 
-                + '}';
+        return "Question{" + "currentQuestion=" + currentQuestion + ", answer1=" + answer1 + ", answer2=" + answer2 + ", answer3=" + answer3 + ", answer4=" + answer4 + ", correctAnswer=" + correctAnswer + ", theatre=" + theatre + ", store=" + store + '}';
     }
-
+    
+   
     
     
     

@@ -6,6 +6,7 @@
 package byui.cit260.LehisDream.model;
 
 import java.io.Serializable;
+import java.util.Arrays;
 import java.util.Objects;
 
 /**
@@ -16,10 +17,29 @@ public class Player implements Serializable{
     
     //class instance variables
     private String name;
-    private double energyLeft;
+    private double energyLevel;
     private Game[] game;
+    private double cash;
+    
 
     public Player() {
+        this.cash = 40;
+    }
+
+    public Game[] getGame() {
+        return game;
+    }
+
+    public void setGame(Game[] game) {
+        this.game = game;
+    }
+
+    public double getCash() {
+        return cash;
+    }
+
+    public void setCash(double cash) {
+        this.cash = cash;
     }
 
     public String getName() {
@@ -30,29 +50,29 @@ public class Player implements Serializable{
         this.name = name;
     }
 
-    public double getEnergyLeft() {
-        return energyLeft;
+    public double getEnergyLevel() {
+        return energyLevel;
+        
     }
 
-    public void setEnergyLeft(double energyLeft) {
-        this.energyLeft = energyLeft;
+    public void setEnergyLevel(double energyLevel) {
+        this.energyLevel = energyLevel;
+        if (this.energyLevel > 100){
+            this.energyLevel = 100;
+        }
+        
     }
-    
-    
+
     @Override
     public int hashCode() {
-        
-        int hash = 3;
-        hash = 19 * hash + Objects.hashCode(this.name);
-        hash = 19 * hash + (int) (Double.doubleToLongBits(this.energyLeft) ^ (Double.doubleToLongBits(this.energyLeft) >>> 32));
+        int hash = 7;
+        hash = 29 * hash + Objects.hashCode(this.name);
+        hash = 29 * hash + (int) (Double.doubleToLongBits(this.energyLevel) ^ (Double.doubleToLongBits(this.energyLevel) >>> 32));
+        hash = 29 * hash + Arrays.deepHashCode(this.game);
+        hash = 29 * hash + (int) (Double.doubleToLongBits(this.cash) ^ (Double.doubleToLongBits(this.cash) >>> 32));
         return hash;
     }
-    
-    @Override
-    public String toString() {
-        return "Player{" + "name=" + name + ", energyLeft=" + energyLeft + '}';
-    }
-    
+
     @Override
     public boolean equals(Object obj) {
         if (this == obj) {
@@ -65,15 +85,27 @@ public class Player implements Serializable{
             return false;
         }
         final Player other = (Player) obj;
-        if (Double.doubleToLongBits(this.energyLeft) != Double.doubleToLongBits(other.energyLeft)) {
+        if (Double.doubleToLongBits(this.energyLevel) != Double.doubleToLongBits(other.energyLevel)) {
+            return false;
+        }
+        if (Double.doubleToLongBits(this.cash) != Double.doubleToLongBits(other.cash)) {
             return false;
         }
         if (!Objects.equals(this.name, other.name)) {
             return false;
         }
+        if (!Arrays.deepEquals(this.game, other.game)) {
+            return false;
+        }
         return true;
     }
-    
-    
+
+    @Override
+    public String toString() {
+        return "Player{" + "name=" + name + ", energyLevel=" + energyLevel + ", game=" + game + ", cash=" + cash + '}';
+    }
     
 }
+    
+    
+    
