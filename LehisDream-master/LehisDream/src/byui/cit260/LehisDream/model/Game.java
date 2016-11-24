@@ -31,10 +31,10 @@ public class Game implements Serializable{
         groceries.add(new Item("Slice of Pie",3.25,4.75, "P"));
         groceries.add(new Item("Ham Sandwich",2.15,3.25, "S"));
         
-        treats.add(new Item("Banana Bunch",2.75,5.50, "B"));
-        treats.add(new Item("Gallon of Milk",3.4,5.25, "M"));
-        treats.add(new Item("Slice of Pie",3.25,4.75, "P"));
-        treats.add(new Item("Ham Sandwich",2.15,3.25, "S"));
+        treats.add(new Item("Tickets",0,9, "T"));
+        treats.add(new Item("Popcorn",5.5,8, "P"));
+        treats.add(new Item("Drink",5,5, "D"));
+        treats.add(new Item("Candy",3.5,5, "C"));
 
     }
 

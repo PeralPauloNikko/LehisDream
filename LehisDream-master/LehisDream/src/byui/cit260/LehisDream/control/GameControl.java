@@ -20,7 +20,7 @@ import lehisdream.LehisDream;
  * @author smith
  */
 public class GameControl {
-
+ 
     public static Player createPlayer(String name) {
         if (name == null) {
             return null;
@@ -32,7 +32,6 @@ public class GameControl {
         LehisDream.setPlayer(player);//save the player
 
         return player;
-
     }
 
     public static void createNewGame(Player player) {

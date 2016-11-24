@@ -406,6 +406,7 @@ public class MapControl {
         currentQuestion.setAnswer3("Mormon");
         currentQuestion.setAnswer4("Alma");
         currentQuestion.setCorrectAnswer(2);
+        currentQuestion.setTheatre(true);
         currentScene.setQuestion(currentQuestion);
         
         scenes[SceneType.theatreThree.ordinal()] = currentScene;

@@ -12,8 +12,8 @@ import java.util.Scanner;
 import lehisdream.LehisDream;
 
 /**
- *
- * @author EthicalH1
+ * 
+ * @author fairy_000
  */
 public class AtTheatreView extends View {
 
