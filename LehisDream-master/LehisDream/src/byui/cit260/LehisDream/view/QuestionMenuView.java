@@ -49,18 +49,18 @@ public boolean doAction(String choice) {
         
         game.getPlayer().setEnergyLevel(currentEnergy);
         
-        System.out.println("Your current energy is now " + currentEnergy);
+        System.out.println("Your current energy is now " + currentEnergy); 
+        
         if (currentScene.getQuestion().isStore()){
             AtStoreView atStore = new AtStoreView();
             atStore.display();
         }
-//        if (currentScene.getQuestion().isStore()){
-//            AtStoreView atStore = new AtStoreView();
-//            atStore.display();
-//todo change infor to thetre view class
-//        }
-//
-     return true;           //TODO finish println for correct answer & energy level
+              
+       if (currentScene.getQuestion().isTheatre()){
+            AtTheatreView atTheatre = new AtTheatreView();
+            atTheatre.display();
+       }
+       return true;           
     }
     System.out.println("You are incorrect. You lose 3% energy.");
         currentEnergy -= 3;
