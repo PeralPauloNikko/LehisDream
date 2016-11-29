@@ -29,6 +29,24 @@ public class LehisDream {
     
     private static Game currentGame = null;
     private static Player player = null;
+    
+     /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        
+        
+        StartProgramView startProgramView = new StartProgramView();
+        try {
+            //create StartProgramView and display the start program view
+            startProgramView.display();
+        } catch (Throwable te) {
+            System.out.println(te.getMessage());
+            te.printStackTrace();
+            startProgramView.display();
+        }
+    }
+
 
     public static Game getCurrentGame() {
         return currentGame;
@@ -148,16 +166,7 @@ public class LehisDream {
     
     
   
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
-        
-        //create StartProgramViewOrig and display the start program view
-        StartProgramView startProgramView = new StartProgramView();
-        startProgramView.display();
-    }
-
+   
     
     
 

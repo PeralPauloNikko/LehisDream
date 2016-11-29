@@ -6,13 +6,11 @@
 package byui.cit260.LehisDream.control;
 
 import byui.cit260.LehisDream.model.Game;
-import byui.cit260.LehisDream.model.Item;
 import byui.cit260.LehisDream.model.Location;
 import byui.cit260.LehisDream.model.Map;
 import byui.cit260.LehisDream.model.Player;
 import byui.cit260.LehisDream.model.Scene;
 import byui.cit260.LehisDream.model.SceneType;
-import java.util.ArrayList;
 import lehisdream.LehisDream;
 
 /**
@@ -49,12 +47,13 @@ public class GameControl {
 
     public static void assignScenesToLocations(Map map, Scene[] scenes) {
         Location[][] location = map.getLocations();
-
-        location[0][0].setScene(scenes[SceneType.frontDoor.ordinal()]);
-        location[0][1].setScene(scenes[SceneType.laundryRoom.ordinal()]);
-        location[0][2].setScene(scenes[SceneType.livingRoom.ordinal()]);
-        location[0][3].setScene(scenes[SceneType.bedroom.ordinal()]);
-        location[0][4].setScene(scenes[SceneType.kitchen.ordinal()]);
+        
+        location[0][0].setScene(scenes[SceneType.start.ordinal()]);
+        location[0][1].setScene(scenes[SceneType.frontDoor.ordinal()]);
+        location[0][2].setScene(scenes[SceneType.laundryRoom.ordinal()]);
+        location[0][3].setScene(scenes[SceneType.livingRoom.ordinal()]);
+        location[0][4].setScene(scenes[SceneType.bedroom.ordinal()]);
+//        location[1][0].setScene(scenes[SceneType.kitchen.ordinal()]);
         location[1][0].setScene(scenes[SceneType.cafeteria.ordinal()]);
         location[1][1].setScene(scenes[SceneType.auditorium.ordinal()]);
         location[1][2].setScene(scenes[SceneType.office.ordinal()]);

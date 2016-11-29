@@ -5,6 +5,7 @@
  */
 package byui.cit260.LehisDream.view;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 /**
@@ -59,4 +60,29 @@ public String getInput() {
         }
         return value; //return the value entered6
 }
+public static double getnextDouble(){
+    Scanner keyboard = new Scanner(System.in);//get infile for keyboard
+//    while (true) {
+        try {
+        double value = keyboard.nextDouble();
+        
+        return value;
+        
+        } catch (InputMismatchException e) {
+        System.out.println("\nYou must enter a valid decimal value. Please try "
+                + "again.\n");
+                         
+     
+        }  
+        double value = 0;
+        return value;
+    }
+
 }
+
+
+
+
+       
+
+//}

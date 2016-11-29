@@ -22,7 +22,7 @@ public class BishopsOfficeView extends View{
              +"\nT     Third Visit"
              +"\n-----------------------------------------------------------");
     }
- int i = 0;
+ 
  
 @Override
 public boolean doAction(String choice) {

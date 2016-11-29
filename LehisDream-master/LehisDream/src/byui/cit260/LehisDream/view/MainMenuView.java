@@ -6,7 +6,6 @@
 package byui.cit260.LehisDream.view;
 
 import byui.cit260.LehisDream.control.GameControl;
-import java.util.Scanner;
 import lehisdream.LehisDream;
 
 /**

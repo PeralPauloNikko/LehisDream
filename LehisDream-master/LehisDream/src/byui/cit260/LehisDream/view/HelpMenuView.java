@@ -59,8 +59,8 @@ public class HelpMenuView extends View{
     private void displayMoves() {
             System.out.println    ("\n --How to Move-- "
                                   +"\n----------------------------------------------------------------------------------------------------------------------------"
-                                  +"\n You will move your person consecutively along the spaces on the map. IN each of the 5 zones, there will be 5 spaces. You   "
-                                  +"\n will choose a plus (+) to go forward one space if that is what the choice is at that time in the game.                     "
+                                  +"\n You will move your person sequentially along the spaces on the map. In each of the 5 zones, there will be 5 spaces. You    "
+                                  +"\n will choose a choose to move your player on the game menu after answering each question.                                   "
                                   +"\n----------------------------------------------------------------------------------------------------------------------------");
     }
     private void displayScenes() {

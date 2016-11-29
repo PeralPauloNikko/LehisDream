@@ -5,7 +5,7 @@
  */
 package byui.cit260.LehisDream.control;
 
-import byui.cit260.LehisDream.model.Location;
+import byui.cit260.LehisDream.exceptions.MapControlException;
 import byui.cit260.LehisDream.model.Map;
 import byui.cit260.LehisDream.model.Question;
 import byui.cit260.LehisDream.model.Scene;
@@ -17,18 +17,21 @@ import byui.cit260.LehisDream.model.SceneType;
  */
 public class MapControl {
 
-    public static double calcVolumeOfFont(double height, double width, double length) {
+    public static double calcVolumeOfFont(double height, double width, double length)throws MapControlException {
         
         if (height < 3 || height > 6) { //height has limits, 3 and 6
-                return -1;
+                throw new MapControlException("\nHeight must be between 3 and 6."
+                        + "Please enter in another value for the height.");
         }
         
         if (width < 5 || width > 10) { //width has limits, 5 and 10
-                return -2;
+                throw new MapControlException("\nWidth must be between 5 and 10."
+                        + "Please enter in another value for the width.");
         }        
         
         if (length < 4 || length > 8) { //length has limits, 4 and 8
-                return -3;
+                throw new MapControlException("\nLength must be between 4 and 8."
+                        + "Please enter in another value for the length.");
         }
         
         double volume = (height * width * length);
@@ -36,14 +39,16 @@ public class MapControl {
         return volume;
     
     }
-    public static double calcSquareFeetOfHome(double length, double width) {
+    public static double calcSquareFeetOfHome(double length, double width)throws MapControlException {
         
         if (length < 0) {//length is negative? 
-        return -1;
+        throw new MapControlException("\nLength must be greater than 0."
+                        + "Please enter in another value for the length.");
         }
         
         if (width < 0) { //width is negative?
-        return -2;
+        throw new MapControlException("\nWidth must be greater than 0."
+                        + "Please enter in another value for the width.");
         }
         
         //calculates squarefeet by multiplying length and width
@@ -71,12 +76,34 @@ public class MapControl {
         
         Scene currentScene = new Scene();
         currentScene.setDescription(
-            "You have entered the zone At Home. You are at the front door of the"
+            "You have started the game, Lehi's Dream. You will need to venture down"
+          + " the path moving your player along the way. You will answer questions "
+          + " until you reach your destination, the Tree of Life.");
+        currentScene.setName("Start");
+        currentScene.setSymbol("ST");
+        Question currentQuestion = new Question();
+        currentQuestion.setCurrentQuestion(
+            "You have started the game, Lehi's Dream." 
+          + "You will need to venture down the path moving your player along the "
+          + "way. You will answer questions until you reach your destination, "
+          + "the Tree of Life.");
+//        currentQuestion.setAnswer1("Vote for them");
+//        currentQuestion.setAnswer2("Run away");
+//        currentQuestion.setAnswer3("Follow them");
+//        currentQuestion.setAnswer4("Copy them");
+//        currentQuestion.setCorrectAnswer(2);
+        currentScene.setQuestion(currentQuestion);
+//        
+        scenes[SceneType.start.ordinal()] = currentScene;
+        
+        //scene 2
+        currentScene = new Scene();
+        currentScene.setDescription(
+            "You have entered the zone At Home. You are at the front door of the "
           + "house. In order to enter the house you need to answer the following "
           + "question:");
         currentScene.setName("Front Door");
         currentScene.setSymbol("FD");
-        Question currentQuestion = new Question();
         currentQuestion.setCurrentQuestion("What do you do when someone lies?");
         currentQuestion.setAnswer1("Vote for them");
         currentQuestion.setAnswer2("Run away");
@@ -87,10 +114,10 @@ public class MapControl {
         
         scenes[SceneType.frontDoor.ordinal()] = currentScene;
         
-        //scene 2
+        //scene 3
         currentScene = new Scene();
         currentScene.setDescription(
-            "You are at the Laundry Room. In order to wash your clothes"
+            "You are in the Laundry Room. In order to wash your clothes "
           + "you need to answer the following question:");
         currentScene.setName("Laundry Room");
         currentScene.setSymbol("LA");
@@ -106,10 +133,10 @@ public class MapControl {
         
         scenes[SceneType.laundryRoom.ordinal()] = currentScene;
         
-        //scene 3
+        //scene 4
         currentScene = new Scene();
         currentScene.setDescription(
-            "You are at the living room. In order to enter enjoy family time"
+            "You are in the living room. In order to enter enjoy family time "
           + "you need to answer the following question:");
         currentScene.setName("Living Room");
         currentScene.setSymbol("LR");
@@ -124,18 +151,18 @@ public class MapControl {
         
         scenes[SceneType.livingRoom.ordinal()] = currentScene;
         
-        //scene 4
+        //scene 5
         currentScene = new Scene();
         currentScene.setDescription(
-            "You are at the Bedroom. In order to go to sleep and rest"
+            "You are in the Bedroom. In order to go to sleep and rest "
           + "you need to answer the following question:");
         currentScene.setName("Bedroom");
         currentScene.setSymbol("BD");
         currentQuestion = new Question();
-        currentQuestion.setCurrentQuestion("How many years a young manis call to"
-                + "serve the lord");
+        currentQuestion.setCurrentQuestion("How many years is a young man called to"
+                + " serve the Lord");
         currentQuestion.setAnswer1("Three years");
-        currentQuestion.setAnswer2("One year and haft");
+        currentQuestion.setAnswer2("One year and a half");
         currentQuestion.setAnswer3("Few years");
         currentQuestion.setAnswer4("Two years");
         currentQuestion.setCorrectAnswer(4);
@@ -143,33 +170,33 @@ public class MapControl {
         
         scenes[SceneType.bedroom.ordinal()] = currentScene;
         
-        //scene 5
-        currentScene = new Scene();
-        currentScene.setDescription(
-            "You are at the Kitchen. In order to enter to start cooking a "
-          + "delicious meal you need to answer the following question:");
-        currentScene.setName("Kitchen");
-        currentScene.setSymbol("KI");
-        currentQuestion = new Question();
-        currentQuestion.setCurrentQuestion("Why was Jesus Christ baptized?");
-        currentQuestion.setAnswer1("Because he want it");
-        currentQuestion.setAnswer2("To give us an example");
-        currentQuestion.setAnswer3("They asking him to do it");
-        currentQuestion.setAnswer4("He wanted a bath");
-        currentQuestion.setCorrectAnswer(2);
-        currentScene.setQuestion(currentQuestion);
-        
-        scenes[SceneType.kitchen.ordinal()] = currentScene;
-        
+//        //scene 5
+//        currentScene = new Scene();
+//        currentScene.setDescription(
+//            "You are at the Kitchen. In order to enter to start cooking a "
+//          + "delicious meal you need to answer the following question:");
+//        currentScene.setName("Kitchen");
+//        currentScene.setSymbol("KI");
+//        currentQuestion = new Question();
+//        currentQuestion.setCurrentQuestion("Why was Jesus Christ baptized?");
+//        currentQuestion.setAnswer1("Because he want it");
+//        currentQuestion.setAnswer2("To give us an example");
+//        currentQuestion.setAnswer3("They asking him to do it");
+//        currentQuestion.setAnswer4("He wanted a bath");
+//        currentQuestion.setCorrectAnswer(2);
+//        currentScene.setQuestion(currentQuestion);
+//        
+//        scenes[SceneType.kitchen.ordinal()] = currentScene;
+//        
         //scene 6
         currentScene = new Scene();
         currentScene.setDescription(
-            "You are at the Cateria. In order to enter to enjoy your lunch"
+            "You are in the Cafeteria. In order to enter to enjoy your lunch "
           + "you need to answer the following question:");
         currentScene.setName("Cafeteria");
         currentScene.setSymbol("CA");
         currentQuestion = new Question();
-        currentQuestion.setCurrentQuestion("What do you do when someone steal?");
+        currentQuestion.setCurrentQuestion("What do you do when someone steals?");
         currentQuestion.setAnswer1("Help them");
         currentQuestion.setAnswer2("Follow them");
         currentQuestion.setAnswer3("Teach them");
@@ -182,12 +209,12 @@ public class MapControl {
         //scene 7
         currentScene = new Scene();
         currentScene.setDescription(
-            "You are at the Auditorium. In order to enter see the show"
+            "You are at the Auditorium. In order to enter see the show "
           + "you need to answer the following question:");
         currentScene.setName("Auditorium");
         currentScene.setSymbol("AU");
         currentQuestion = new Question();
-        currentQuestion.setCurrentQuestion("What do you do when someone hurt "
+        currentQuestion.setCurrentQuestion("What do you do when someone hurts "
                 + "your feelings?");
         currentQuestion.setAnswer1("Beg them");
         currentQuestion.setAnswer2("Demand for a appology");
@@ -201,16 +228,16 @@ public class MapControl {
         //scene 8
         currentScene = new Scene();
         currentScene.setDescription(
-            "You are at the Office. In order to work"
+            "You are at the Office. In order to work "
           + "you need to answer the following question:");
         currentScene.setName("Office");
         currentScene.setSymbol("OC");
         currentQuestion = new Question();
-        currentQuestion.setCurrentQuestion("Why Jesus died for us?");
-        currentQuestion.setAnswer1("He did not havea choice");
+        currentQuestion.setCurrentQuestion("Why did Jesus die for us?");
+        currentQuestion.setAnswer1("He did not have a choice");
         currentQuestion.setAnswer2("He love us");
         currentQuestion.setAnswer3("Someone ask him");
-        currentQuestion.setAnswer4("to win a gift");
+        currentQuestion.setAnswer4("To win a gift");
         currentQuestion.setCorrectAnswer(2);
         currentScene.setQuestion(currentQuestion);
         
@@ -219,7 +246,7 @@ public class MapControl {
         //scene 9
         currentScene = new Scene();
         currentScene.setDescription(
-            "You are at the library. In order to enter read a great book"
+            "You are at the library. In order to enter read a great book "
           + "you need to answer the following question:");
         currentScene.setName("Library");
         currentScene.setSymbol("LI");
@@ -238,7 +265,7 @@ public class MapControl {
         //scene 10
         currentScene = new Scene();
         currentScene.setDescription(
-            "You are at the play ground. In order to enter to have a lot of fun"
+            "You are at the playground. In order to enter to have a lot of fun "
           + "you need to answer the following question:");
         currentScene.setName("Play Ground");
         currentScene.setSymbol("PG");
@@ -257,7 +284,7 @@ public class MapControl {
         //scene 11
         currentScene = new Scene();
         currentScene.setDescription(
-            "You are at the meat depatment. In order to prepare the best food"
+            "You are at the meat depatment. In order to prepare the best food, "
           + "you need to answer the following question:");
         currentScene.setName("Meat Dept");
         currentScene.setSymbol("MD");
@@ -277,7 +304,7 @@ public class MapControl {
         //scene 12
         currentScene = new Scene();
         currentScene.setDescription(
-            "You are at the deli shoppe. In order to enter to enjoy our food"
+            "You are at the deli shoppe. In order to enter to enjoy our food "
           + "you need to answer the following question:");
         currentScene.setName("Deli Shoppe");
         currentScene.setSymbol("DS");
@@ -285,7 +312,7 @@ public class MapControl {
         currentQuestion.setCurrentQuestion("What was the boat Noah built called?");
         currentQuestion.setAnswer1("Ship");
         currentQuestion.setAnswer2("An ark");
-        currentQuestion.setAnswer3("Yate");
+        currentQuestion.setAnswer3("Yacht");
         currentQuestion.setAnswer4("Boat");
         currentQuestion.setCorrectAnswer(2);
         currentQuestion.setStore(true);
@@ -296,7 +323,7 @@ public class MapControl {
         //scene 13
         currentScene = new Scene();
         currentScene.setDescription(
-            "You are at the Dairy Aisle. In order to enter have some milk"
+            "You are at the Dairy Aisle. In order to enter have some milk "
           + "you need to answer the following question:");
         currentScene.setName("Dairy Aisle");
         currentScene.setSymbol("DA");
@@ -316,7 +343,7 @@ public class MapControl {
         //scene 14
         currentScene = new Scene();
         currentScene.setDescription(
-            "You are at the Produce Aisle. In order to enter make some salad"
+            "You are at the Produce Aisle. In order to enter make some salad "
           + "you need to answer the following question:");
         currentScene.setName("Produce Aisle");
         currentScene.setSymbol("PA");
@@ -335,7 +362,7 @@ public class MapControl {
         //scene 15
         currentScene = new Scene();
         currentScene.setDescription(
-           "You are at the Customer Service. In order to enter ask for some help"
+           "You are at the Customer Service. In order to enter ask for some help "
           +"you need to answer the following question:");
         currentScene.setName("CustomerService");
         currentScene.setSymbol("CS");

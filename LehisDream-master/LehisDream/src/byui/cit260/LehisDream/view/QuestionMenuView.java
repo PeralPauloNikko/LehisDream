@@ -17,13 +17,15 @@ import lehisdream.LehisDream;
 public class QuestionMenuView extends View {
    private Scene currentScene;
    private Game game;
+
    
 public QuestionMenuView() {
    super("");
    game = LehisDream.getCurrentGame(); // retreive the game
    Map map = game.getMap(); // retreive the map from game
    currentScene =  map.getCurrentLocation().getScene();
-   String question = currentScene.getQuestion().getCurrentQuestion()+
+   String question = currentScene.getDescription()+"\n"+
+   "\n\r"   +currentScene.getQuestion().getCurrentQuestion()+
    "\n\r 1-"+currentScene.getQuestion().getAnswer1()+
    "\n\r 2-"+currentScene.getQuestion().getAnswer2()+
    "\n\r 3-"+currentScene.getQuestion().getAnswer3()+
@@ -36,13 +38,23 @@ public QuestionMenuView() {
 
 @Override
 public boolean doAction(String choice) {
-     int ichoice = Integer.parseInt(choice);
+    int ichoice;
+    try { 
+    ichoice = Integer.parseInt(choice);
+    
+    } catch (NumberFormatException nf) {
+        
+        System.out.println("\nYou must enter a valid number."
+                +"Try again or enter Q to quit."
+                +"\n");
+        return false;
+    }
      double currentEnergy = game.getPlayer().getEnergyLevel();
      
     if (ichoice == currentScene.getQuestion().getCorrectAnswer()){
         System.out.println("You are correct. Your energy will now be increased by 2%.");
         currentEnergy += 2;
-        
+       
         if(currentEnergy  > 100) {
             currentEnergy = 100;
         }

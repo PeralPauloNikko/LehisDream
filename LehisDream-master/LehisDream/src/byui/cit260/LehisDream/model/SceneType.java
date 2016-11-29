@@ -11,11 +11,12 @@ package byui.cit260.LehisDream.model;
  */
 public enum SceneType {
     
+    start,
     frontDoor,
     laundryRoom,
     livingRoom,
     bedroom,
-    kitchen,
+//    kitchen,
     cafeteria,
     auditorium,
     office,

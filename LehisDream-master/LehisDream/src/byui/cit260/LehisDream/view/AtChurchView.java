@@ -6,6 +6,7 @@
 package byui.cit260.LehisDream.view;
 
 import byui.cit260.LehisDream.control.MapControl;
+import byui.cit260.LehisDream.exceptions.MapControlException;
 import java.util.Scanner;
 
 /**
@@ -20,47 +21,54 @@ public class AtChurchView {
     public void displayAtChurchView() {
 
         Scanner keyboard = new Scanner(System.in);//get infile for keyboard
-        double fontlength = 0.0;// value to be returned
-        double fontwidth = 0.0;
-        double fontheigth = 0.0;
+        double fontlength;// value to be returned
+        double fontwidth;
+        double fontheight;
         boolean valid = false;// initialize to not valid
 
         while (!valid) {// loop while an invalid value is entered
 
-            System.out.println("Enter the heigth(depth) of the font (Enter -1 to cancel)");
+            System.out.println("Enter the height(depth) of the font (Enter -1 to cancel)");
 
-            fontheigth = keyboard.nextDouble();// get next line typed on keyboard
-            if (fontheigth == -1) {
+            fontheight = View.getnextDouble();// get next line typed on keyboard
+            if (fontheight == -1) {
                 System.out.println("You chose to cancel");
                 return;
             }
             System.out.println("Enter the width of the font (Enter -1 to cancel)");
-            fontwidth = keyboard.nextDouble();// get next line typed on keyboard
+            fontwidth = View.getnextDouble();// get next line typed on keyboard
             if (fontwidth == -1) {
                 System.out.println("You chose to cancel");
                 return;
             }
             System.out.println("Enter the length of the font (Enter -1 to cancel)");
 
-            fontlength = keyboard.nextDouble();// get next line typed on keyboard
+            fontlength = View.getnextDouble();// get next line typed on keyboard
             if (fontlength == -1) {
                 System.out.println("You chose to cancel");
                 return;
             }
-            double volume = MapControl.calcVolumeOfFont(fontheigth, fontwidth, fontlength);
-
-            if (volume == -1) {
-                System.out.println("You entered an invalid height. It should between 3 and 6.");
-            } else if (volume == -2) {
-                System.out.println("You entered an invalid width. It should be between 5 and 10.");
-            } else if (volume == -3) {
-                System.out.println("You entered an invalid length. It should be bewteen 4 and 8.");
-            } else {
-                valid = true;
-                System.out.println("The volume of the font is:" + volume);
+            try {
+            double volume = MapControl.calcVolumeOfFont(fontheight, fontwidth, fontlength);
+            System.out.println("\nThe volume of the font is " + volume + " feet.");
+            valid = true;
+            } catch (MapControlException me){
+                System.out.println(me.getMessage());
+                
+            }
+//            double volume = 0;
+//            if (volume == -1) {
+//                System.out.println("You entered an invalid height. It should between 3 and 6.");
+//            } else if (volume == -2) {
+//                System.out.println("You entered an invalid width. It should be between 5 and 10.");
+//            } else if (volume == -3) {
+//                System.out.println("You entered an invalid length. It should be bewteen 4 and 8.");
+//            } else {
+//                valid = true;
+                
             }
             // end the loop
         }
-        return; //return 
+//        return; //return 
     }
-}
+
