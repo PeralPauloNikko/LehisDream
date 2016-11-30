@@ -5,10 +5,14 @@
  */
 package byui.cit260.LehisDream.view;
 
+import byui.cit260.LehisDream.control.SpendMoney;
+import byui.cit260.LehisDream.exceptions.SpendMoneyException;
 import byui.cit260.LehisDream.model.Game;
 import byui.cit260.LehisDream.model.Item;
 import java.util.ArrayList;
 import java.util.Scanner;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import lehisdream.LehisDream;
 
 /**
@@ -49,12 +53,13 @@ public class AtTheatreView extends View {
         for (Item item : treats) {
             if (choice.equalsIgnoreCase(item.getChoiceValue())) {
                 double cash = game.getPlayer().getCash();
-                if (cash < item.getCost()) {
-                    System.out.println("Sorry, you cannot purchase this because "
-                            + "you only have $" + cash + " left.");
+                try { 
+                    cash = SpendMoney.CalculateBalance(cash, item.getCost());
+                } catch (SpendMoneyException ex) {
+                    System.out.println(ex.getMessage());
                     return false;
                 }
-                cash = cash - item.getCost();
+                
                 game.getPlayer().setCash(cash);
                 double currentEnergy = game.getPlayer().getEnergyLevel();
                 currentEnergy += item.getEnergyAdd();
