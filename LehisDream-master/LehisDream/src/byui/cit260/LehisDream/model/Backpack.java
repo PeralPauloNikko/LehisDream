@@ -23,8 +23,6 @@ public class Backpack implements Serializable{
         
     }
 
-   
-
     public Game getIronrodgame() {
         return ironrodgame;
     }

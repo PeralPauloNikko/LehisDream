@@ -25,17 +25,17 @@ public class AtTheatreView extends View {
         game = LehisDream.getCurrentGame(); // retreive the game
         this.treats = game.getTreats();
 
-        String question = ("\nYou have now entered the theatre. You have the option"
+        String question = ("\nYou are in the theatre. You have the option"
                 + "\nto buy these items in the theatre only. Please select from "
                 + "\nthe list of items if you wish to purchase something to "
                 + "\nreplenish energy. Please remember you can not go over 100% "
                 + "energy.") + "\n\r"
                 + "\n\rChoice\tItem\t\tEnergy+\tCost\n"
-                + "\n\r-----\t--------------\t-------\t-------\n";
+                + "\n\r-----\t-----------\t------\t------\n";
         for (Item item : treats) {
 
             question = question + "\n\r" + item.getChoiceValue() + "-\t"
-                    + item.getName() + "\t" + item.getEnergyAdd() + "\t$" + item.getCost();
+                    + item.getName() + "\t\t" + item.getEnergyAdd() + "\t$" + item.getCost();
         }
         question = question + "\n\rYou have $" + game.getPlayer().getCash() + ".\n\rEnter Q to Quit";
 
@@ -67,7 +67,7 @@ public class AtTheatreView extends View {
 
                 return true;
 
-                //todo incorporate money deductions    
+                  
             }
         }
         return false;

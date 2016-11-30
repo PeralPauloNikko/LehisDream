@@ -24,7 +24,7 @@ public class AtStoreView extends View {
         game = LehisDream.getCurrentGame(); // retreive the game
         this.groceries = game.getGroceries();
 
-        String question = ("\nYou have now entered the store. You have the option"
+        String question = ("\nYou are in  the store. You have the option"
                 + "\nto buy these items in the store only. Please select from "
                 + "\nthe list of items if you wish to purchase something to "
                 + "\nreplenish energy. Please remember you can not go over 100% "

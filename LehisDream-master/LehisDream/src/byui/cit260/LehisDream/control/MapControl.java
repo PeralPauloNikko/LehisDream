@@ -72,6 +72,7 @@ public class MapControl {
     }
         //scene 1
     private static Scene[] createScenes(){
+        Question currentQuestion;
         Scene[] scenes = new Scene[SceneType.values().length];
         
         Scene currentScene = new Scene();
@@ -81,18 +82,15 @@ public class MapControl {
           + " until you reach your destination, the Tree of Life.");
         currentScene.setName("Start");
         currentScene.setSymbol("ST");
-        Question currentQuestion = new Question();
-        currentQuestion.setCurrentQuestion(
-            "You have started the game, Lehi's Dream." 
-          + "You will need to venture down the path moving your player along the "
-          + "way. You will answer questions until you reach your destination, "
-          + "the Tree of Life.");
+        currentQuestion = new Question();
+//        currentQuestion.setCurrentQuestion(
+            
 //        currentQuestion.setAnswer1("Vote for them");
 //        currentQuestion.setAnswer2("Run away");
 //        currentQuestion.setAnswer3("Follow them");
 //        currentQuestion.setAnswer4("Copy them");
 //        currentQuestion.setCorrectAnswer(2);
-        currentScene.setQuestion(currentQuestion);
+//        currentScene.setQuestion(currentQuestion);
 //        
         scenes[SceneType.start.ordinal()] = currentScene;
         
@@ -100,10 +98,11 @@ public class MapControl {
         currentScene = new Scene();
         currentScene.setDescription(
             "You have entered the zone At Home. You are at the front door of the "
-          + "house. In order to enter the house you need to answer the following "
+          + "house. In order to enter the house, you need to answer the following "
           + "question:");
         currentScene.setName("Front Door");
         currentScene.setSymbol("FD");
+        currentQuestion = new Question();
         currentQuestion.setCurrentQuestion("What do you do when someone lies?");
         currentQuestion.setAnswer1("Vote for them");
         currentQuestion.setAnswer2("Run away");
@@ -117,12 +116,12 @@ public class MapControl {
         //scene 3
         currentScene = new Scene();
         currentScene.setDescription(
-            "You are in the Laundry Room. In order to wash your clothes "
+            "You are in the Laundry Room. In order to wash your clothes, "
           + "you need to answer the following question:");
         currentScene.setName("Laundry Room");
         currentScene.setSymbol("LA");
         currentQuestion = new Question();
-        currentQuestion.setCurrentQuestion("What does it mean to be a Special"
+        currentQuestion.setCurrentQuestion("What does it mean to be a Special "
                 + "Witnes of Christ?");
         currentQuestion.setAnswer1("Be Famous");
         currentQuestion.setAnswer2("Be Batman");
@@ -136,7 +135,7 @@ public class MapControl {
         //scene 4
         currentScene = new Scene();
         currentScene.setDescription(
-            "You are in the living room. In order to enter enjoy family time "
+            "You are in the living room. In order to enter enjoy family time, "
           + "you need to answer the following question:");
         currentScene.setName("Living Room");
         currentScene.setSymbol("LR");
@@ -154,7 +153,7 @@ public class MapControl {
         //scene 5
         currentScene = new Scene();
         currentScene.setDescription(
-            "You are in the Bedroom. In order to go to sleep and rest "
+            "You are in the Bedroom. In order to go to sleep and rest, "
           + "you need to answer the following question:");
         currentScene.setName("Bedroom");
         currentScene.setSymbol("BD");
@@ -191,8 +190,9 @@ public class MapControl {
         //scene 6
         currentScene = new Scene();
         currentScene.setDescription(
-            "You are in the Cafeteria. In order to enter to enjoy your lunch "
-          + "you need to answer the following question:");
+            "You have entered the zone At School. You are in the Cafeteria. "
+          + "In order to enter to enjoy your lunch, you need to answer the "
+          + "following question:");
         currentScene.setName("Cafeteria");
         currentScene.setSymbol("CA");
         currentQuestion = new Question();
@@ -209,7 +209,7 @@ public class MapControl {
         //scene 7
         currentScene = new Scene();
         currentScene.setDescription(
-            "You are at the Auditorium. In order to enter see the show "
+            "You are at the Auditorium. In order to enter to see the play, "
           + "you need to answer the following question:");
         currentScene.setName("Auditorium");
         currentScene.setSymbol("AU");
@@ -228,7 +228,7 @@ public class MapControl {
         //scene 8
         currentScene = new Scene();
         currentScene.setDescription(
-            "You are at the Office. In order to work "
+            "You are at the Office. In order to work, "
           + "you need to answer the following question:");
         currentScene.setName("Office");
         currentScene.setSymbol("OC");
@@ -246,7 +246,7 @@ public class MapControl {
         //scene 9
         currentScene = new Scene();
         currentScene.setDescription(
-            "You are at the library. In order to enter read a great book "
+            "You are at the library. In order to enter to read a great book, "
           + "you need to answer the following question:");
         currentScene.setName("Library");
         currentScene.setSymbol("LI");
@@ -265,7 +265,7 @@ public class MapControl {
         //scene 10
         currentScene = new Scene();
         currentScene.setDescription(
-            "You are at the playground. In order to enter to have a lot of fun "
+            "You are at the playground. In order to enter to have a lot of fun, "
           + "you need to answer the following question:");
         currentScene.setName("Play Ground");
         currentScene.setSymbol("PG");
@@ -284,8 +284,8 @@ public class MapControl {
         //scene 11
         currentScene = new Scene();
         currentScene.setDescription(
-            "You are at the meat depatment. In order to prepare the best food, "
-          + "you need to answer the following question:");
+            "You have entered the zone At the Store. You are in the meat depatment. "
+          + "In order to prepare the best food, you need to answer the following question:");
         currentScene.setName("Meat Dept");
         currentScene.setSymbol("MD");
         currentQuestion = new Question();
@@ -304,7 +304,7 @@ public class MapControl {
         //scene 12
         currentScene = new Scene();
         currentScene.setDescription(
-            "You are at the deli shoppe. In order to enter to enjoy our food "
+            "You are at the deli shoppe. In order to enter to enjoy our food, "
           + "you need to answer the following question:");
         currentScene.setName("Deli Shoppe");
         currentScene.setSymbol("DS");
@@ -323,7 +323,7 @@ public class MapControl {
         //scene 13
         currentScene = new Scene();
         currentScene.setDescription(
-            "You are at the Dairy Aisle. In order to enter have some milk "
+            "You are at the Dairy Aisle. In order to enter have some milk, "
           + "you need to answer the following question:");
         currentScene.setName("Dairy Aisle");
         currentScene.setSymbol("DA");
@@ -367,7 +367,7 @@ public class MapControl {
         currentScene.setName("CustomerService");
         currentScene.setSymbol("CS");
         currentQuestion = new Question();
-        currentQuestion.setCurrentQuestion("What was the first thing Lehi saw in"
+        currentQuestion.setCurrentQuestion("What was the first thing Lehi saw in "
                 + "his dream?");
         currentQuestion.setAnswer1("An iron rod");
         currentQuestion.setAnswer2("A man dressed in white");
@@ -382,7 +382,8 @@ public class MapControl {
         //scene 16
         currentScene = new Scene();
         currentScene.setDescription(
-            "You are at the Theatre One. In order to enter enjoy the show"
+            "You have entered the zone At the Theatre. You are in the Theatre One. "
+          + "In order to enter enjoy the show"
           + "you need to answer the following question:");
         currentScene.setName("Theatre One");
         currentScene.setSymbol("T1");
@@ -466,7 +467,7 @@ public class MapControl {
         currentScene.setName("Theatre Five");
         currentScene.setSymbol("T5");
         currentQuestion = new Question(); 
-        currentQuestion.setCurrentQuestion("What do you do when someone hit"
+        currentQuestion.setCurrentQuestion("What do you do when someone hits "
                                          + "you?");
         currentQuestion.setAnswer1("Hit them Back");
         currentQuestion.setAnswer2("Forgive them");
@@ -481,13 +482,13 @@ public class MapControl {
         //scene 21
         currentScene = new Scene();
         currentScene.setDescription(
-            "You are at the Chapel. In order to enter to pray and listen the"
-          + " to talks of amazing people "
+            "You have entered the zone At Church. You are at the Chapel. In order "
+          + "to enter to pray and listen the to talks of amazing people "
           + "you need to answer the following question:");
         currentScene.setName("Chapel");
         currentScene.setSymbol("CP");
         currentQuestion = new Question();
-        currentQuestion.setCurrentQuestion("What do you do when you found"
+        currentQuestion.setCurrentQuestion("What do you do when you found "
                                     + "a cellphone that you always wanted it?");
         currentQuestion.setAnswer1("Give it back");
         currentQuestion.setAnswer2("keep it");
@@ -520,8 +521,8 @@ public class MapControl {
         //scene 23
         currentScene = new Scene();
         currentScene.setDescription(
-            "You are at the cultural hall. In order to enter and have fun with "
-          + "friends. you need to answer the following question:");
+            "You are in the cultural hall. In order to enter and have fun with "
+          + "friends, you need to answer the following question:");
         currentScene.setName("Cultural Hall");
         currentScene.setSymbol("CH");
         currentQuestion = new Question();
@@ -539,17 +540,17 @@ public class MapControl {
         //scene 24
         currentScene = new Scene();
         currentScene.setDescription(
-            "You are at the relief society room. In order to enter and learn "
-          + "how to cook,bake, and make amazing things and enjoy time."
+            "You are in the relief society room. In order to enter and learn "
+          + "how to cook,bake, and make amazing things and enjoy time,"
           + "you need to answer the following question:");
         currentScene.setName("Relief Society Room");
         currentScene.setSymbol("RS");
         currentQuestion = new Question();
-        currentQuestion.setCurrentQuestion("How can I be more positivy?");
+        currentQuestion.setCurrentQuestion("How can I be more positive?");
         currentQuestion.setAnswer1("Focus on my mistakes");
         currentQuestion.setAnswer2("Have a bad attitude");
         currentQuestion.setAnswer3("Dance in the Sky");
-        currentQuestion.setAnswer4("See the bright in everything");
+        currentQuestion.setAnswer4("See the good in everything");
         currentQuestion.setCorrectAnswer(4);
         currentScene.setQuestion(currentQuestion);
         
@@ -558,14 +559,14 @@ public class MapControl {
         //scene 25
         currentScene = new Scene();
         currentScene.setDescription(
-            "You are at the classroom. In order to enter to learn"
+            "You are in the classroom. In order to enter to learn,"
           + "you need to answer the following question:");
         currentScene.setName("Classroom");
         currentScene.setSymbol("CR");
         currentQuestion = new Question();
         currentQuestion.setCurrentQuestion("Which of the following people was "
                 + "not one of Lehi's son?");
-        currentQuestion.setAnswer1("Joseoh");
+        currentQuestion.setAnswer1("Joseph");
         currentQuestion.setAnswer2("Sam");
         currentQuestion.setAnswer3("Jacob");
         currentQuestion.setAnswer4("Jarom");
