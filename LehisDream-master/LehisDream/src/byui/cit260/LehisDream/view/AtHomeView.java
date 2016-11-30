@@ -5,7 +5,9 @@
  */
 package byui.cit260.LehisDream.view;
 
+import byui.cit260.LehisDream.control.HouseControl;
 import byui.cit260.LehisDream.control.MapControl;
+import byui.cit260.LehisDream.exceptions.HouseControlException;
 import byui.cit260.LehisDream.exceptions.MapControlException;
 import java.util.Scanner;
 
@@ -41,10 +43,10 @@ public class AtHomeView {
                 return;
             }
             try {
-            double squarefeet = MapControl.calcSquareFeetOfHome(homelength, homewidth);
+            double squarefeet = HouseControl.calcSquareFeetOfHome(homelength, homewidth);
             System.out.println("\nThe squarefeet of the home is " + squarefeet + " feet.");
             valid = true;
-            } catch (MapControlException me) {
+            } catch (HouseControlException me) {
                 System.out.println(me.getMessage());
                 
             }

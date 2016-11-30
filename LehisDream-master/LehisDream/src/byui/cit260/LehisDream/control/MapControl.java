@@ -39,25 +39,26 @@ public class MapControl {
         return volume;
     
     }
-    public static double calcSquareFeetOfHome(double length, double width)throws MapControlException {
-        
-        if (length < 0) {//length is negative? 
-        throw new MapControlException("\nLength must be greater than 0."
-                        + "Please enter in another value for the length.");
-        }
-        
-        if (width < 0) { //width is negative?
-        throw new MapControlException("\nWidth must be greater than 0."
-                        + "Please enter in another value for the width.");
-        }
-        
-        //calculates squarefeet by multiplying length and width
-        double squarefeet = (length * width);
-        
-        //returns squarefeet
-        return squarefeet;
 
-    }
+//    public static double calcSquareFeetOfHome(double length, double width)throws MapControlException {
+//        
+//        if (length < 0) {//length is negative? 
+//        throw new MapControlException("\nLength must be greater than 0."
+//                        + "Please enter in another value for the length.");
+//        }
+//        
+//        if (width < 0) { //width is negative?
+//        throw new MapControlException("\nWidth must be greater than 0."
+//                        + "Please enter in another value for the width.");
+//        }
+//        
+//        //calculates squarefeet by multiplying length and width
+//        double squarefeet = (length * width);
+//        
+//        //returns squarefeet
+//        return squarefeet;
+//
+//    }
 
     public static Map createMap() {
         Map map = new Map(5, 5);
