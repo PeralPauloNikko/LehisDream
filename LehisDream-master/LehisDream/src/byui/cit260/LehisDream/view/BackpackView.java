@@ -46,7 +46,7 @@ public BackpackView() {
                 this.wallet(500);
                 break;
             default:
-                System.out.println("\n*** Invalid selection *** Try again");
+                this.console.println("\n*** Invalid selection *** Try again");
                 break;
         }
         return false;
@@ -60,22 +60,22 @@ public BackpackView() {
     }
 
     private boolean flashlight() {
-        System.out.println("\n*** flashlight() function called ***");
+        this.console.println("\n*** flashlight() function called ***");
         return true;
     }
 
     private boolean water(int i) {
-        System.out.println("\n*** water() function called ***");
+        this.console.println("\n*** water() function called ***");
         return true;
     }
 
     private boolean snack(int i) {
-        System.out.println("\n*** snack() function called ***");
+        this.console.println("\n*** snack() function called ***");
         return true;
     }
 
     private boolean wallet(int i) {
-        System.out.println("\n*** wallet() function called ***");
+        this.console.println("\n*** wallet() function called ***");
         return true;
     }
 }
