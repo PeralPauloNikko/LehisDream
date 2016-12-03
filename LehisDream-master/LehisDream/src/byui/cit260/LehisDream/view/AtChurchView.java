@@ -7,8 +7,6 @@ package byui.cit260.LehisDream.view;
 
 import byui.cit260.LehisDream.control.MapControl;
 import byui.cit260.LehisDream.exceptions.MapControlException;
-import java.io.BufferedReader;
-import java.util.Scanner;
 import java.io.PrintWriter;
 import lehisdream.LehisDream;
 
@@ -17,7 +15,6 @@ import lehisdream.LehisDream;
  * @author smith
  */
 public class AtChurchView {
-    
     
     protected final PrintWriter console = LehisDream.getOutFile();
     
@@ -48,7 +45,7 @@ public class AtChurchView {
                  this.console.println("You chose to cancel");
                 return;
             }
-            System.out.println("Enter the length of the font (Enter -1 to cancel)");
+            this.console.println("Enter the length of the font (Enter -1 to cancel)");
 
             fontlength = View.getnextDouble();// get next line typed on keyboard
             if (fontlength == -1) {

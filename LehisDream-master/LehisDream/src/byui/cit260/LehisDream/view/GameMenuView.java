@@ -5,12 +5,11 @@
  */
 package byui.cit260.LehisDream.view;
 
-import byui.cit260.LehisDream.control.GameControl;
+
 import byui.cit260.LehisDream.control.MapControl;
 import byui.cit260.LehisDream.model.Game;
 import byui.cit260.LehisDream.model.Location;
 import byui.cit260.LehisDream.model.Map;
-import java.util.Scanner;
 import lehisdream.LehisDream;
 
 /**
@@ -67,7 +66,7 @@ public class GameMenuView extends View {
                 this.displayHelpMenu();
                 break;
             default:
-                System.out.println("\n*** Invalid selection *** Try again");
+                this.console.println("\n*** Invalid selection *** Try again");
                 break;
         }
         return false;
@@ -124,7 +123,7 @@ public class GameMenuView extends View {
 //                    System.out.println(map.getCurrentLocation().getScene().getDescription());
             }
         } catch (Exception e) {
-            System.out.println("Error");
+            ErrorView.display(this.getClass().getName(),"Error");
         }
     }
     private void moveForward() {

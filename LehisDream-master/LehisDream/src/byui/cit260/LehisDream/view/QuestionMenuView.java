@@ -44,7 +44,7 @@ public boolean doAction(String choice) {
     
     } catch (NumberFormatException nf) {
         
-        System.out.println("\nYou must enter a valid number."
+        ErrorView.display(this.getClass().getName(),"\nYou must enter a valid number."
                 +"Try again or enter Q to quit."
                 +"\n");
         return false;
@@ -52,7 +52,7 @@ public boolean doAction(String choice) {
      double currentEnergy = game.getPlayer().getEnergyLevel();
      
     if (ichoice == currentScene.getQuestion().getCorrectAnswer()){
-        System.out.println("You are correct. Your energy will now be increased by 2%.");
+        this.console.println("You are correct. Your energy will now be increased by 2%.");
         currentEnergy += 2;
        
         if(currentEnergy  > 100) {
@@ -61,7 +61,7 @@ public boolean doAction(String choice) {
         
         game.getPlayer().setEnergyLevel(currentEnergy);
         
-        System.out.println("Your current energy is now " + currentEnergy); 
+        this.console.println("Your current energy is now " + currentEnergy); 
         
         if (currentScene.getQuestion().isStore()){
             AtStoreView atStore = new AtStoreView();
@@ -74,10 +74,10 @@ public boolean doAction(String choice) {
        }
        return true;           
     }
-    System.out.println("You are incorrect. You lose 3% energy.");
+    this.console.println("You are incorrect. You lose 3% energy.");
         currentEnergy -= 3;
         game.getPlayer().setEnergyLevel(currentEnergy);
-        System.out.println("Your current energy is now " + currentEnergy);
+        this.console.println("Your current energy is now " + currentEnergy);
     return true;
 }  
 }

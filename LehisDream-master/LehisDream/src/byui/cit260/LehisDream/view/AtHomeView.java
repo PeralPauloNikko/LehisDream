@@ -15,6 +15,7 @@ import byui.cit260.LehisDream.exceptions.HouseControlException;
  * @author EthicalH1
  */
 public class AtHomeView {
+    
 
     public AtHomeView() {
     }

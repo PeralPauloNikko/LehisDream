@@ -49,7 +49,7 @@ public MainMenuView() {
                 this.saveGame();
                 break;
             default:
-                System.out.println("\n*** Invalid selection *** Try again");
+                this.console.println("\n*** Invalid selection *** Try again");
                 break;
         }
         return false;
@@ -65,7 +65,7 @@ public MainMenuView() {
     }
 
     private void restartExistingGame() {
-        System.out.println("*** restartExistingGame function called ***");
+        this.console.println("*** restartExistingGame function called ***");
     }
 
     private void displayHelpMenu() {
