@@ -20,7 +20,7 @@ public class AtChurchView {
     }
     public void displayAtChurchView() {
 
-        Scanner keyboard = new Scanner(System.in);//get infile for keyboard
+       
         double fontlength;// value to be returned
         double fontwidth;
         double fontheight;

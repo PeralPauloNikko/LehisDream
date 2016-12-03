@@ -5,8 +5,14 @@
  */
 package byui.cit260.LehisDream.view;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.InputMismatchException;
 import java.util.Scanner;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import lehisdream.LehisDream;
 
 /**
  *
@@ -14,6 +20,9 @@ import java.util.Scanner;
  */
 public abstract class View implements ViewInterface{
     protected String displayMessage= "\nPlease enter your selection: "; 
+    
+    protected final BufferedReader keyboard = LehisDream.getInFile();
+    protected final PrintWriter console = LehisDream.getOutFile();
     
     public View() {
 }
@@ -41,22 +50,26 @@ public View(String message) {
 @Override
 public String getInput() {
         
-        Scanner keyboard = new Scanner(System.in);//get infile for keyboard
+        
         String value = "";// value to be returned
         boolean valid = false;// initialize to not valid
-        
+        try {
         while (!valid) {// loop while an invalid value is entered
-           System.out.println("\n" + this.displayMessage);
+           this.console.println("\n" + this.displayMessage);
             
-            value = keyboard.nextLine();// get next line typed on keyboard
+            value = this.keyboard.readLine();// get next line typed on keyboard
             value = value.trim(); // trim off leading and trailing blanks
             
             if (value.length() < 1) {// value is blank
-                System.out.println("\nInvalid value: value can not be blank");
+                ErrorView.display(this.getClass().getName(),
+                                  "\nInvalid value: value can not be blank");
                 continue;
             }
-            
             break; // end the loop
+        }
+        } catch (Exception e) {
+            ErrorView.display(this.getClass().getName(),
+                              "Error reading input: " + e.getMessage());
         }
         return value; //return the value entered6
 }
@@ -71,9 +84,8 @@ public static double getnextDouble(){
         } catch (InputMismatchException e) {
         System.out.println("\nYou must enter a valid decimal value. Please try "
                 + "again.\n");
-                         
-     
-        }  
+        }
+        
         double value = 0;
         return value;
     }

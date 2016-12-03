@@ -6,10 +6,9 @@
 package byui.cit260.LehisDream.view;
 
 import byui.cit260.LehisDream.control.HouseControl;
-import byui.cit260.LehisDream.control.MapControl;
 import byui.cit260.LehisDream.exceptions.HouseControlException;
-import byui.cit260.LehisDream.exceptions.MapControlException;
-import java.util.Scanner;
+
+
 
 /**
  *
@@ -22,7 +21,7 @@ public class AtHomeView {
 
     public void displayAtHomeView() {
 
-        Scanner keyboard = new Scanner(System.in);//get infile for keyboard
+//        Scanner keyboard = new Scanner(System.in);//get infile for keyboard
         double homelength;// value to be returned
         double homewidth;
         boolean valid = false;// initialize to not valid

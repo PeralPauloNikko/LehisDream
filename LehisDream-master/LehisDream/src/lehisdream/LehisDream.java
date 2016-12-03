@@ -20,6 +20,12 @@ import byui.cit260.LehisDream.model.Item;
 import byui.cit260.LehisDream.model.Question;
 
 import byui.cit260.LehisDream.view.StartProgramView;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.PrintWriter;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
@@ -30,21 +36,64 @@ public class LehisDream {
     private static Game currentGame = null;
     private static Player player = null;
     
+    private static PrintWriter outFile = null;
+    private static BufferedReader inFile = null;
+    
+    private static PrintWriter logFile = null;
+    
      /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
         
-        
-        StartProgramView startProgramView = new StartProgramView();
         try {
+            //open character stream files for end user input and output
+            LehisDream.inFile =
+                    new BufferedReader(new InputStreamReader (System.in));
+            
+            LehisDream.outFile = new PrintWriter(System.out, true);
+            
+            // open log file
+            String filePath = "log.txt";
+            LehisDream.logFile = new PrintWriter(filePath);
+            
             //create StartProgramView and display the start program view
+            StartProgramView startProgramView = new StartProgramView();
             startProgramView.display();
-        } catch (Throwable te) {
-            System.out.println(te.getMessage());
-            te.printStackTrace();
-            startProgramView.display();
+            return;
+            
+        } catch (Throwable e) {
+            
+            System.out.println("Exception: " + e.toString() +
+                               "\nCause: " + e.getCause() +
+                               "\nMessage: " + e.getMessage());
+            
+            e.printStackTrace();;
         }
+        finally {
+            try {
+                if (LehisDream.inFile != null)
+                    LehisDream.inFile.close();
+                
+                if (LehisDream.outFile != null)
+                    LehisDream.outFile.close();
+                
+                if(LehisDream.logFile != null)
+                   LehisDream.logFile.close();
+            } catch (IOException ex) {
+                System.out.println("Error closing files");
+                return;
+            }
+           
+        }
+        
+        
+        
+        
+          
+            
+        
+            
     }
 
 
@@ -63,6 +112,31 @@ public class LehisDream {
     public static void setPlayer(Player player) {
         LehisDream.player = player;
     }
+
+    public static PrintWriter getOutFile() {
+        return outFile;
+    }
+
+    public static void setOutFile(PrintWriter outFile) {
+        LehisDream.outFile = outFile;
+    }
+
+    public static BufferedReader getInFile() {
+        return inFile;
+    }
+
+    public static void setInFile(BufferedReader inFile) {
+        LehisDream.inFile = inFile;
+    }
+
+    public static PrintWriter getLogFile() {
+        return logFile;
+    }
+
+    public static void setLogFile(PrintWriter logFile) {
+        LehisDream.logFile = logFile;
+    }
+    
     
     public static void teamTest(){
         //Player Test
