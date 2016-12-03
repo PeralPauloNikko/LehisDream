@@ -24,14 +24,14 @@ public boolean doAction(String choice) {
     
     switch (choice) {
         case "Y": 
-          System.out.println("You have chosen to use the Sword. This will help you in your battle."
+          this.console.println("You have chosen to use the Sword. This will help you in your battle."
                   + " You will lose less energy with the Sword.");  
           break;
         case "N":
-          System.out.println("You chose No");
+          this.console.println("You chose No");
           break;
         default: 
-            System.out.println("\n*** Invalid selection *** Try again");
+            this.console.println("\n*** Invalid selection *** Try again");
             break;
     }
     return false;
