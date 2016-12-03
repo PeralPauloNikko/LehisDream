@@ -30,7 +30,7 @@ public class MapControlTest {
         /************************************
          * Test Case #1
          ***********************************/
-        System.out.println("\tTest case #1");
+        this.console.println("\tTest case #1");
         
         //input values for test case 1
         double height = 5.0;
@@ -50,7 +50,7 @@ public class MapControlTest {
         /************************************
          * Test Case #2
          ***********************************/
-        System.out.println("\tTest case #2");
+        this.console.println("\tTest case #2");
         
         //input values for test case 2
         height = 2.0;
@@ -67,7 +67,7 @@ public class MapControlTest {
         /************************************
          * Test Case #3
          ***********************************/
-        System.out.println("\tTest case #3");
+        this.console.println("\tTest case #3");
         
         //input values for test case 3
         height = 7.0;
@@ -84,7 +84,7 @@ public class MapControlTest {
         /************************************
          * Test Case #4
          ***********************************/
-        System.out.println("\tTest case #4");
+        this.console.println("\tTest case #4");
         
         //input values for test case 4
         height = 5.0;
@@ -101,7 +101,7 @@ public class MapControlTest {
         /************************************
          * Test Case #5
          ***********************************/
-        System.out.println("\tTest case #5");
+        this.console.println("\tTest case #5");
         
         //input values for test case 5
         height = 5.0;
@@ -118,7 +118,7 @@ public class MapControlTest {
         /************************************
          * Test Case #6
          ***********************************/
-        System.out.println("\tTest case #6");
+        this.console.println("\tTest case #6");
         
         //input values for test case 6
         height = 5.0;
@@ -135,7 +135,7 @@ public class MapControlTest {
         /************************************
          * Test Case #7
          ***********************************/
-        System.out.println("\tTest case #7");
+        this.console.println("\tTest case #7");
         
         //input values for test case 7
         height = 5.0;
@@ -152,7 +152,7 @@ public class MapControlTest {
         /************************************
          * Test Case #8
          ***********************************/
-        System.out.println("\tTest case #8");
+        this.console.println("\tTest case #8");
         
         //input values for test case 8
         height = 3.0;
@@ -169,7 +169,7 @@ public class MapControlTest {
         /************************************
          * Test Case #9
          ***********************************/
-        System.out.println("\tTest case #9");
+        this.console.println("\tTest case #9");
         
         //input values for test case 9
         height = 6.0;
@@ -191,11 +191,11 @@ public class MapControlTest {
     @Test
     public void testCalcSquareFeetOfHome() {
         
-        System.out.println("calcSquareFeetOfHome");
+        this.console.println("calcSquareFeetOfHome");
         /************************************
          * Test Case #1
          ***********************************/
-        System.out.println("\tTest case #1");
+        this.console.println("\tTest case #1");
         
         // input values for test case
         double length = 60.0;
@@ -216,7 +216,7 @@ public class MapControlTest {
          /************************************
          * Test Case #2
          ***********************************/
-        System.out.println("\tTest case #2");
+        this.console.println("\tTest case #2");
         
         // input values for test case
         length = -1;
@@ -234,7 +234,7 @@ public class MapControlTest {
         /************************************
          * Test Case #3
          ***********************************/
-        System.out.println("\tTest case #3");
+        this.console.println("\tTest case #3");
         
         // input values for test case
         length = 700.0;
@@ -252,7 +252,7 @@ public class MapControlTest {
         /************************************
          * Test Case #4
          ***********************************/
-        System.out.println("\tTest case #4");
+        this.console.println("\tTest case #4");
         
         // input values for test case
         length = 600.0;
@@ -270,7 +270,7 @@ public class MapControlTest {
         /************************************
          * Test Case #5
          ***********************************/
-        System.out.println("\tTest case #5");
+        this.console.println("\tTest case #5");
         
         // input values for test case
         length = 0.0;
