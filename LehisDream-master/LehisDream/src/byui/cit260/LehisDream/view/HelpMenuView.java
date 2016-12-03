@@ -41,14 +41,14 @@ public class HelpMenuView extends View{
                 this.displayScenes();
                 break;
             default:
-                System.out.println("\n*** Invalid selection *** Try again");
+                this.console.println("\n*** Invalid selection *** Try again");
                 break;
         }
         return false;
     }
 
     private void displayObject() {
-             System.out.println   ("\n --Object of the Game--"
+             this.console.println   ("\n --Object of the Game--"
                                   +"\n-----------------------------------------------------------------------------------------------------------------------------"
                                   +"\n The object of the game is to move along the path by answering the questions in the situations and not lose a lot of energy. "
                                   +"\n You will need to have enough energy to make it to the Tree of Life. There will be opportunities along the way where you can "
@@ -57,14 +57,14 @@ public class HelpMenuView extends View{
                                   +"\n-----------------------------------------------------------------------------------------------------------------------------");
     }
     private void displayMoves() {
-            System.out.println    ("\n --How to Move-- "
+            this.console.println    ("\n --How to Move-- "
                                   +"\n----------------------------------------------------------------------------------------------------------------------------"
                                   +"\n You will move your person sequentially along the spaces on the map. In each of the 5 zones, there will be 5 spaces. You    "
                                   +"\n will choose a choose to move your player on the game menu after answering each question.                                   "
                                   +"\n----------------------------------------------------------------------------------------------------------------------------");
     }
     private void displayScenes() {
-        System.out.println("\n --Entetring the Scenes/Zones--"
+        this.console.println("\n --Entetring the Scenes/Zones--"
                                   +"\n-----------------------------------------------------------------------------------------------------------------------------"
                                   +"\n During the course of the game, there are five zones that consisit of 5 spaces in each zone. The five zones are At Home, At  "
                                   +"\n School, At the Store, At the Movei Theatre, and At Church. In each zone, there are 5 situations where a question will be    "

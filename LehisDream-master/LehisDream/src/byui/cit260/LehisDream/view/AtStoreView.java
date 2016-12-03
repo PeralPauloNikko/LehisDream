@@ -49,7 +49,7 @@ public class AtStoreView extends View {
             if (choice.equalsIgnoreCase(item.getChoiceValue())) {
                 double cash = game.getPlayer().getCash();
                 if (cash < item.getCost()) {
-                    System.out.println("Sorry, you cannot purchase this because "
+                    this.console.println("Sorry, you cannot purchase this because "
                             + "you only have $" + cash + " left.");
                     return false;
                 }
@@ -61,8 +61,8 @@ public class AtStoreView extends View {
                     currentEnergy = 100;
                 }
                 game.getPlayer().setEnergyLevel(currentEnergy);
-                System.out.println("Your current energy is now " + currentEnergy);
-                System.out.println("You have $" + cash + " left.");
+                this.console.println("Your current energy is now " + currentEnergy);
+                this.console.println("You have $" + cash + " left.");
 
                 return true;
 
