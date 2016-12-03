@@ -31,20 +31,20 @@ public boolean doAction(String choice) {
     
         switch (choice) {
             case "F":
-                System.out.println("\n For the natural man is an enemy to God and"
+                this.console.println("\n For the natural man is an enemy to God and"
                         +"\n has been from the fall of Adam...");
                 break;
             case "S":
-                System.out.println("\n Adam fell that men might be; and men"
+                this.console.println("\n Adam fell that men might be; and men"
                         + "\n are, that they might have joy.");
                 break;
             case "T":
-                System.out.println("\n...Faith is things which are hoped for"
+                this.console.println("\n...Faith is things which are hoped for"
                         + "\n and not seen; wherefore, dispute not because ye see not, for"
                         + "\n ye receive no witness until after the trial of your faith.");
                 break;
             default:
-                System.out.println("\n You have entered an invalid option."
+                this.console.println("\n You have entered an invalid option."
                         +"\n Please try again.");
                 break;
         }

@@ -91,13 +91,13 @@ public class GameMenuView extends View {
         Map map = game.getMap(); // retreive the map from game
         Location[][] locations = map.getLocations(); // retreive the locations from map
         try {
-            System.out.print("  |");
+            this.console.print("  |");
             for (int column = 0; column < locations[0].length; column++) {
                 System.out.print("  " + column + " |"); // print col numbers to side of map
             }
-            System.out.println();
+            this.console.println();
             for (int row = 0; row < locations.length; row++) {
-                System.out.print(row + " "); // print row numbers to side of map
+                this.console.print(row + " "); // print row numbers to side of map
                 for (int column = 0; column < locations[row].length; column++) {
                     leftIndicator = " ";
                     rightIndicator = " ";
@@ -108,19 +108,19 @@ public class GameMenuView extends View {
                         leftIndicator = ">"; // can be stars or whatever these are indicators showing visited
                         rightIndicator = "<"; // same as above
                     }
-                    System.out.print("|"); // start map with a |
+                    this.console.print("|"); // start map with a |
                     if (locations[row][column].getScene() == null) {
-                        System.out.print(leftIndicator + "??" + rightIndicator);
+                        this.console.print(leftIndicator + "??" + rightIndicator);
                     } else {
-                        System.out.print(leftIndicator + locations[row][column].getScene().getSymbol() + rightIndicator);
+                        this.console.print(leftIndicator + locations[row][column].getScene().getSymbol() + rightIndicator);
                     }
                 }
-                System.out.println("|");
+                this.console.println("|");
                 
                 
             }
             if (map.getCurrentLocation()!= null && map.getCurrentLocation().getScene()!= null){
-                    System.out.println("\nYour current location is " + map.getCurrentLocation().getScene().getName() + ".");
+                    this.console.println("\nYour current location is " + map.getCurrentLocation().getScene().getName() + ".");
 //                    System.out.println(map.getCurrentLocation().getScene().getDescription());
             }
         } catch (Exception e) {

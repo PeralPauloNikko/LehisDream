@@ -5,6 +5,8 @@
  */
 package byui.cit260.LehisDream.control;
 
+import java.io.PrintWriter;
+import lehisdream.LehisDream;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
@@ -13,6 +15,7 @@ import static org.junit.Assert.*;
  * @author smith
  */
 public class MapControlTest {
+    protected final PrintWriter console = LehisDream.getOutFile();
     
     public MapControlTest() {
     }
@@ -23,7 +26,7 @@ public class MapControlTest {
     @Test
     public void testCalcVolumeOfFont() {
         
-        System.out.println("calcVolumeOfFont");
+        this.console.println("calcVolumeOfFont");
         /************************************
          * Test Case #1
          ***********************************/
