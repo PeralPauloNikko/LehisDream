@@ -13,7 +13,7 @@ public class BishopsOfficeView extends View{
  
     public BishopsOfficeView(){
         super("\n You have entered the Bishop's Office. You are able to make"
-             +"\n a total of 3 visits during the course of the game.Please"
+             +"\n a total of 3 visits during the course of the game. Please"
              +"\n give the reference for the scripture in order to replenish"
              +"\n some of your energy."
              +"\n-----------------------------------------------------------"

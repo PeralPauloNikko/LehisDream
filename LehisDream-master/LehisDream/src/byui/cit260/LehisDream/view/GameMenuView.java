@@ -120,8 +120,8 @@ public class GameMenuView extends View {
                 
             }
             if (map.getCurrentLocation()!= null && map.getCurrentLocation().getScene()!= null){
-                    System.out.println("\nYour current location is " + map.getCurrentLocation().getScene().getName());
-                    System.out.println(map.getCurrentLocation().getScene().getDescription());
+                    System.out.println("\nYour current location is " + map.getCurrentLocation().getScene().getName() + ".");
+//                    System.out.println(map.getCurrentLocation().getScene().getDescription());
             }
         } catch (Exception e) {
             System.out.println("Error");

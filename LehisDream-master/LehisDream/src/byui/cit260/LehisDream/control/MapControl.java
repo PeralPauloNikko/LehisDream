@@ -78,8 +78,8 @@ public class MapControl {
         
         Scene currentScene = new Scene();
         currentScene.setDescription(
-            "You have started the game, Lehi's Dream. You will need to venture down"
-          + " the path moving your player along the way. You will answer questions "
+            "You have started the game, Lehi's Dream. \n\rYou will need to venture down"
+          + " the path moving your player along the way. \n\rYou will answer questions "
           + " until you reach your destination, the Tree of Life.");
         currentScene.setName("Start");
         currentScene.setSymbol("ST");
@@ -99,7 +99,7 @@ public class MapControl {
         currentScene = new Scene();
         currentScene.setDescription(
             "You have entered the zone At Home. You are at the front door of the "
-          + "house. In order to enter the house, you need to answer the following "
+          + "house. \n\rIn order to enter the house, you need to answer the following "
           + "question:");
         currentScene.setName("Front Door");
         currentScene.setSymbol("FD");
@@ -117,7 +117,7 @@ public class MapControl {
         //scene 3
         currentScene = new Scene();
         currentScene.setDescription(
-            "You are in the Laundry Room. In order to wash your clothes, "
+            "You are in the Laundry Room. \n\rIn order to wash your clothes, "
           + "you need to answer the following question:");
         currentScene.setName("Laundry Room");
         currentScene.setSymbol("LA");
