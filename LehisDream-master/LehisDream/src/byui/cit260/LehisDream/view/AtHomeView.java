@@ -26,7 +26,7 @@ public class AtHomeView {
 
     public void displayAtHomeView() {
 
-//        Scanner keyboard = new Scanner(System.in);//get infile for keyboard
+//       
         double homelength;// value to be returned
         double homewidth;
         boolean valid = false;// initialize to not valid
@@ -51,7 +51,7 @@ public class AtHomeView {
             this.console.println("\nThe squarefeet of the home is " + squarefeet + " feet.");
             valid = true;
             } catch (HouseControlException me) {
-                System.out.println(me.getMessage());
+                ErrorView.display(this.getClass().getName(),me.getMessage());
                 
             }
         

@@ -5,19 +5,19 @@
  */
 package byui.cit260.LehisDream.view;
 
-import byui.cit260.LehisDream.control.GameControl;
-import byui.cit260.LehisDream.model.Game;
+
 import byui.cit260.LehisDream.model.Item;
-import byui.cit260.LehisDream.model.Map;
+import java.io.PrintWriter;
 import java.util.ArrayList;
 import lehisdream.LehisDream;
+
 
 /**
  *
  * @author smith
  */
 public class MyFirstClass {
-
+protected static PrintWriter console = LehisDream.getOutFile();
     
     public static void main(String[] args)
     {
@@ -33,30 +33,17 @@ public class MyFirstClass {
     }
         static void displayItems(ArrayList<Item> groceryItems){
            
-        System.out.printf("Item\t\t\tQuant\tCost\n");
-        System.out.printf("----------------\t-------\t-------\n");
+        console.printf("Item\t\t\tQuant\tCost\n");
+        console.printf("----------------\t-------\t-------\n");
 //         for (int i=0;i<groceryItems.size();i++){ 
-//             System.out.printf("\n",groceryItems.get(i) + " ");
+//             console.printf("\n",groceryItems.get(i) + " ");
 //         }
-//         System.out.println();
+//         console.println();
                 
             for (int i=0;i<groceryItems.size();i++){
                 Item item = groceryItems.get(i);
-                System.out.println(item.getName() + "\t\t" + "\t" + item.getCost());
+                console.println(item.getName() + "\t\t" + "\t" + item.getCost());
                                    
-//                System.out.print(groceryItems.get(i) + " ");
-//            System.out.println();
-             
-         }
+               }
+        }
 }
-}
-//         System.out.println();
-//        //adding items to the end of the ArrayList
-//        
-//
-//        return (groceries);
-//    } 
-//        System.out.printf("Item\tquantityInStock\tcost\n");
-//        System.out.printf("-------\t-----------\t-------\n");
-//        System.out.printf("s\n",groceryItems.get(i));
-//}

@@ -5,12 +5,17 @@
  */
 package byui.cit260.LehisDream.control;
 
+import byui.cit260.LehisDream.exceptions.GameControlException;
 import byui.cit260.LehisDream.model.Game;
 import byui.cit260.LehisDream.model.Location;
 import byui.cit260.LehisDream.model.Map;
 import byui.cit260.LehisDream.model.Player;
 import byui.cit260.LehisDream.model.Scene;
 import byui.cit260.LehisDream.model.SceneType;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
 import lehisdream.LehisDream;
 
 /**
@@ -77,5 +82,37 @@ public class GameControl {
 
     }
 
+    public static void saveGame(Game currentGame, String filePath) 
+            throws GameControlException {
+        
+        try( FileOutputStream fops = new FileOutputStream(filePath)) {
+            ObjectOutputStream output = new ObjectOutputStream(fops);
+            
+            output.writeObject(currentGame);
+        }
+        catch(Exception e) {
+            throw new GameControlException(e.getMessage());
+        
+    }
+
     
+}
+
+    public static void getSavedGame(String filepath) 
+                    throws GameControlException {
+        
+        Game game = null;
+        
+        try(FileInputStream fips = new FileInputStream(filepath)) {
+            ObjectInputStream input = new ObjectInputStream(fips);
+            
+            game = (Game) input.readObject(); // read the game object from file
+        }
+        catch(Exception e) {
+            throw new GameControlException(e.getMessage());
+        }
+        
+        // close the output file
+        LehisDream.setCurrentGame(game);  //save in LehisDream
+    }
 }

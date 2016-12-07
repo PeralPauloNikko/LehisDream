@@ -41,7 +41,7 @@ public class HelpMenuView extends View{
                 this.displayScenes();
                 break;
             default:
-                this.console.println("\n*** Invalid selection *** Try again");
+                ErrorView.display(this.getClass().getName(),"\n*** Invalid selection *** Try again");
                 break;
         }
         return false;

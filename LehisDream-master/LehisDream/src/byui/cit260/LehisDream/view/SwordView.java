@@ -31,7 +31,7 @@ public boolean doAction(String choice) {
           this.console.println("You chose No");
           break;
         default: 
-            this.console.println("\n*** Invalid selection *** Try again");
+            ErrorView.display(this.getClass().getName(),"\n*** Invalid selection *** Try again");
             break;
     }
     return false;

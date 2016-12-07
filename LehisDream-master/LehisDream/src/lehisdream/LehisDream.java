@@ -14,18 +14,16 @@ import byui.cit260.LehisDream.model.TreeOfLife;
 
 //nikkoTest
 //import byui.cit260.LehisDream.model.Backpack;
-import byui.cit260.LehisDream.model.Actor;
+
 import byui.cit260.LehisDream.model.Map;
 import byui.cit260.LehisDream.model.Item;
-import byui.cit260.LehisDream.model.Question;
-
+import byui.cit260.LehisDream.view.ErrorView;
 import byui.cit260.LehisDream.view.StartProgramView;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.PrintWriter;
-import java.util.logging.Level;
-import java.util.logging.Logger;
+
 
 /**
  *
@@ -40,6 +38,8 @@ public class LehisDream {
     private static BufferedReader inFile = null;
     
     private static PrintWriter logFile = null;
+    
+    protected static PrintWriter console = LehisDream.getOutFile();
     
      /**
      * @param args the command line arguments
@@ -146,7 +146,7 @@ public class LehisDream {
         playerOne.setEnergyLevel(100);
         
         String playerInfo = playerOne.toString();
-        System.out.println(playerInfo);
+        console.println(playerInfo);
     }
 
     public static void aprilTest(){
@@ -157,7 +157,7 @@ public class LehisDream {
 //        gameOne.setTotalEnergy(100);
         
         String gameInfo = gameOne.toString();
-        System.out.println(gameInfo);
+        console.println(gameInfo);
         
         //Location Test
         Location place = new Location();
@@ -168,7 +168,7 @@ public class LehisDream {
         place.setColumn(1);
        
         String locationInfo = place.toString();
-        System.out.println(locationInfo);
+        console.println(locationInfo);
         
         //Tree of Life Test
         TreeOfLife prize = new TreeOfLife();
@@ -176,7 +176,7 @@ public class LehisDream {
         prize.setPrizeAcquired("Tree of Life");
         
         String prizeInfo = prize.toString();
-        System.out.println(prizeInfo);
+        console.println(prizeInfo);
         
         //Scene Test
         Scene portrait = new Scene();
@@ -185,7 +185,7 @@ public class LehisDream {
 //        portrait.setLocation("Start Spot");
 //        
         String sceneInfo = portrait.toString();
-        System.out.println(sceneInfo);
+        console.println(sceneInfo);
         
     }
     
@@ -197,7 +197,7 @@ public class LehisDream {
 //    backPackOne.setItemsInStock("");
 //    
 //    String backPackInfo = backPackOne.toString();
-//    System.out.println(backPackOne);
+//    console.println(backPackOne);
 //    
    
     //Map Test
@@ -208,7 +208,7 @@ public class LehisDream {
 //    gps.setRowCount("");
 //    
     String mapInfo = gps.toString();
-    System.out.println(mapInfo);
+    console.println(mapInfo);
     
     //Item Test
     Item stuff = new Item();
@@ -219,7 +219,7 @@ public class LehisDream {
     stuff.setCost(5);
     
     String itemInfo = stuff.toString();
-    System.out.println(itemInfo);
+    console.println(itemInfo);
     
     //Question Test
 //    Question questionOne = new Question();
@@ -231,7 +231,7 @@ public class LehisDream {
     
     
 //    String questionOneInfo = questionOne.toString();
-//    System.out.println(questionOneInfo);
+//    console.println(questionOneInfo);
     
    
     

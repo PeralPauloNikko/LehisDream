@@ -44,7 +44,7 @@ public boolean doAction(String choice) {
                         + "\n ye receive no witness until after the trial of your faith.");
                 break;
             default:
-                this.console.println("\n You have entered an invalid option."
+                ErrorView.display(this.getClass().getName(),"\n You have entered an invalid option."
                         +"\n Please try again.");
                 break;
         }

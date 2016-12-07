@@ -6,12 +6,9 @@
 package byui.cit260.LehisDream.view;
 
 import java.io.BufferedReader;
-import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.InputMismatchException;
 import java.util.Scanner;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import lehisdream.LehisDream;
 
 /**
@@ -22,7 +19,7 @@ public abstract class View implements ViewInterface{
     protected String displayMessage= "\nPlease enter your selection: "; 
     
     protected final BufferedReader keyboard = LehisDream.getInFile();
-    protected final PrintWriter console = LehisDream.getOutFile();
+    protected static PrintWriter console = LehisDream.getOutFile();
     
     public View() {
 }
@@ -73,8 +70,10 @@ public String getInput() {
         }
         return value; //return the value entered6
 }
+//This needed to be a static function, cannot use the normal input methods, this does not extend View class
 public static double getnextDouble(){
     Scanner keyboard = new Scanner(System.in);//get infile for keyboard
+    
 //    while (true) {
         try {
         double value = keyboard.nextDouble();
@@ -82,7 +81,7 @@ public static double getnextDouble(){
         return value;
         
         } catch (InputMismatchException e) {
-        System.out.println("\nYou must enter a valid decimal value. Please try "
+        ErrorView.display("View", "You must enter a valid decimal value. Please try "
                 + "again.\n");
         }
         

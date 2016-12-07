@@ -57,7 +57,7 @@ public class AtChurchView {
              this.console.println("\nThe volume of the font is " + volume + " feet.");
             valid = true;
             } catch (MapControlException me){
-                System.out.println(me.getMessage());
+                ErrorView.display(this.getClass().getName(),me.getMessage());
                 
             }
 //            

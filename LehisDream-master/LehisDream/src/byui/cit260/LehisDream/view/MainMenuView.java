@@ -6,6 +6,7 @@
 package byui.cit260.LehisDream.view;
 
 import byui.cit260.LehisDream.control.GameControl;
+//import static byui.cit260.LehisDream.view.SaveGameView.console;
 import lehisdream.LehisDream;
 
 /**
@@ -49,7 +50,7 @@ public MainMenuView() {
                 this.saveGame();
                 break;
             default:
-                this.console.println("\n*** Invalid selection *** Try again");
+                ErrorView.display(this.getClass().getName(),"\n*** Invalid selection *** Try again");
                 break;
         }
         return false;
@@ -64,9 +65,26 @@ public MainMenuView() {
        gameMenu.display();
     }
 
-    private void restartExistingGame() {
-        this.console.println("*** restartExistingGame function called ***");
+//    private void restartExistingGame() {
+       private void restartExistingGame() {
+        //prompt for and get the name of the file to save the game in
+        this.console.println("\n\nEnter the file path for file where the game "
+                           + "is to be saved.");
+        
+        String filePath = this.getInput();
+        
+        try {
+            // start a saved game
+            GameControl.getSavedGame(filePath);
+        } catch (Exception ex) {
+            ErrorView.display("MainMenuView", ex.getMessage());
+        }
+        
+        //display the game menu
+        GameMenuView gameMenu = new GameMenuView();
+        gameMenu.display();
     }
+    
 
     private void displayHelpMenu() {
         
@@ -75,8 +93,22 @@ public MainMenuView() {
         helpMenu.display();
     }
 
-    private void saveGame() {
-        SaveGameView.SaveGame();
+//    private void saveGame() {
+//        SaveGameView saveGame = new SaveGameView();
+//        SaveGameView.saveGame();
+//    }
+    public void saveGame(){
+
+      console.println("\n\nEnter the file path for file where the game is to be "
+                     +"saved.");
+      String filePath = this.getInput();
+      
+      try {
+          //save the game to the specified file
+          GameControl.saveGame(LehisDream.getCurrentGame(), filePath);
+      } catch (Exception ex) {
+          ErrorView.display("MainMenuView", ex.getMessage());
+      }
     }
 
 

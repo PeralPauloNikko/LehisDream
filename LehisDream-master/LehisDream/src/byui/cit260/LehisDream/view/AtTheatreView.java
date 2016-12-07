@@ -56,7 +56,7 @@ public class AtTheatreView extends View {
                 try { 
                     cash = SpendMoney.CalculateBalance(cash, item.getCost());
                 } catch (SpendMoneyException ex) {
-                    System.out.println(ex.getMessage());
+                    ErrorView.display(this.getClass().getName(),ex.getMessage());
                     return false;
                 }
                 
@@ -67,8 +67,8 @@ public class AtTheatreView extends View {
                     currentEnergy = 100;
                 }
                 game.getPlayer().setEnergyLevel(currentEnergy);
-                System.out.println("Your current energy is now " + currentEnergy);
-                System.out.println("You have $" + cash + " left.");
+                this.console.println("Your current energy is now " + currentEnergy);
+                this.console.println("You have $" + cash + " left.");
 
                 return true;
 

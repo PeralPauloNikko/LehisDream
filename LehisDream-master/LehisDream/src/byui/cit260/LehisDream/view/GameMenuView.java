@@ -29,7 +29,6 @@ public class GameMenuView extends View {
                 + "\nP - Go to Backpack"
                 + "\nO - At Home"
                 + "\nC - At Church"
-                + "\nS - Save game"
                 + "\nH - Help"
                 + "\nQ - Quit"
                 + "\n-------------------------------------------");
@@ -59,14 +58,11 @@ public class GameMenuView extends View {
             case "C": //
                 this.atChurch();
                 break;
-           case "S": // save the current game
-                this.saveGame();
-                break;
             case "H": // Go to Help
                 this.displayHelpMenu();
                 break;
             default:
-                this.console.println("\n*** Invalid selection *** Try again");
+                ErrorView.display(this.getClass().getName(),"\n*** Invalid selection *** Try again");
                 break;
         }
         return false;
@@ -76,10 +72,6 @@ public class GameMenuView extends View {
         //display the game menu
         HelpMenuView helpMenu = new HelpMenuView();
         helpMenu.display();
-    }
-
-    private void saveGame() {
-        SaveGameView.SaveGame();
     }
 
     public void viewPath() {
@@ -92,7 +84,7 @@ public class GameMenuView extends View {
         try {
             this.console.print("  |");
             for (int column = 0; column < locations[0].length; column++) {
-                System.out.print("  " + column + " |"); // print col numbers to side of map
+                this.console.print("  " + column + " |"); // print col numbers to side of map
             }
             this.console.println();
             for (int row = 0; row < locations.length; row++) {
@@ -120,7 +112,7 @@ public class GameMenuView extends View {
             }
             if (map.getCurrentLocation()!= null && map.getCurrentLocation().getScene()!= null){
                     this.console.println("\nYour current location is " + map.getCurrentLocation().getScene().getName() + ".");
-//                    System.out.println(map.getCurrentLocation().getScene().getDescription());
+//                    this.console.println(map.getCurrentLocation().getScene().getDescription());
             }
         } catch (Exception e) {
             ErrorView.display(this.getClass().getName(),"Error");

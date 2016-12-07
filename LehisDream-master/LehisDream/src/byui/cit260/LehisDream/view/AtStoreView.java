@@ -49,7 +49,7 @@ public class AtStoreView extends View {
             if (choice.equalsIgnoreCase(item.getChoiceValue())) {
                 double cash = game.getPlayer().getCash();
                 if (cash < item.getCost()) {
-                    this.console.println("Sorry, you cannot purchase this because "
+                    ErrorView.display(this.getClass().getName(),"Sorry, you cannot purchase this because "
                             + "you only have $" + cash + " left.");
                     return false;
                 }
