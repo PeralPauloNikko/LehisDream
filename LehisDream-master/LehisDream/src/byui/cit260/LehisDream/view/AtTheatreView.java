@@ -10,9 +10,6 @@ import byui.cit260.LehisDream.exceptions.SpendMoneyException;
 import byui.cit260.LehisDream.model.Game;
 import byui.cit260.LehisDream.model.Item;
 import java.util.ArrayList;
-import java.util.Scanner;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import lehisdream.LehisDream;
 
 /**

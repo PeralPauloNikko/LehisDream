@@ -17,7 +17,6 @@ import byui.cit260.LehisDream.model.TreeOfLife;
 
 import byui.cit260.LehisDream.model.Map;
 import byui.cit260.LehisDream.model.Item;
-import byui.cit260.LehisDream.view.ErrorView;
 import byui.cit260.LehisDream.view.StartProgramView;
 import java.io.BufferedReader;
 import java.io.IOException;

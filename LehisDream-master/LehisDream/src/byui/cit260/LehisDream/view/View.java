@@ -70,7 +70,8 @@ public String getInput() {
         }
         return value; //return the value entered6
 }
-//This needed to be a static function, cannot use the normal input methods, this does not extend View class
+//This needed to be a static function, cannot use the normal input methods, this does not extend View class, okd by Brother Jones at 8:55 pm 12/6/2016
+
 public static double getnextDouble(){
     Scanner keyboard = new Scanner(System.in);//get infile for keyboard
     

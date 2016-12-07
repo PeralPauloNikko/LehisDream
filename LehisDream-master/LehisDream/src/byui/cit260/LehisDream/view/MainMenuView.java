@@ -97,9 +97,9 @@ public MainMenuView() {
 //        SaveGameView saveGame = new SaveGameView();
 //        SaveGameView.saveGame();
 //    }
-    public void saveGame(){
+    private void saveGame(){
 
-      console.println("\n\nEnter the file path for file where the game is to be "
+      this.console.println("\n\nEnter the file path for file where the game is to be "
                      +"saved.");
       String filePath = this.getInput();
       
