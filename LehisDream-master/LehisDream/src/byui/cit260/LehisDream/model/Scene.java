@@ -6,6 +6,7 @@
 package byui.cit260.LehisDream.model;
 
 import java.io.Serializable;
+import java.util.Arrays;
 import java.util.Objects;
 
 /**
@@ -82,6 +83,61 @@ public class Scene implements Serializable{
     public void setDescription(String description) {
         this.description = description;
     }
+
+    @Override
+    public int hashCode() {
+        int hash = 3;
+        hash = 37 * hash + Objects.hashCode(this.description);
+        hash = 37 * hash + Objects.hashCode(this.name);
+        hash = 37 * hash + Objects.hashCode(this.symbol);
+        hash = 37 * hash + Objects.hashCode(this.actor);
+        hash = 37 * hash + Objects.hashCode(this.question);
+        hash = 37 * hash + Arrays.deepHashCode(this.itemsInStock);
+        hash = 37 * hash + this.visits;
+        return hash;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        final Scene other = (Scene) obj;
+        if (this.visits != other.visits) {
+            return false;
+        }
+        if (!Objects.equals(this.description, other.description)) {
+            return false;
+        }
+        if (!Objects.equals(this.name, other.name)) {
+            return false;
+        }
+        if (!Objects.equals(this.symbol, other.symbol)) {
+            return false;
+        }
+        if (this.actor != other.actor) {
+            return false;
+        }
+        if (!Objects.equals(this.question, other.question)) {
+            return false;
+        }
+        if (!Arrays.deepEquals(this.itemsInStock, other.itemsInStock)) {
+            return false;
+        }
+        return true;
+    }
+
+    @Override
+    public String toString() {
+        return "Scene{" + "description=" + description + ", name=" + name + ", symbol=" + symbol + ", actor=" + actor + ", question=" + question + ", itemsInStock=" + itemsInStock + ", visits=" + visits + '}';
+    }
+    
 
     
     

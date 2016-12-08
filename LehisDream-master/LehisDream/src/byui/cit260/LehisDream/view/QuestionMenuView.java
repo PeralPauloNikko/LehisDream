@@ -32,8 +32,6 @@ public QuestionMenuView() {
    "\n\r 4-"+currentScene.getQuestion().getAnswer4();
    
    displayMessage = question;
-   
-    
 }
 
 @Override

@@ -35,7 +35,6 @@ public class GameMenuView extends View {
                 + "\nC - At Church"
                 + "\nR - Save Grocery List (April)"
                 + "\nH - Help"
-                
                 + "\nQ - Quit"
                 + "\n-------------------------------------------");
     }
@@ -64,12 +63,12 @@ public class GameMenuView extends View {
             case "C": //
                 this.atChurch();
                 break;
-            case "H": // Go to Help
-                this.displayHelpMenu();
-                break;
             case "R":
                 this.createReport();
                 break;    
+            case "H": // Go to Help
+                this.displayHelpMenu();
+                break;
             default:
                 ErrorView.display(this.getClass().getName(),"\n*** Invalid selection *** Try again");
                 break;
