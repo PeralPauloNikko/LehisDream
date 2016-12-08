@@ -93,11 +93,8 @@ public class GameControl {
         catch(Exception e) {
             throw new GameControlException(e.getMessage());
         
-    }
-
-    
+    }  
 }
-
     public static void getSavedGame(String filepath) 
                     throws GameControlException {
         
