@@ -8,8 +8,12 @@ package byui.cit260.LehisDream.view;
 
 import byui.cit260.LehisDream.control.MapControl;
 import byui.cit260.LehisDream.model.Game;
+import byui.cit260.LehisDream.model.Item;
 import byui.cit260.LehisDream.model.Location;
 import byui.cit260.LehisDream.model.Map;
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.util.ArrayList;
 import lehisdream.LehisDream;
 
 /**
@@ -29,7 +33,9 @@ public class GameMenuView extends View {
                 + "\nP - Go to Backpack"
                 + "\nO - At Home"
                 + "\nC - At Church"
+                + "\nR - Save Grocery List (April)"
                 + "\nH - Help"
+                
                 + "\nQ - Quit"
                 + "\n-------------------------------------------");
     }
@@ -61,6 +67,9 @@ public class GameMenuView extends View {
             case "H": // Go to Help
                 this.displayHelpMenu();
                 break;
+            case "R":
+                this.createReport();
+                break;    
             default:
                 ErrorView.display(this.getClass().getName(),"\n*** Invalid selection *** Try again");
                 break;
@@ -158,5 +167,40 @@ public class GameMenuView extends View {
         AtChurchView atChurch = new AtChurchView();
         atChurch.displayAtChurchView();
     }
-
+     private void createReport() {
+        Game game = LehisDream.getCurrentGame(); // retreive the game
+        ArrayList<Item> groceries = game.getGroceries();
+         
+        String oldMenu = this.displayMessage;
+        displayMessage= "\n\nEnter the file path for the file where the report "
+                            + "is to be printed.";
+        String filePath = this.getInput();
+        displayMessage = oldMenu;
+      
+      this.printReport(groceries, filePath);
+      
+     }     
+     
+     private void printReport(ArrayList<Item> groceries, String outputLocation) {
+        
+        //create BufferedReader object for input file
+        try(PrintWriter out = new PrintWriter(outputLocation)) {
+            
+            //print title and column headings
+            out.println("\n\n               Grocery Report               ");
+            out.printf("%n%-20s%10s%10s",  "Name", "Energy Added", "Price");
+            out.printf("%n%-20s%10s%10s", "--------------", "---------", "-------");
+            
+            //print the description and price of each item
+            for (Item item: groceries) {
+                out.printf("%n%-20s%8.2f%13.2f"       , item.getName()
+                                                      , item.getEnergyAdd()
+                                                      , item.getCost());
+            }
+        } catch (IOException ex) {
+            ErrorView.display("MainMenuView","I/O Error: " + ex.getMessage());
+        }
+    }
 }
+
+

@@ -6,6 +6,10 @@
 package byui.cit260.LehisDream.view;
 
 import byui.cit260.LehisDream.control.GameControl;
+import byui.cit260.LehisDream.model.Item;
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.util.ArrayList;
 //import static byui.cit260.LehisDream.view.SaveGameView.console;
 import lehisdream.LehisDream;
 
@@ -26,6 +30,7 @@ public MainMenuView() {
               + "\nR - Restart saved game"
               + "\nH - Get Help on how to play the game"
               + "\nS - Save game"
+              + "\nP - Print Report"    
               + "\nQ - Quit"
               + "\n-------------------------------------------");
 
@@ -49,6 +54,7 @@ public MainMenuView() {
             case "S": // save the current game
                 this.saveGame();
                 break;
+            
             default:
                 ErrorView.display(this.getClass().getName(),"\n*** Invalid selection *** Try again");
                 break;
@@ -69,7 +75,7 @@ public MainMenuView() {
        private void restartExistingGame() {
         //prompt for and get the name of the file to save the game in
         this.console.println("\n\nEnter the file path for file where the game "
-                           + "is to be saved.");
+                           + "was saved.");
         
         String filePath = this.getInput();
         
@@ -110,8 +116,14 @@ public MainMenuView() {
           ErrorView.display("MainMenuView", ex.getMessage());
       }
     }
+    
+}
 
 
-    }
+   
+        
+
+
+    
     
 

@@ -80,6 +80,7 @@ public class LehisDream {
                 if(LehisDream.logFile != null)
                    LehisDream.logFile.close();
             } catch (IOException ex) {
+                //closingn out the files, need to use system.out
                 System.out.println("Error closing files");
                 return;
             }
