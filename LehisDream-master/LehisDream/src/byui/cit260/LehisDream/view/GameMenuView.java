@@ -33,9 +33,9 @@ public class GameMenuView extends View {
                 + "\nP - Go to Backpack"
                 + "\nO - At Home"
                 + "\nC - At Church"
-                + "\nR - Save Grocery List (April)"
+                + "\nR - Save Grocery List (April)" 
+                + "\nT - Save Treat List (Irhen(Hirendira))"
                 + "\nH - Help"
-                
                 + "\nQ - Quit"
                 + "\n-------------------------------------------");
     }
@@ -69,7 +69,10 @@ public class GameMenuView extends View {
                 break;
             case "R":
                 this.createReport();
-                break;    
+                break;
+            case "T":
+                this.createReportTreat();
+                break;  
             default:
                 ErrorView.display(this.getClass().getName(),"\n*** Invalid selection *** Try again");
                 break;
@@ -200,7 +203,41 @@ public class GameMenuView extends View {
         } catch (IOException ex) {
             ErrorView.display("MainMenuView","I/O Error: " + ex.getMessage());
         }
-    }
+     }
+        private void createReportTreat(){
+        Game game = LehisDream.getCurrentGame(); // retreive the game
+        ArrayList<Item> treats = game.getTreats();
+         
+        String oldMenu = this.displayMessage;
+        displayMessage= "\n\nEnter the file path for the file where the report "
+                            + "is to be printed.";
+        String filePath = this.getInput();
+        displayMessage = oldMenu;
+      
+      this.printReportTreat(treats, filePath);
+      
+     } 
+        private void printReportTreat(ArrayList<Item> treats, String outputLocation) {
+        
+        //create BufferedReader object for input file
+        try(PrintWriter out = new PrintWriter(outputLocation)) {
+            
+            //print title and column headings
+            out.println("\n\n               Treats Report               ");
+            out.printf("%n%-15s%10s%9s",  "Name", "Energy Added", "Cost");
+            out.printf("%n%-12s%15s%10.5s", "--------", "------------", "-----");
+            
+            //print the description and price of each item
+            for (Item item: treats) {
+                out.printf("%n%-13s%8.2f%16.2f"       , item.getName()
+                                                      , item.getEnergyAdd()
+                                                      , item.getCost());
+            }
+        } catch (IOException ex) {
+            ErrorView.display("MainMenuView","I/O Error: " + ex.getMessage());
+        }
+     }
 }
+
 
 
