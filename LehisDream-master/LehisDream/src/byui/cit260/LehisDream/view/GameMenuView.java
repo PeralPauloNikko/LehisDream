@@ -188,12 +188,12 @@ public class GameMenuView extends View {
             
             //print title and column headings
             out.println("\n\n               Grocery Report               ");
-            out.printf("%n%-20s%10s%10s",  "Name", "Energy Added", "Price");
-            out.printf("%n%-20s%10s%10s", "--------------", "---------", "-------");
+            out.printf("%n%-20s%10s%9s",  "Name", "Energy Added", "Price");
+            out.printf("%n%-20s%12s%10s", "----------------", "------------", "-------");
             
             //print the description and price of each item
             for (Item item: groceries) {
-                out.printf("%n%-20s%8.2f%13.2f"       , item.getName()
+                out.printf("%n%-20s%9.2f%12.2f"       , item.getName()
                                                       , item.getEnergyAdd()
                                                       , item.getCost());
             }

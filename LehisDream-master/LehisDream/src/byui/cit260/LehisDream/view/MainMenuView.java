@@ -30,7 +30,6 @@ public MainMenuView() {
               + "\nR - Restart saved game"
               + "\nH - Get Help on how to play the game"
               + "\nS - Save game"
-              + "\nP - Print Report"    
               + "\nQ - Quit"
               + "\n-------------------------------------------");
 
@@ -54,7 +53,6 @@ public MainMenuView() {
             case "S": // save the current game
                 this.saveGame();
                 break;
-            
             default:
                 ErrorView.display(this.getClass().getName(),"\n*** Invalid selection *** Try again");
                 break;
