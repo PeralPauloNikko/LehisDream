@@ -30,6 +30,7 @@ public class GameMenuView extends View {
                 + "\nO - At Home"
                 + "\nC - At Church"
                 + "\nH - Help"
+                + "\nS - Report"
                 + "\nQ - Quit"
                 + "\n-------------------------------------------");
     }
@@ -60,6 +61,9 @@ public class GameMenuView extends View {
                 break;
             case "H": // Go to Help
                 this.displayHelpMenu();
+                break;
+            case "S":
+                this.sceneReport();
                 break;
             default:
                 ErrorView.display(this.getClass().getName(),"\n*** Invalid selection *** Try again");
@@ -157,6 +161,10 @@ public class GameMenuView extends View {
     private void atChurch() {     
         AtChurchView atChurch = new AtChurchView();
         atChurch.displayAtChurchView();
+    }
+
+    private void sceneReport() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
 }
