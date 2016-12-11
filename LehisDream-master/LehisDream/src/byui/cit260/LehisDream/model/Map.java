@@ -21,6 +21,15 @@ public class Map implements Serializable{
     private Location[][] locations;
     private Location currentLocation;
     private boolean visited;
+    private Scene [] scenes;
+
+    public Scene[] getScenes() {
+        return scenes;
+    }
+
+    public void setScenes(Scene[] scenes) {
+        this.scenes = scenes;
+    }
     
     public Map() {
     }

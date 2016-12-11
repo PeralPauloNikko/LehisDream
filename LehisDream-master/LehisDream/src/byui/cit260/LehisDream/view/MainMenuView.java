@@ -6,6 +6,10 @@
 package byui.cit260.LehisDream.view;
 
 import byui.cit260.LehisDream.control.GameControl;
+import byui.cit260.LehisDream.model.Item;
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.util.ArrayList;
 //import static byui.cit260.LehisDream.view.SaveGameView.console;
 import lehisdream.LehisDream;
 
@@ -69,7 +73,7 @@ public MainMenuView() {
        private void restartExistingGame() {
         //prompt for and get the name of the file to save the game in
         this.console.println("\n\nEnter the file path for file where the game "
-                           + "is to be saved.");
+                           + "was saved.");
         
         String filePath = this.getInput();
         
@@ -97,9 +101,9 @@ public MainMenuView() {
 //        SaveGameView saveGame = new SaveGameView();
 //        SaveGameView.saveGame();
 //    }
-    public void saveGame(){
+    private void saveGame(){
 
-      console.println("\n\nEnter the file path for file where the game is to be "
+      this.console.println("\n\nEnter the file path for file where the game is to be "
                      +"saved.");
       String filePath = this.getInput();
       
@@ -110,8 +114,14 @@ public MainMenuView() {
           ErrorView.display("MainMenuView", ex.getMessage());
       }
     }
+    
+}
 
 
-    }
+   
+        
+
+
+    
     
 

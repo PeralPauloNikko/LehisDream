@@ -64,6 +64,8 @@ public class MapControl {
         Map map = new Map(5, 5);
         
         Scene[] scenes = createScenes();
+        map.setScenes(scenes);
+        
         
         //TODO: look @ code in developer forum with code
         GameControl.assignScenesToLocations(map, scenes);
@@ -71,6 +73,7 @@ public class MapControl {
         return map;
         
     }
+   
         //scene 1
     private static Scene[] createScenes(){
         Question currentQuestion;
