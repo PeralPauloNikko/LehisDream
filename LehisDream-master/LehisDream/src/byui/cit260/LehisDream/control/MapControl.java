@@ -352,7 +352,7 @@ public class MapControl {
         currentQuestion = new Question();
         currentQuestion.setCurrentQuestion("How can you go to heaven?");
         currentQuestion.setAnswer1("Make Mary cry");
-        currentQuestion.setAnswer2("Being a good person");
+        currentQuestion.setAnswer2("Be a good person");
         currentQuestion.setAnswer3("Be a mean person");
         currentQuestion.setAnswer4("Eating cake");
         currentQuestion.setCorrectAnswer(2);
