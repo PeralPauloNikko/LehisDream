@@ -313,7 +313,7 @@ public class MapControl {
         currentQuestion = new Question();
         currentQuestion.setCurrentQuestion("What was the boat Noah built called?");
         currentQuestion.setAnswer1("Ship");
-        currentQuestion.setAnswer2("An ark");
+        currentQuestion.setAnswer2("An Ark");
         currentQuestion.setAnswer3("Yacht");
         currentQuestion.setAnswer4("Boat");
         currentQuestion.setCorrectAnswer(2);
