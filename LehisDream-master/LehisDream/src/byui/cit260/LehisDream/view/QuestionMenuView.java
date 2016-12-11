@@ -56,7 +56,7 @@ public boolean doAction(String choice) {
         if(currentEnergy  > 100) {
             currentEnergy = 100;
         }
-        
+     
         game.getPlayer().setEnergyLevel(currentEnergy);
         
         this.console.println("Your current energy is now " + currentEnergy); 

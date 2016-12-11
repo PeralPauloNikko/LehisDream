@@ -23,6 +23,7 @@ public class Scene implements Serializable{
     private Question question;
     private Item[] itemsInStock;
     private int visits;
+    
 
     public Scene() {
         visits = 0;
