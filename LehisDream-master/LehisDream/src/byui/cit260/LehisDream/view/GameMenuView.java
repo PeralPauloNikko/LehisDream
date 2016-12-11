@@ -36,6 +36,9 @@ public class GameMenuView extends View {
                 + "\nC - At Church"
                 + "\nR - Save Grocery List (April)"
                 + "\nS - Save Scene List (Nikko)"
+                + "\nR - Save Grocery List (April)" 
+                + "\nT - Save Treat List (Irhen(Hirendira))"
+                + "\nS - Save Scene Treat (Nikko)"
                 + "\nH - Help"
                 
                 + "\nQ - Quit"
@@ -52,7 +55,8 @@ public class GameMenuView extends View {
                 this.viewPath();
                 break;
             case "M": // view path
-                this.moveForward();
+                if(this.moveForward())
+                    return true;
                 break;
             case "B": // visit Bishop's office
                 this.bishopsOffice();
@@ -65,6 +69,15 @@ public class GameMenuView extends View {
                 break;
             case "C": //
                 this.atChurch();
+                break;
+            case "R":
+                this.createReport();
+                break;
+            case "T":
+                this.createReportTreat();
+                break;  
+            case "S":
+                this.createSceneReport();
                 break;
             case "H": // Go to Help
                 this.displayHelpMenu();
@@ -132,7 +145,7 @@ public class GameMenuView extends View {
             ErrorView.display(this.getClass().getName(),"Error");
         }
     }
-    private void moveForward() {
+    private boolean moveForward() {
         Game game = LehisDream.getCurrentGame(); // retreive the game
         Map map = game.getMap(); // retreive the map from game
         int newRow = map.getCurrentLocation().getRow();
@@ -151,8 +164,20 @@ public class GameMenuView extends View {
         QuestionMenuView questionMenu = new QuestionMenuView();
         questionMenu.display();
         
+        double currentEnergy = game.getPlayer().getEnergyLevel();
+        if (currentEnergy <= 0) {
+            EndGameView endgameview = new EndGameView();
+            endgameview.lostGame();
+            return true;
+        }
+        if(newColumn == 4 && newRow == 4){
+            EndGameView endgameview = new EndGameView();
+            endgameview.wonGame();
+            return true;
+        }
+            
         viewPath();
-        
+        return false;
     }
     private void bishopsOffice() {
        BishopsOfficeView bishopsOffice = new BishopsOfficeView();
@@ -172,6 +197,107 @@ public class GameMenuView extends View {
         AtChurchView atChurch = new AtChurchView();
         atChurch.displayAtChurchView();
     }
+     private void createReport() {
+        Game game = LehisDream.getCurrentGame(); // retreive the game
+        ArrayList<Item> groceries = game.getGroceries();
+         
+        String oldMenu = this.displayMessage;
+        displayMessage= "\n\nEnter the file path for the file where the report "
+                            + "is to be printed.";
+        String filePath = this.getInput();
+        displayMessage = oldMenu;
+      
+      this.printReport(groceries, filePath);
+      
+     }     
+     
+     private void printReport(ArrayList<Item> groceries, String outputLocation) {
+        
+        //create BufferedReader object for input file
+        try(PrintWriter out = new PrintWriter(outputLocation)) {
+            
+            //print title and column headings
+            out.println("\n\n               Grocery Report               ");
+            out.printf("%n%-20s%10s%9s",  "Name", "Energy Added", "Price");
+            out.printf("%n%-20s%12s%10s", "----------------", "------------", "-------");
+            
+            //print the description and price of each item
+            for (Item item: groceries) {
+                out.printf("%n%-20s%9.2f%12.2f"       , item.getName()
+                                                      , item.getEnergyAdd()
+                                                      , item.getCost());
+            }
+        } catch (IOException ex) {
+            ErrorView.display("MainMenuView","I/O Error: " + ex.getMessage());
+        }
+     }
+        private void createReportTreat(){
+        Game game = LehisDream.getCurrentGame(); // retreive the game
+        ArrayList<Item> treats = game.getTreats();
+         
+        String oldMenu = this.displayMessage;
+        displayMessage= "\n\nEnter the file path for the file where the report "
+                            + "is to be printed.";
+        String filePath = this.getInput();
+        displayMessage = oldMenu;
+      
+      this.printReportTreat(treats, filePath);
+      
+     } 
+        private void printReportTreat(ArrayList<Item> treats, String outputLocation) {
+        
+        //create BufferedReader object for input file
+        try(PrintWriter out = new PrintWriter(outputLocation)) {
+            
+            //print title and column headings
+            out.println("\n\n               Treats Report               ");
+            out.printf("%n%-15s%10s%9s",  "Name", "Energy Added", "Cost");
+            out.printf("%n%-12s%15s%10.5s", "--------", "------------", "-----");
+            
+            //print the description and price of each item
+            for (Item item: treats) {
+                out.printf("%n%-13s%8.2f%16.2f"       , item.getName()
+                                                      , item.getEnergyAdd()
+                                                      , item.getCost());
+            }
+        } catch (IOException ex) {
+            ErrorView.display("MainMenuView","I/O Error: " + ex.getMessage());
+        }
+     }
+        private void createSceneReport() {
+       Game game = LehisDream.getCurrentGame(); // retreive the game
+       Scene scenes = game.getMap().getCurrentLocation().getScene();
+       
+       String oldMenu = this.displayMessage;
+       displayMessage= "\n\nEnter the file path for the file where the report "
+                           + "is to be printed.";
+       String filePath = this.getInput();
+       displayMessage = oldMenu;
+     
+       this.printSceneReport(game.getMap().getScenes(), filePath);
+     
+    }     
+    
+    private void printSceneReport(Scene[] scenes, String outputLocation) {
+       
+       //create BufferedReader object for input file
+       try(PrintWriter out = new PrintWriter(outputLocation)) {
+           
+           //print title and column headings
+           out.println("\n\n         Scene Report               ");
+           out.printf("%n%-20s%10s",  "Name", "Symbol");
+           out.printf("%n%-20s%12s", "----------------", "------------");
+           
+           //print the description and price of each item
+           for (Scene scene: scenes)  {
+               out.printf("%n%-20s%9.2s"             , scene.getName()
+                                                     , scene.getSymbol());
+//                                                   , scene.getQuestion());
+           }
+       } catch (IOException ex) {
+           ErrorView.display("MainMenuView","I/O Error: " + ex.getMessage());
+       }
+   }
 
 
     private void sceneReport() {
@@ -253,14 +379,4 @@ public class GameMenuView extends View {
             ErrorView.display("MainMenuView","I/O Error: " + ex.getMessage());
         }
     }
-
 }
-
-
-
-     
-     
-     
-     
-
-
