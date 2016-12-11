@@ -144,7 +144,7 @@ public class MapControl {
         currentQuestion = new Question();
         currentQuestion.setCurrentQuestion("What is a patriarchal blessing?");
         currentQuestion.setAnswer1("A guide");
-        currentQuestion.setAnswer2("A rommantic letter");
+        currentQuestion.setAnswer2("A romantic letter");
         currentQuestion.setAnswer3("A letter");
         currentQuestion.setAnswer4("A exam");
         currentQuestion.setCorrectAnswer(1);
@@ -286,7 +286,7 @@ public class MapControl {
         //scene 11
         currentScene = new Scene();
         currentScene.setDescription(
-            "You have entered the zone At the Store. You are in the meat depatment. "
+            "You have entered the zone At the Store. You are in the meat department. "
           + "In order to prepare the best food, you need to answer the following question:");
         currentScene.setName("Meat Dept");
         currentScene.setSymbol("MD");
@@ -350,9 +350,9 @@ public class MapControl {
         currentScene.setName("Produce Aisle");
         currentScene.setSymbol("PA");
         currentQuestion = new Question();
-        currentQuestion.setCurrentQuestion("How can you go to Heaven?");
+        currentQuestion.setCurrentQuestion("How can you go to heaven?");
         currentQuestion.setAnswer1("Make Mary cry");
-        currentQuestion.setAnswer2("Being agood person");
+        currentQuestion.setAnswer2("Being a good person");
         currentQuestion.setAnswer3("Be a mean person");
         currentQuestion.setAnswer4("Eating cake");
         currentQuestion.setCorrectAnswer(2);
