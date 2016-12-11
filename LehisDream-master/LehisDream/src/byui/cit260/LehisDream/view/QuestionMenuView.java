@@ -32,8 +32,6 @@ public QuestionMenuView() {
    "\n\r 4-"+currentScene.getQuestion().getAnswer4();
    
    displayMessage = question;
-   
-    
 }
 
 @Override
@@ -58,7 +56,7 @@ public boolean doAction(String choice) {
         if(currentEnergy  > 100) {
             currentEnergy = 100;
         }
-        
+     
         game.getPlayer().setEnergyLevel(currentEnergy);
         
         this.console.println("Your current energy is now " + currentEnergy); 

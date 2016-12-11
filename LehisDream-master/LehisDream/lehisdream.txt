@@ -1,0 +1,10 @@
+
+
+               Grocery Report               
+
+Name                Energy Added    Price
+----------------    ------------   -------
+Banana Bunch             2.75        5.50
+Gallon of Milk           3.40        5.25
+Slice of Pie             3.25        4.75
+Ham Sandwich             2.15        3.25

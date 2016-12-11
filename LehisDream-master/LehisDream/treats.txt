@@ -1,0 +1,10 @@
+
+
+               Treats Report               
+
+Name           Energy Added     Cost
+--------       ------------     -----
+Tickets          0.00            9.00
+Popcorn          5.50            8.00
+Drink            5.00            5.00
+Candy            3.50            5.00

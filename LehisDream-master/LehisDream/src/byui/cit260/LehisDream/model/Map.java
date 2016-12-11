@@ -7,6 +7,7 @@ package byui.cit260.LehisDream.model;
 
 import byui.cit260.LehisDream.view.ErrorView;
 import java.io.Serializable;
+import java.util.Arrays;
 import java.util.Objects;
 
 /**
@@ -21,15 +22,7 @@ public class Map implements Serializable{
     private Location[][] locations;
     private Location currentLocation;
     private boolean visited;
-    private Scene [] scenes;
-
-    public Scene[] getScenes() {
-        return scenes;
-    }
-
-    public void setScenes(Scene[] scenes) {
-        this.scenes = scenes;
-    }
+    private Scene[] scenes;
     
     public Map() {
     }
@@ -90,6 +83,72 @@ public class Map implements Serializable{
     public void setCurrentLocation(Location currentLocation) {
         this.currentLocation = currentLocation;
     }  
+
+    public Scene[] getScenes() {
+        return scenes;
+    }
+
+    public void setScenes(Scene[] scenes) {
+        this.scenes = scenes;
+    }
+
+    public boolean isVisited() {
+        return visited;
+    }
+
+    public void setVisited(boolean visited) {
+        this.visited = visited;
+    }
+
+    @Override
+    public int hashCode() {
+        int hash = 5;
+        hash = 67 * hash + this.noOfRows;
+        hash = 67 * hash + this.noOfColumns;
+        hash = 67 * hash + Arrays.deepHashCode(this.locations);
+        hash = 67 * hash + Objects.hashCode(this.currentLocation);
+        hash = 67 * hash + (this.visited ? 1 : 0);
+        hash = 67 * hash + Arrays.deepHashCode(this.scenes);
+        return hash;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        final Map other = (Map) obj;
+        if (this.noOfRows != other.noOfRows) {
+            return false;
+        }
+        if (this.noOfColumns != other.noOfColumns) {
+            return false;
+        }
+        if (this.visited != other.visited) {
+            return false;
+        }
+        if (!Arrays.deepEquals(this.locations, other.locations)) {
+            return false;
+        }
+        if (!Objects.equals(this.currentLocation, other.currentLocation)) {
+            return false;
+        }
+        if (!Arrays.deepEquals(this.scenes, other.scenes)) {
+            return false;
+        }
+        return true;
+    }
+
+    @Override
+    public String toString() {
+        return "Map{" + "noOfRows=" + noOfRows + ", noOfColumns=" + noOfColumns + ", locations=" + locations + ", currentLocation=" + currentLocation + ", visited=" + visited + ", scenes=" + scenes + '}';
+    }
     
     
 }

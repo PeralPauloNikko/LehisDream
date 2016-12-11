@@ -65,7 +65,7 @@ public class MapControl {
         
         Scene[] scenes = createScenes();
         map.setScenes(scenes);
-        
+
         
         //TODO: look @ code in developer forum with code
         GameControl.assignScenesToLocations(map, scenes);
@@ -580,7 +580,7 @@ public class MapControl {
         scenes[SceneType.classroom.ordinal()] = currentScene;
         
        return scenes; 
-       
+      
     }
     static void movePlayerToStartingLocation(Map map) {
        // movePlayer(map, 2, 2);
