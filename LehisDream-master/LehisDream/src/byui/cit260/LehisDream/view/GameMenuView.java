@@ -34,8 +34,6 @@ public class GameMenuView extends View {
                 + "\nP - Go to Backpack"
                 + "\nO - At Home"
                 + "\nC - At Church"
-                + "\nR - Save Grocery List (April)"
-                + "\nS - Save Scene List (Nikko)"
                 + "\nR - Save Grocery List (April)" 
                 + "\nT - Save Treat List (Irhen(Hirendira))"
                 + "\nS - Save Scene Treat (Nikko)"
@@ -293,5 +291,3 @@ public class GameMenuView extends View {
        }
    }
 }
-
-
