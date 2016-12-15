@@ -72,8 +72,8 @@ public boolean doAction(String choice) {
        }
        return true;           
     }
-    this.console.println("You are incorrect. You lose 3% energy.");
-        currentEnergy -= 3;
+    this.console.println("You are incorrect. You lose 8% energy.");
+        currentEnergy -= 8;
         game.getPlayer().setEnergyLevel(currentEnergy);
         this.console.println("Your current energy is now " + currentEnergy);
     return true;

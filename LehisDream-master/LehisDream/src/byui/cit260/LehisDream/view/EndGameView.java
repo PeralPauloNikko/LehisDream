@@ -22,50 +22,52 @@ public class EndGameView {
     
     public void wonGame() {
      { 
-    this.console.println("You have won the game. Congratulations, you have arrived "
-            + "at the Tree of Life.");
+    this.console.println("\r\nYou have won the game. Congratulations, you have "
+                       + "been righteous and have arrived at the Tree of Life.");
     this.console.println("" +
-"                             vv\r\n" +
+"                               vv\r\n" +
 "                         vvv^^^^vvvvv\r\n" +
 "                   vvvvvvvvv^^vvvvvv^^vvvvv\r\n" +
 "              vvvvvvvvvvv^^^^^^^^^^^^^vvvvv^^^vvvvv\r\n" +
 "           vvvvvvv^^^^^^^^^vvv^^^^^^^vvvvvvvvvvv^^^vvv\r\n" +
 "          vvvv^^^^^^vvvvv^^^^^^^vv^^^^^^^vvvv^^^vvvvvv\r\n" +
-"        vv^^^^^^^^vvv^^^^^vv^^^^vvvvvvvvvvvv^^^^^^vv^\r\n" +
-"        vvv^^^^^vvvv^^^^^^vvvvv^^vvvvvvvvv^^^^^^vvvvv^\r\n" +
-"    voovvvvvvvvvv^^^v^^^vvvvvv^^vvvvvvvvvv^^^vvvvvvvvv\r\n" +
-"    o  o ^vv^^^vvvvvvv^^vvvvv^^^^^^^^vvvvvvvvv^^^^^^vvvvvv\r\n" +
-"     oo  ^vvvvvvvvv^^^^vvvvvv^^^^^^vvvvvvvv^^^vvvvvvvvvv^v\r\n" +
-"       ^^^^^^vvvvvv^^vvvvv^vvvv^^^v^^^^^^vvvvvv^^^^vvvvv\r\n" +
-"     vvvv^^vvv^^^vvvvvvvvvv^vvvvv^vvvvvv^^^vvvvvvv^^vvvvv^\r\n" +
-"     vvv^vvvvv^^vvvvvvv^^vvvvvvv^^vvvvv^vvvv^vvvv^^vvvvv^v\r\n" +
-"      ^vvvvvv^^vvvvvvvv^vv^vvv^^^^^^^^^vvvvvvvvvvvvvv^^^^\r\n" +
-"          ^^vvoovvv^^vvvvvvvvvv^^^^vvvvvvvvvvvvvvv^^^\r\n" +
-"             o o  ^^vvvvvv^^^^^^vvvvvvvvv^vvvvvvvvvv\r\n" +
-"              o     ^^vvvvvvvvvvvvvvvvvvvvvvvvvv\r\n" +
-"                        v_           v\r\n" +
-"                         v          v\r\n" +
-"                          v        v\r\n" +
-"                           v      v\r\n" +
-"                            |     |\r\n" +
-"                            |     |\r\n" +
-"                            |     |\r\n" +
-"                            |     ]\r\n");
+"        vv^^^^^^^^vvv^^^^^vv^^^^vvvvvvvvvvvv^^^^^^vv^vvvvvv       \r\n" +
+"        vvv^^^^^vvvv^^^^^^vvvvv^^vvvvvvvvv^^^^^^vvvvv^vvvvvvvvv   \r\n" +
+"    ooo vvvvvvvv^^^v^^^vvvvvv^^vvvvvvvvvv^^^vvvvvvvvvvvvvv  ooo   \r\n" +
+"   o   o ^vv^^^vvvvvvv^^vvvvv^^^^^^^^vvvvvvvvv^^^^^^vvvvv  o   o  \r\n" +
+"    ooo  ^vvvvvvvvv^^^^vvvvvv^^^^^^vvvvvvvv^^^vvvvvvvvvv^v  ooo   \r\n" +
+"       ^^^^^^vvvvvv^^vvvvv^vvvv^^^v^^^^^^vvvvvv^^^^vvvv ooo       \r\n" +
+"     vvvv^^vvv^^^vvvvvvvvvv^vvvvv^vvvvvv^^^vvvvvvv^^vv o   o      \r\n" +
+"    vvv^vvvvv^^vvvvvvv^^vvvvvvv^^vvvvv^vvvv^vvvv^^vvvv  ooo       \r\n" +
+"    ooo  ^vvvvvv^^vvvvvvvv^vv^vvv^^^^^^^^^vvvvvvvvvvvvvv^ ooo     \r\n" +
+"   o   o    ^^vooovvv^^vvvvvvvvvv^^^^vvvvvvvvvvvvvvv^^^  o   o    \r\n" +
+"    ooo       o   o  ^^vvvvvv^^^^^^vvvvvvvvv^vvvvvvvvvv   ooo     \r\n" +
+"               ooo ^^^^vvvvvvvvvvvvvvvvvvvvvvvvvv^^^^             \r\n" +
+"                        v_           v                            \r\n" +
+"                         v          v                             \r\n" +
+"                          v        v                              \r\n" +
+"                           v      v                               \r\n" +
+"                            |     |                               \r\n" +
+"                            |     |                               \r\n" +
+"                            |     |                               \r\n" +
+"                            |     ]                               \r\n");
 }
     }
     
     public void lostGame() { 
-        this.console.println("You have lost the game. Sorry you can start again and"
-                           + "see if you can make it to the Tree of Life.");
+        this.console.println("\r\nYou have lost the game. You have gone to the Great "
+                            +"and Spacious Building. You are laughing and mocking "
+                            +"others. Sorry you can repent and start again and see "
+                            +"if you can make it to the Tree of Life.");
         this.console.println("" +      
-"                                   _____\r\n" +
-"                                   |___|\r\n" +
-"                                   |___|\r\n" +
-"                                   |]_[|\r\n" +
-"                                   | I |\r\n" +
-"                               JL| | |JL\r\n" +
-"      .-.                    i   ()   |   () i                      .-.\r\n" +
-"      |_|     .^.           |_|  LJ=======LJ  |_|           .^.     |_|\r\n" +
+"                                   _____                                      \r\n" +
+"                                   |___|                                      \r\n" +
+"                                   |___|                                      \r\n" +
+"                                   |]_[|                                      \r\n" +
+"                                   | I |                                      \r\n" +
+"                               JL| | |JL                                      \r\n" +
+"      .-.                    i   ()   |   () i                      .-.       \r\n" +
+"      |_|     .^.           |_|  LJ=======LJ  |_|           .^.     |_|       \r\n" +
 "_._._|___|._.|___|_._._._._.L_J_|.-. .-. .-.|_L_J._._._._._|___|._.|___|._._._\r\n" +
 ".,        ., |-,-| .,       L_J  |_| [I] |_|  L_J       ., |-,-| .,         .,\r\n" +
 "JL        JL |-O-| JL       L_J%%%%%%%%%%%%%%%L_J       JL |-O-| JL         JL\r\n" +
